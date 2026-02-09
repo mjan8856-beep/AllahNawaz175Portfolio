@@ -1,1187 +1,419 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allah Nawaz - UI/UX Designer Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <title>Allah Nawaz | Senior Product Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @font-face {
-            font-family: 'MiSans';
-            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Regular.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'MiSans';
-            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Medium.ttf') format('truetype');
-            font-weight: 500;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'MiSans';
-            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Bold.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
         :root {
-            --bg-color: #1A1A1A;
-            --card-bg: #2C2C2C;
-            --text-primary: #FFFFFF;
-            --text-secondary: #A0A0A0;
-            --accent-green: #00C853;
-            --rating-yellow: #FFD700;
-            --sidebar-width: 280px;
-            --content-max-width: 1000px;
+            --accent: #818cf8;
+            --bg-dark: #0a0a0c;
+            --card-bg: #16161a;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'MiSans', sans-serif;
-            scroll-behavior: smooth;
+        /* Responsive Cursor: Only active on desktop/fine pointers */
+        @media (hover: hover) and (pointer: fine) {
+            * { cursor: none !important; }
+            #cursor {
+                width: 8px;
+                height: 8px;
+                background: var(--accent);
+                border-radius: 50%;
+                position: fixed;
+                pointer-events: none;
+                z-index: 9999;
+            }
+            #cursor-follower {
+                width: 35px;
+                height: 35px;
+                border: 1px solid rgba(129, 140, 248, 0.4);
+                border-radius: 50%;
+                position: fixed;
+                pointer-events: none;
+                z-index: 9998;
+                transition: transform 0.1s ease-out;
+            }
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            width: 1920px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--bg-dark);
+            color: #f8fafc;
             overflow-x: hidden;
-            display: flex;
         }
 
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--bg-color);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--card-bg);
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-green);
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: var(--sidebar-width);
-            height: 100vh;
-            background-color: #141414;
-            position: fixed;
-            left: 0;
-            top: 0;
-            padding: 40px 24px;
-            display: flex;
-            flex-direction: column;
-            border-right: 1px solid #333;
-            z-index: 1000;
-        }
-
-        .profile-section {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--card-bg);
-            margin-bottom: 16px;
-        }
-
-        .profile-name {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .status {
-            display: inline-flex;
-            align-items: center;
-            font-size: 14px;
-            color: var(--text-secondary);
-            background: rgba(255, 255, 255, 0.05);
-            padding: 4px 12px;
-            border-radius: 20px;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--accent-green);
-            border-radius: 50%;
-            margin-right: 8px;
-            box-shadow: 0 0 8px var(--accent-green);
-        }
-
-        .nav-menu {
-            list-style: none;
-            flex-grow: 1;
-        }
-
-        .nav-item {
-            margin-bottom: 8px;
-        }
-
-        .nav-link {
-            display: flex;
-            align-items: center;
-            padding: 12px 16px;
-            color: var(--text-secondary);
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .nav-link i {
-            margin-right: 12px;
-            font-size: 20px;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            background-color: var(--card-bg);
-            color: var(--text-primary);
-        }
-
-        .nav-link.active i {
-            color: var(--accent-green);
-        }
-
-        .sidebar-footer {
-            margin-top: auto;
-        }
-
-        .sidebar-stack-title {
-            font-size: 16px;
-            color: var(--text-secondary);
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-
-        .sidebar-stack-img {
-            width: 100%;
-            border-radius: 8px;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-        
-        .sidebar-stack-img:hover {
-            opacity: 1;
-        }
-
-        /* Main Content */
-        .main-content {
-            margin-left: var(--sidebar-width);
-            flex-grow: 1;
-            padding: 0 60px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: var(--content-max-width);
-            padding: 80px 0;
-        }
-
-        section {
-            margin-bottom: 120px;
+        .reveal {
             opacity: 0;
             transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
         }
-
-        section.visible {
+        .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Typography Utilities */
-        .section-title {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 40px;
-            position: relative;
-            padding-left: 20px;
+        .glass-nav {
+            background: rgba(10, 10, 12, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .section-title::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 6px;
-            height: 30px;
-            width: 4px;
-            background-color: var(--accent-green);
-            border-radius: 2px;
+        .bento-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+        .bento-card:hover {
+            border-color: rgba(129, 140, 248, 0.3);
+            background: #1c1c22;
+            transform: translateY(-5px);
         }
 
-        /* Hero Section */
-        .hero-section {
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .hero-title {
-            font-size: 64px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, #fff, #a0a0a0);
+        .gradient-text {
+            background: linear-gradient(to right, #fff, #818cf8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero-subtitle {
-            font-size: 24px;
-            color: var(--accent-green);
-            margin-bottom: 40px;
-            font-family: monospace;
-            min-height: 32px;
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 16px 32px;
-            background-color: var(--card-bg);
-            color: var(--text-primary);
-            text-decoration: none;
-            border-radius: 999px;
-            border: 1px solid #444;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            border-color: var(--accent-green);
-            color: var(--accent-green);
-        }
-
-        .btn-primary {
-            background-color: var(--accent-green);
-            color: #000;
-            border: none;
-        }
-        
-        .btn-primary:hover {
-            background-color: #00E676;
-            color: #000;
-        }
-
-        .btn i {
-            margin-left: 8px;
-        }
-
-        /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-        }
-
-        .summary-text {
-            font-size: 18px;
-            line-height: 1.6;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .stat-card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat-icon {
-            font-size: 24px;
-            color: var(--accent-green);
-            margin-bottom: 10px;
-        }
-
-        .stat-value {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .stat-label {
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-
-        .contact-grid {
-            display: grid;
-            gap: 16px;
-        }
-
-        .contact-item {
+        .stats-marquee {
             display: flex;
-            align-items: center;
-            color: var(--text-secondary);
-            text-decoration: none;
-            padding: 12px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 8px;
-            transition: 0.3s;
+            width: fit-content;
+            animation: scroll 40s linear infinite;
         }
 
-        .contact-item:hover {
-            background: rgba(255,255,255,0.08);
-            color: var(--accent-green);
+        .project-img-container {
+            perspective: 1000px;
         }
-
-        .contact-item i {
-            margin-right: 12px;
-            font-size: 20px;
-        }
-
-        /* Experience Section */
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-            border-left: 2px solid #333;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 40px;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -36px;
-            top: 0;
-            width: 10px;
-            height: 10px;
-            background: var(--accent-green);
-            border-radius: 50%;
-            border: 2px solid var(--bg-color);
-            box-shadow: 0 0 0 4px rgba(0, 200, 83, 0.2);
-        }
-
-        .timeline-role {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .timeline-company {
-            font-size: 16px;
-            color: var(--accent-green);
-            margin-bottom: 8px;
-            display: inline-block;
-        }
-
-        .timeline-date {
-            font-size: 14px;
-            color: #666;
-            margin-left: 10px;
-        }
-
-        .timeline-desc {
-            color: var(--text-secondary);
-            line-height: 1.5;
-            margin-top: 8px;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-        }
-
-        .skill-item {
-            margin-bottom: 20px;
-        }
-
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-        }
-
-        .skill-bar-bg {
-            height: 8px;
-            background: #333;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .skill-bar-fill {
-            height: 100%;
-            background: var(--accent-green);
-            border-radius: 4px;
-            width: 0;
-            transition: width 1.5s ease-out;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-bottom: 40px;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .project-image-container {
-            height: 200px;
-            overflow: hidden;
-        }
-
         .project-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .bento-card:hover .project-img {
+            transform: scale(1.05);
         }
 
-        .project-card:hover .project-img {
-            transform: scale(1.1);
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1);
         }
-
-        .project-content {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-cat {
-            font-size: 12px;
-            color: var(--accent-green);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .project-title {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-        }
-
-        .project-desc {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        .view-all-container {
-            text-align: center;
-        }
-
-        /* Stack Section */
-        .stack-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .stack-card {
-            background: var(--card-bg);
-            padding: 24px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            transition: 0.3s;
-        }
-
-        .stack-card:hover {
-            background: #363636;
-        }
-
-        .stack-icon {
-            font-size: 32px;
-            color: var(--text-primary);
-            margin-right: 16px;
-        }
-
-        .stack-info h4 {
-            font-size: 18px;
-            margin-bottom: 4px;
-        }
-
-        .stack-info p {
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
-
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .testimonial-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            position: relative;
-        }
-
-        .stars {
-            color: var(--rating-yellow);
-            margin-bottom: 16px;
-        }
-
-        .quote {
-            font-style: italic;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-            line-height: 1.6;
-            min-height: 72px;
-        }
-
-        .client-info {
-            display: flex;
-            align-items: center;
-        }
-
-        .client-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #444;
-            margin-right: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .client-details h4 {
-            font-size: 16px;
-            margin-bottom: 2px;
-        }
-
-        .client-details p {
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
-
-        /* Contact Section */
-        .contact-form {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 16px;
-            background: #1A1A1A;
-            border: 1px solid #333;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--accent-green);
-        }
-
-        .form-footer {
-            margin-top: 80px;
-            text-align: center;
-            border-top: 1px solid #333;
-            padding-top: 40px;
-        }
-
-        .social-links {
-            margin-bottom: 20px;
-        }
-
-        .social-link {
-            display: inline-flex;
-            width: 40px;
-            height: 40px;
-            background: var(--card-bg);
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            color: #fff;
-            text-decoration: none;
-            margin: 0 8px;
-            transition: 0.3s;
-        }
-
-        .social-link:hover {
-            background: var(--accent-green);
-            color: #000;
-        }
-
-        /* Scroll to top */
-        .scroll-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: var(--accent-green);
-            color: #000;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            opacity: 0;
-            pointer-events: none;
-            transition: 0.3s;
-            z-index: 999;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-
-        .scroll-to-top.show {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .scroll-to-top:hover {
-            transform: translateY(-5px);
-        }
-
     </style>
 </head>
-<body>
+<body class="selection:bg-indigo-500/30 selection:text-white">
 
-    <!-- Audio Element -->
-    <audio id="typewriter-sound" src="https://a.lovart.ai/artifacts/external/typewriter.mp3" preload="auto"></audio>
+    <div id="cursor" class="hidden md:block"></div>
+    <div id="cursor-follower" class="hidden md:block"></div>
 
-    <!-- Sidebar -->
-    <nav class="sidebar">
-        <div class="profile-section">
-            <img src="https://a.lovart.ai/artifacts/user/rvfgbqzQbeafPpJE.png" alt="Allah Nawaz" class="profile-img">
-            <h1 class="profile-name">Allah Nawaz</h1>
-            <div class="status">
-                <span class="status-dot"></span> Available for Work
+    <!-- Navigation -->
+    <nav class="fixed w-full z-[100] py-4 glass-nav" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer group" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center font-black text-xs group-hover:rotate-12 transition-transform">AN</div>
+                <div class="flex flex-col">
+                    <span class="text-sm font-bold tracking-tight">Allah Nawaz</span>
+                    <span class="text-[9px] text-indigo-400 font-bold uppercase tracking-widest">Senior Product Designer</span>
+                </div>
             </div>
-        </div>
+            
+            <div class="hidden md:flex items-center gap-10">
+                <a href="#work" class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white transition-colors">Work</a>
+                <a href="#skills" class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white transition-colors">Skills</a>
+                <a href="#experience" class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white transition-colors">Career</a>
+                <a href="mailto:allahnawazmalik175@gmail.com" class="px-5 py-2 bg-white text-black rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-indigo-500 hover:text-white transition-all">Contact</a>
+            </div>
 
-        <ul class="nav-menu">
-            <li class="nav-item"><a href="#home" class="nav-link active"><i class="ri-home-4-line"></i> Home</a></li>
-            <li class="nav-item"><a href="#about" class="nav-link"><i class="ri-user-3-line"></i> About</a></li>
-            <li class="nav-item"><a href="#projects" class="nav-link"><i class="ri-stack-line"></i> Projects</a></li>
-            <li class="nav-item"><a href="#stack" class="nav-link"><i class="ri-tools-line"></i> Stack</a></li>
-            <li class="nav-item"><a href="#contact" class="nav-link"><i class="ri-mail-send-line"></i> Contact</a></li>
-        </ul>
-
-        <div class="sidebar-footer">
-            <h3 class="sidebar-stack-title">My Stack</h3>
-            <img src="https://a.lovart.ai/artifacts/agent/fitA7s9JnBoiYRXG.png" alt="Tools" class="sidebar-stack-img">
+            <button onclick="toggleMenu(true)" class="md:hidden text-xl p-2"><i class="fa-solid fa-bars-staggered"></i></button>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            
-            <!-- Hero Section -->
-            <section id="home" class="hero-section visible">
-                <h2 class="hero-title">Hello Everyone!<br>I'm Allah Nawaz</h2>
-                <div class="hero-subtitle" id="typing-text"></div>
-                <a href="#about" class="btn">More about Me <i class="ri-arrow-right-line"></i></a>
-            </section>
-
-            <!-- About Section -->
-            <section id="about">
-                <h3 class="section-title">About Me</h3>
-                <div class="about-grid">
-                    <div>
-                        <p class="summary-text">
-                            Passionate UI/UX & Product Designer with 2+ years of experience crafting intuitive digital experiences. specialized in user-centric design, I help startups and established businesses transform complex problems into elegant, easy-to-use solutions.
-                        </p>
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <div class="stat-icon"><i class="ri-line-chart-line"></i></div>
-                                <div class="stat-value">25%</div>
-                                <div class="stat-label">Engagement Increase</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-icon"><i class="ri-eye-line"></i></div>
-                                <div class="stat-value">30%</div>
-                                <div class="stat-label">Visibility Boost</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-icon"><i class="ri-time-line"></i></div>
-                                <div class="stat-value">35%</div>
-                                <div class="stat-label">Time Reduction</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-icon"><i class="ri-rocket-line"></i></div>
-                                <div class="stat-value">40%</div>
-                                <div class="stat-label">Delivery Speed</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-grid">
-                        <a href="tel:+923055743436" class="contact-item">
-                            <i class="ri-phone-line"></i> +92 305 574 3436
-                        </a>
-                        <a href="mailto:allahnawazmalik175@gmail.com" class="contact-item">
-                            <i class="ri-mail-line"></i> Email Me
-                        </a>
-                        <a href="https://linkedin.com/in/allah-nawaz-256a81286" target="_blank" class="contact-item">
-                            <i class="ri-linkedin-fill"></i> LinkedIn Profile
-                        </a>
-                        <a href="https://behance.net/allahnawaz175" target="_blank" class="contact-item">
-                            <i class="ri-behance-fill"></i> Behance Portfolio
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Professional Journey -->
-            <section id="experience">
-                <h3 class="section-title">My Professional Journey</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-role">UI/UX & Graphic Designer</div>
-                        <div class="timeline-company">T-Tech Solutions Pvt Ltd <span class="timeline-date">May 2025 – Nov 2025</span></div>
-                        <p class="timeline-desc">Designed responsive interfaces, built scalable design systems, and created GMB optimized visuals.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-role">UI/UX & Graphic Designer</div>
-                        <div class="timeline-company">Profituned Marketing <span class="timeline-date">May 2024 – Apr 2025</span></div>
-                        <p class="timeline-desc">Increased engagement by 25%, developed high-fidelity prototypes, reduced design time by 35% through efficient workflows.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-role">UI/UX Design Intern</div>
-                        <div class="timeline-company">Design Peeps <span class="timeline-date">Oct 2023 – Apr 2024</span></div>
-                        <p class="timeline-desc">Conducted user research, created interactive prototypes, and collaborated with senior designers on client projects.</p>
-                    </div>
-                </div>
-            </section>
-
-             <!-- Education & Certifications -->
-             <section id="education">
-                <h3 class="section-title">Education & Certifications</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-role">Associate Degree Program</div>
-                        <div class="timeline-company">Islamia University of Bahawalpur <span class="timeline-date">2020 - 2022</span></div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-role">Certifications</div>
-                        <div class="timeline-company">Multiple Institutions</div>
-                        <p class="timeline-desc">
-                            • Networking Technician (PSDF)<br>
-                            • Website Design (NAVTTC)<br>
-                            • Information Technology (TEVTA)
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Skills -->
-            <section id="skills">
-                <h3 class="section-title">My Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>UI/UX Design</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Wireframing</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Prototyping</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Design Systems</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>User Research</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Figma</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Adobe Suite</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Responsive Design</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80%"></div></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects -->
-            <section id="projects">
-                <h3 class="section-title">My Work</h3>
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="https://a.lovart.ai/artifacts/external/PYinDhKCmhShtbaa.png" alt="Smarter Influencer Marketing" class="project-img">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-cat">Web UI/UX • AI</div>
-                            <h4 class="project-title">Smarter Influencer Marketing</h4>
-                            <p class="project-desc">Dark-themed interface with AI branding and people collaboration visuals.</p>
-                        </div>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="https://a.lovart.ai/artifacts/external/oy0eex6Bc7mAIBfY.png" alt="Solar Energy Solutions" class="project-img">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-cat">Web UI/UX • Renewable Energy</div>
-                            <h4 class="project-title">Solar Energy Solutions</h4>
-                            <p class="project-desc">Website with solar panels, company logo, and project statistics.</p>
-                        </div>
-                    </div>
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="https://a.lovart.ai/artifacts/external/BbQRvWMYd3YagSrT.png" alt="Pet Food UI" class="project-img">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-cat">E-commerce • Web UI</div>
-                            <h4 class="project-title">Pet Food & Sales Web UI</h4>
-                            <p class="project-desc">Vibrant e-commerce design with promotions and product categories.</p>
-                        </div>
-                    </div>
-                    <!-- Project 4 -->
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="https://a.lovart.ai/artifacts/external/zVSYjB00VLKTxqVj.png" alt="ClickSy Platform" class="project-img">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-cat">Mobile UI/UX • Platform</div>
-                            <h4 class="project-title">ClickSy — All-in-One Platform</h4>
-                            <p class="project-desc">Mobile app screens featuring dashboard, analytics, and account management.</p>
-                        </div>
-                    </div>
-                    <!-- Project 5 -->
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="https://a.lovart.ai/artifacts/external/P7yzDsCykXku1Jd2.png" alt="Conectlab" class="project-img">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-cat">Web UI/UX • Software</div>
-                            <h4 class="project-title">Conectlab</h4>
-                            <p class="project-desc">Vibrant green website emphasizing business transformation services.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="view-all-container">
-                    <a href="https://behance.net/allahnawaz175" target="_blank" class="btn">View All Projects <i class="ri-arrow-right-line"></i></a>
-                </div>
-            </section>
-
-            <!-- Stack Section -->
-            <section id="stack">
-                <h3 class="section-title">My Stack</h3>
-                <div class="stack-grid">
-                    <div class="stack-card">
-                        <i class="ri-pen-nib-line stack-icon"></i>
-                        <div class="stack-info">
-                            <h4>Figma</h4>
-                            <p>Interface Design</p>
-                        </div>
-                    </div>
-                    <div class="stack-card">
-                        <i class="ri-layout-masonry-line stack-icon"></i>
-                        <div class="stack-info">
-                            <h4>Framer</h4>
-                            <p>Web Builder</p>
-                        </div>
-                    </div>
-                    <div class="stack-card">
-                        <i class="ri-image-edit-line stack-icon"></i>
-                        <div class="stack-info">
-                            <h4>Photoshop</h4>
-                            <p>Image Editing</p>
-                        </div>
-                    </div>
-                    <div class="stack-card">
-                        <i class="ri-pencil-ruler-2-line stack-icon"></i>
-                        <div class="stack-info">
-                            <h4>Illustrator</h4>
-                            <p>Vector Graphics</p>
-                        </div>
-                    </div>
-                    <div class="stack-card">
-                        <i class="ri-pantone-line stack-icon"></i>
-                        <div class="stack-info">
-                            <h4>Canva</h4>
-                            <p>Quick Design</p>
-                        </div>
-                    </div>
-                    <div class="stack-card">
-                        <i class="ri-mind-map-line stack-icon"></i>
-                        <div class="stack-info">
-                            <h4>Miro</h4>
-                            <p>Brainstorming</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Testimonials -->
-            <section id="testimonials">
-                <h3 class="section-title">Kind Words</h3>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
-                        <p class="quote">"Allah Nawaz transformed our product vision into a reality. His attention to detail and user-centric approach are unmatched."</p>
-                        <div class="client-info">
-                            <div class="client-avatar">JD</div>
-                            <div class="client-details">
-                                <h4>John Doe</h4>
-                                <p>CEO, TechStart</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
-                        <p class="quote">"Incredible turnaround time and high-quality designs. He really understood our brand identity from day one."</p>
-                        <div class="client-info">
-                            <div class="client-avatar">AS</div>
-                            <div class="client-details">
-                                <h4>Anna Smith</h4>
-                                <p>Marketing Director</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact -->
-            <section id="contact">
-                <h3 class="section-title">Get in Touch</h3>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%">Send Message</button>
-                    </form>
-                </div>
-                <div class="form-footer">
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/allah-nawaz-256a81286" class="social-link"><i class="ri-linkedin-fill"></i></a>
-                        <a href="https://behance.net/allahnawaz175" class="social-link"><i class="ri-behance-fill"></i></a>
-                        <a href="#" class="social-link"><i class="ri-github-fill"></i></a>
-                        <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
-                    </div>
-                    <p style="color: #666; font-size: 14px;">© 2025 Allah Nawaz. All rights reserved.</p>
-                </div>
-            </section>
-
-        </div>
-    </main>
-
-    <div class="scroll-to-top" id="scrollToTop">
-        <i class="ri-arrow-up-line"></i>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black z-[120] flex flex-col items-center justify-center gap-10 translate-x-full">
+        <button onclick="toggleMenu(false)" class="absolute top-10 right-10 text-3xl">&times;</button>
+        <a href="#work" onclick="toggleMenu(false)" class="text-4xl font-black">Work</a>
+        <a href="#skills" onclick="toggleMenu(false)" class="text-4xl font-black">Skills</a>
+        <a href="#experience" onclick="toggleMenu(false)" class="text-4xl font-black">Career</a>
+        <a href="mailto:allahnawazmalik175@gmail.com" class="text-xl text-indigo-400 font-bold uppercase">Hire Me</a>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center pt-28 pb-16 px-6 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px]"></div>
+
+        <div class="max-w-7xl mx-auto w-full relative">
+            <div class="reveal inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-8">
+                <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Available for Global Projects</span>
+            </div>
             
-            // 1. Typing Effect with Sound
-            const text = "UI/UX & Product Designer | 2+ Years Experience";
-            const typingElement = document.getElementById('typing-text');
-            const audio = document.getElementById('typewriter-sound');
-            let index = 0;
+            <h1 class="reveal text-5xl md:text-8xl lg:text-[110px] font-black tracking-tighter leading-[0.9] mb-10">
+                Bridging <span class="gradient-text">Product Design</span> <br> & Business Growth.
+            </h1>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-end">
+                <p class="reveal text-lg md:text-xl text-slate-400 font-medium leading-relaxed max-w-xl">
+                    UI/UX Specialist with 2+ years of experience. I build scalable <span class="text-white">Design Systems</span> that reduce development time by 35% and boost user retention by 25%.
+                </p>
+                <div class="reveal flex flex-wrap gap-4 md:justify-end">
+                    <div class="px-6 py-4 bento-card flex flex-col items-center justify-center min-w-[120px]">
+                        <span class="text-3xl font-black text-indigo-400">40%</span>
+                        <span class="text-[9px] font-bold uppercase tracking-widest opacity-50">Faster Delivery</span>
+                    </div>
+                    <div class="px-6 py-4 bento-card flex flex-col items-center justify-center min-w-[120px]">
+                        <span class="text-3xl font-black text-indigo-400">30%</span>
+                        <span class="text-[9px] font-bold uppercase tracking-widest opacity-50">Impact ↑</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            function typeWriter() {
-                if (index < text.length) {
-                    typingElement.textContent += text.charAt(index);
-                    index++;
-                    // Try to play sound (browsers might block it without interaction)
-                    audio.currentTime = 0;
-                    audio.volume = 0.2;
-                    audio.play().catch(e => {}); 
-                    setTimeout(typeWriter, 50);
-                }
-            }
-            // Start typing after a short delay
-            setTimeout(typeWriter, 1000);
+    <!-- Impact Ticker -->
+    <div class="py-8 border-y border-white/5 overflow-hidden bg-white/2">
+        <div class="stats-marquee">
+            <div class="flex gap-20 items-center px-10">
+                <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-white/30 whitespace-nowrap"><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 25% User Retention Increase</span>
+                <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-white/30 whitespace-nowrap"><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 30% Google My Business Growth</span>
+                <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-white/30 whitespace-nowrap"><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 35% Scalable System Efficiency</span>
+                <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-white/30 whitespace-nowrap"><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 40% Accelerated Project Delivery</span>
+            </div>
+            <!-- Repeat for scroll -->
+            <div class="flex gap-20 items-center px-10">
+                <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-white/30 whitespace-nowrap"><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 25% User Retention Increase</span>
+                <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-white/30 whitespace-nowrap"><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 30% Google My Business Growth</span>
+                <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-white/30 whitespace-nowrap"><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 35% Scalable System Efficiency</span>
+                <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-white/30 whitespace-nowrap"><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 40% Accelerated Project Delivery</span>
+            </div>
+        </div>
+    </div>
 
+    <!-- Case Studies -->
+    <section id="work" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="reveal mb-20">
+                <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-[0.5em] mb-4 block">Selected Works</span>
+                <h2 class="text-5xl md:text-7xl font-black tracking-tighter">Impact Portfolio.</h2>
+            </div>
 
-            // 2. Section visibility and Skills Animation on Scroll
-            const observerOptions = {
-                threshold: 0.15
-            };
+            <div class="grid gap-8">
+                <!-- T-Tech Case Study -->
+                <div class="reveal bento-card group overflow-hidden">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="p-10 md:p-16 flex flex-col justify-center">
+                            <span class="text-[9px] font-black uppercase tracking-[0.3em] text-indigo-400 mb-6">Workflow Optimization</span>
+                            <h3 class="text-4xl md:text-5xl font-black mb-6 tracking-tight">T-Tech Solutions</h3>
+                            <p class="text-slate-400 font-medium leading-relaxed mb-10 text-lg">
+                                Developed a unified design language that synchronized cross-platform products. Streamlined high-fidelity prototyping and AI integration, reducing system implementation time by 35%.
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <span class="px-4 py-2 bg-white/5 rounded-full text-[10px] font-bold uppercase tracking-widest border border-white/5">Design Systems</span>
+                                <span class="px-4 py-2 bg-white/5 rounded-full text-[10px] font-bold uppercase tracking-widest border border-white/5">AI Automation</span>
+                            </div>
+                        </div>
+                        <div class="bg-indigo-900/10 overflow-hidden min-h-[400px]">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80" alt="Workflow Tool" class="w-full h-full object-cover project-img opacity-60 group-hover:opacity-100 transition-all duration-700">
+                        </div>
+                    </div>
+                </div>
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        
-                        // If it's the skills section, animate bars
-                        if (entry.target.id === 'skills') {
-                            const bars = entry.target.querySelectorAll('.skill-bar-fill');
-                            bars.forEach(bar => {
-                                bar.style.width = bar.getAttribute('data-width');
-                            });
-                        }
-                    }
-                });
-            }, observerOptions);
+                <!-- Secondary Grid -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Profituned -->
+                    <div class="reveal bento-card p-10 flex flex-col justify-between group">
+                        <div>
+                            <span class="text-[9px] font-black uppercase tracking-[0.3em] text-indigo-400 mb-4 block">SEO & Marketing</span>
+                            <h3 class="text-3xl font-black mb-4">Profituned Store</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-8">Boosted online visibility by 30% through optimized UI/UX and visual storytelling, improving GMB impressions significantly.</p>
+                        </div>
+                        <div class="rounded-2xl overflow-hidden border border-white/5">
+                             <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover project-img grayscale group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+                    <!-- Photo Retouching -->
+                    <div class="reveal bento-card p-10 flex flex-col justify-between group">
+                        <div>
+                            <span class="text-[9px] font-black uppercase tracking-[0.3em] text-indigo-400 mb-4 block">Freelance / Photoshop</span>
+                            <h3 class="text-3xl font-black mb-4">Advanced Retouching</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-8">Crafting high-converting product listings for e-commerce via professional image manipulation and visual storytelling.</p>
+                        </div>
+                        <div class="rounded-2xl overflow-hidden border border-white/5">
+                             <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover project-img grayscale group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            document.querySelectorAll('section').forEach(section => {
-                observer.observe(section);
-            });
+    <!-- Expertise -->
+    <section id="skills" class="py-32 px-6 bg-white/[0.02]">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
+            <div class="reveal">
+                <h2 class="text-5xl font-black tracking-tighter mb-10">Strategic <br>Mindset.</h2>
+                <div class="space-y-10">
+                    <div>
+                        <h5 class="text-indigo-400 text-[10px] font-bold uppercase tracking-widest mb-4">Domain Skills</h5>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-sm">Responsive Design</span>
+                            <span class="bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-sm">WCAG Accessibility</span>
+                            <span class="bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-sm">Interaction Design</span>
+                            <span class="bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-sm">User Research</span>
+                            <span class="bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-sm">Wireframing</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-indigo-400 text-[10px] font-bold uppercase tracking-widest mb-4">Core Tech</h5>
+                        <div class="flex flex-wrap gap-3">
+                            <div class="flex items-center gap-2 bg-indigo-600/20 text-indigo-300 px-4 py-2 rounded-lg border border-indigo-500/20">
+                                <i class="fa-brands fa-figma"></i> <span class="font-bold">Figma</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-indigo-600/20 text-indigo-300 px-4 py-2 rounded-lg border border-indigo-500/20">
+                                <i class="fa-solid fa-code"></i> <span class="font-bold">Framer</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
+                                <i class="fa-solid fa-camera-retro"></i> <span class="font-bold">Adobe CC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reveal grid grid-cols-2 gap-4">
+                <div class="bento-card p-8 flex flex-col items-center justify-center gap-4 text-center">
+                    <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-indigo-400"><i class="fa-solid fa-mobile-button text-xl"></i></div>
+                    <h4 class="font-black">Mobile UX</h4>
+                </div>
+                <div class="bento-card p-8 flex flex-col items-center justify-center gap-4 text-center">
+                    <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-indigo-400"><i class="fa-solid fa-server text-xl"></i></div>
+                    <h4 class="font-black">SaaS UI</h4>
+                </div>
+                <div class="bento-card p-8 flex flex-col items-center justify-center gap-4 text-center">
+                    <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-indigo-400"><i class="fa-solid fa-bolt-lightning text-xl"></i></div>
+                    <h4 class="font-black">Fast Prototyping</h4>
+                </div>
+                <div class="bento-card p-8 flex flex-col items-center justify-center gap-4 text-center">
+                    <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-indigo-400"><i class="fa-solid fa-users-viewfinder text-xl"></i></div>
+                    <h4 class="font-black">User Growth</h4>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="reveal text-center mb-20">
+                <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-[0.5em] mb-4 block">Professional History</span>
+                <h2 class="text-5xl font-black tracking-tighter">Experience.</h2>
+            </div>
 
-            // 3. Navigation Highlight
-            const navLinks = document.querySelectorAll('.nav-link');
-            const sections = document.querySelectorAll('section');
+            <div class="space-y-6">
+                <!-- Freelance -->
+                <div class="reveal bento-card p-8 flex flex-col md:flex-row justify-between md:items-center gap-6 group">
+                    <div>
+                        <h4 class="text-xl font-bold group-hover:text-indigo-400 transition-colors">Freelance Product Designer</h4>
+                        <p class="text-xs font-bold text-slate-500 tracking-widest uppercase mt-1">Apr 2024 — Present</p>
+                    </div>
+                    <p class="text-sm text-slate-400 md:text-right md:max-w-[200px]">Advanced retouching and high-converting e-commerce design.</p>
+                </div>
+                <!-- T-Tech -->
+                <div class="reveal bento-card p-8 flex flex-col md:flex-row justify-between md:items-center gap-6 group bg-indigo-600/[0.05] border-indigo-500/20">
+                    <div>
+                        <h4 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">UI/UX & Graphic Designer</h4>
+                        <p class="text-xs font-bold text-indigo-400 tracking-widest uppercase mt-1">T-Tech Solutions | May 2025 — Nov 2025</p>
+                    </div>
+                    <p class="text-sm text-indigo-200/50 md:text-right md:max-w-[200px]">Led scalable system implementation for SaaS platforms.</p>
+                </div>
+                <!-- Profituned -->
+                <div class="reveal bento-card p-8 flex flex-col md:flex-row justify-between md:items-center gap-6 group">
+                    <div>
+                        <h4 class="text-xl font-bold group-hover:text-indigo-400 transition-colors">Digital Product Designer</h4>
+                        <p class="text-xs font-bold text-slate-500 tracking-widest uppercase mt-1">Profituned Marketing | May 2024 — Apr 2025</p>
+                    </div>
+                    <p class="text-sm text-slate-400 md:text-right md:max-w-[200px]">Enhanced GMB impressions and SEO visibility by 30%.</p>
+                </div>
+            </div>
 
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (pageYOffset >= (sectionTop - 300)) {
-                        current = section.getAttribute('id');
-                    }
-                });
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+                <div class="reveal bento-card p-8">
+                    <span class="text-[9px] font-bold text-indigo-400 uppercase tracking-[0.2em] block mb-2">Education</span>
+                    <p class="font-bold text-lg">Associate Degree</p>
+                    <p class="text-sm text-slate-500 mt-1">Islamia University of Bahawalpur</p>
+                </div>
+                <div class="reveal bento-card p-8">
+                    <span class="text-[9px] font-bold text-indigo-400 uppercase tracking-[0.2em] block mb-2">Technical Certs</span>
+                    <ul class="text-sm text-slate-500 space-y-1">
+                        <li>• Website Design | NAVTTC</li>
+                        <li>• Networking Tech | PSDF</li>
+                        <li>• Information Tech | TEVTA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').includes(current)) {
-                        link.classList.add('active');
-                    }
-                });
+    <!-- Footer -->
+    <footer class="py-32 px-6 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto text-center reveal">
+            <h2 class="text-6xl md:text-9xl font-black tracking-tighter mb-16">Ready for <br><span class="gradient-text">new heights.</span></h2>
+            
+            <a href="mailto:allahnawazmalik175@gmail.com" class="inline-block px-12 py-6 bg-white text-black rounded-2xl font-black text-xl hover:bg-indigo-600 hover:text-white transition-all shadow-2xl mb-32">
+                allahnawazmalik175@gmail.com <i class="fa-solid fa-arrow-right ml-3"></i>
+            </a>
 
-                // Scroll to top button visibility
-                const scrollBtn = document.getElementById('scrollToTop');
-                if (window.scrollY > 500) {
-                    scrollBtn.classList.add('show');
-                } else {
-                    scrollBtn.classList.remove('show');
-                }
-            });
+            <div class="flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 gap-8">
+                <p>&copy; 2026 Allah Nawaz — Islamabad, PK</p>
+                <div class="flex gap-10">
+                    <a href="https://www.linkedin.com/in/allah-nawaz-256a81286" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+                    <a href="https://www.behance.net/allahnawaz175" target="_blank" class="hover:text-white transition-colors">Behance</a>
+                </div>
+                <p>Designed for Impact</p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- WhatsApp CTA -->
+    <a href="https://wa.me/923055743436" target="_blank" class="fixed bottom-6 right-6 z-[110] w-14 h-14 bg-green-600 text-white rounded-full flex items-center justify-center text-xl shadow-2xl hover:scale-110 transition-transform">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
-            // 4. Scroll to top functionality
-            document.getElementById('scrollToTop').addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-
-
-            // 5. Form Handling
-            const form = document.getElementById('contactForm');
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                // Simple validation feedback
-                const btn = form.querySelector('button');
-                const originalText = btn.innerText;
-                
-                btn.innerText = 'Sending...';
-                btn. style.backgroundColor = '#00C853';
-                
+    <script>
+        // Cursor Logic
+        const cursor = document.getElementById('cursor');
+        const follower = document.getElementById('cursor-follower');
+        
+        if (cursor) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
                 setTimeout(() => {
-                    btn.innerText = 'Message Sent!';
-                    form.reset();
-                    setTimeout(() => {
-                        btn.innerText = originalText;
-                    }, 3000);
-                }, 1500);
+                    follower.style.left = e.clientX - 14 + 'px';
+                    follower.style.top = e.clientY - 14 + 'px';
+                }, 40);
             });
-        });
+        }
+
+        // Reveal Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Mobile Menu
+        function toggleMenu(show) {
+            document.getElementById('mobile-menu').style.transform = show ? 'translateX(0)' : 'translateX(100%)';
+        }
     </script>
 </body>
 </html>

@@ -1,395 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Allah Nawaz | Product Designer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Allah Nawaz | Product Designer</title>
 
-<script src="https://unpkg.com/lucide@latest"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
 
-<style>
-:root{
-    --bg:#050505;
-    --fg:#fff;
-    --muted:rgba(255,255,255,0.6);
-    --border:rgba(255,255,255,0.08);
-    --accent:#FFD700;
-}
+    <style>
+        :root {
+            --bg: #050505;
+            --fg: #ffffff;
+            --muted: rgba(255, 255, 255, 0.6);
+            --border: rgba(255, 255, 255, 0.1);
+            --accent: #FFD700;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --glass: rgba(255, 255, 255, 0.02);
+        }
 
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-    background:var(--bg);
-    color:var(--fg);
-    font-family:Inter;
-    overflow-x:hidden;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* NAV */
-.nav{
-    position:fixed;
-    top:20px;
-    left:50%;
-    transform:translateX(-50%);
-    width:90%;
-    max-width:1100px;
-    padding:10px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(10,10,10,0.5);
-    border:1px solid var(--border);
-    backdrop-filter:blur(20px);
-    border-radius:999px;
-    z-index:1000;
-}
+        body {
+            background: var(--bg);
+            color: var(--fg);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
 
-/* SECTION BASE */
-.panel{
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-    padding:80px 20px;
-}
+        /* Nav */
+        .nav {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1000px;
+            padding: 12px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.7);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+            border-radius: 100px;
+            z-index: 1000;
+        }
 
-/* HERO */
-.hero h1{
-    font-size:clamp(40px,7vw,90px);
-    text-align:center;
-    line-height:1;
-}
-.hero p{
-    margin-top:20px;
-    text-align:center;
-    max-width:700px;
-    color:var(--muted);
-}
+        .nav .brand { font-weight: 600; letter-spacing: -0.5px; }
+        .nav .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav a { color: var(--fg); text-decoration: none; font-size: 0.9rem; opacity: 0.7; transition: opacity 0.3s; }
+        .nav a:hover { opacity: 1; }
 
-/* SECTION TITLE */
-.title{
-    font-size:clamp(30px,5vw,64px);
-    text-align:center;
-}
+        /* Layout */
+        .panel {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 120px 5%;
+            will-change: transform, opacity;
+        }
 
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:24px;
-    max-width:1100px;
-    margin:auto;
-}
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
 
-.card{
-    background:rgba(255,255,255,0.03);
-    border:1px solid var(--border);
-    border-radius:24px;
-    overflow:hidden;
-}
+        /* Typography */
+        h1 { font-size: clamp(48px, 10vw, 100px); text-align: center; line-height: 0.9; font-weight: 600; letter-spacing: -2px; margin-bottom: 24px; }
+        .title { font-size: clamp(32px, 6vw, 64px); font-weight: 600; letter-spacing: -1px; margin-bottom: 48px; text-align: center; }
+        .accent { color: var(--accent); font-style: italic; font-family: "Playfair Display", serif; font-weight: 400; }
+        .hero-sub { text-align: center; max-width: 700px; margin: 0 auto; color: var(--muted); font-size: clamp(16px, 2vw, 20px); font-weight: 300; }
 
-.card img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-}
+        /* Experience Section */
+        .exp-list { max-width: 800px; margin: 0 auto; }
+        .exp-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .exp-date { color: var(--muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .exp-role { font-size: 1.5rem; font-weight: 600; margin-bottom: 8px; }
+        .exp-company { color: var(--accent); font-family: "Playfair Display", serif; font-style: italic; margin-bottom: 16px; display: block; }
+        .exp-desc { color: var(--muted); font-size: 0.95rem; }
 
-/* ACCENT */
-.accent{color:var(--accent);font-style:italic;font-family:"Playfair Display";}
+        /* Achievements */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .stat-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 40px 20px;
+            border-radius: 24px;
+            text-align: center;
+        }
+        .stat-num { font-size: 3rem; font-weight: 600; color: var(--accent); display: block; }
+        .stat-label { color: var(--muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
 
-@media(max-width:768px){
-    .grid{grid-template-columns:1fr;}
-}
-</style>
+        /* Project Grid */
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 32px; overflow: hidden; transition: border-color 0.3s ease; text-decoration: none; color: inherit; display: block; }
+        .card:hover { border-color: var(--muted); }
+        .card-img-wrapper { width: 100%; height: 350px; overflow: hidden; background: #111; }
+        .card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+        .card:hover img { transform: scale(1.05); }
+        .card-info { padding: 24px; }
+        .card-title { font-size: 1.25rem; font-weight: 600; display: block; margin-bottom: 8px; }
+        .card-tag { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 60px;
+            border-radius: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .quote-icon { position: absolute; top: 40px; left: 40px; opacity: 0.1; }
+        .testimonial-text { font-size: 1.5rem; margin-bottom: 30px; font-weight: 300; }
+        .author { display: flex; align-items: center; gap: 15px; }
+        .author-img { width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(45deg, #333, #111); }
+
+        /* Social/Connect */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 24px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--fg);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .social-btn:hover { background: var(--fg); color: var(--bg); transform: translateY(-5px); }
+
+        /* FAQ */
+        .faq-list { max-width: 700px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; cursor: pointer; }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; font-size: 1.2rem; font-weight: 500; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: all 0.4s ease; color: var(--muted); padding-top: 0; }
+        .faq-item.active .faq-answer { max-height: 200px; padding-top: 15px; }
+        .faq-item.active i { transform: rotate(180deg); }
+
+        /* Footer */
+        .footer { padding: 60px 0; border-top: 1px solid var(--border); margin-top: 100px; }
+        .footer-content { display: flex; justify-content: space-between; align-items: center; }
+        .footer-socials { display: flex; gap: 20px; }
+        .footer-socials a { color: var(--muted); text-decoration: none; transition: color 0.3s; }
+        .footer-socials a:hover { color: var(--fg); }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .exp-item { grid-template-columns: 1fr; gap: 10px; }
+            .social-grid { grid-template-columns: 1fr; }
+            .testimonial-card { padding: 30px; }
+            .nav .nav-links { display: none; }
+            .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<div class="nav">
-    <div>Allah Nawaz</div>
-    <div>Product Designer</div>
-</div>
-
-<!-- HERO (PINNED) -->
-<section class="panel hero">
-    <div>
-        <h1>Designing Systems<br><span class="accent">that Scale</span></h1>
-        <p>SaaS • AI Dashboards • High-conversion product experiences built with precision.</p>
-    </div>
-</section>
-
-<!-- WORK (PINNED CHAPTER) -->
-<section class="panel">
-    <div>
-        <h2 class="title">Selected Work</h2>
-
-        <div class="grid" style="margin-top:40px;">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca">
-                <div style="padding:20px;">GoRook Emergency UX</div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
-                <div style="padding:20px;">AI SaaS Dashboard</div>
-            </div>
+    <nav class="nav">
+        <div class="brand">Allah Nawaz</div>
+        <div class="nav-links">
+            <a href="https://behance.net/allahnawaz175" target="_blank">Behance</a>
+            <a href="https://linkedin.com/in/allahnawaz" target="_blank">LinkedIn</a>
+            <a href="mailto:allahnawazmalik175@gmail.com">Contact</a>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- BEHANCE (PINNED CHAPTER) -->
-<section class="panel">
-    <div>
-        <h2 class="title">Behance Projects</h2>
-
-        <div class="card" style="max-width:900px;margin-top:40px;">
-            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
-            <div style="padding:20px;">
-                View full portfolio on Behance → allahnawaz175
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FINAL CTA (PINNED) -->
-<section class="panel">
-    <div style="text-align:center;">
-        <h2 class="title">Let’s build something<br><span class="accent">extraordinary</span></h2>
-    </div>
-</section>
-
-<script>
-gsap.registerPlugin(ScrollTrigger);
-
-/* PIN HERO */
-gsap.to(".hero", {
-    scrollTrigger:{
-        trigger:".hero",
-        start:"top top",
-        end:"bottom top",
-        pin:true,
-        scrub:1
-    },
-    scale:0.9,
-    opacity:0
-});
-
-/* PIN WORK */
-gsap.to(".panel:nth-of-type(2)", {
-    scrollTrigger:{
-        trigger:".panel:nth-of-type(2)",
-        start:"top top",
-        end:"bottom top",
-        pin:true,
-        scrub:1
-    }
-});
-
-/* PIN BEHANCE */
-gsap.to(".panel:nth-of-type(3)", {
-    scrollTrigger:{
-        trigger:".panel:nth-of-type(3)",
-        start:"top top",
-        end:"bottom top",
-        pin:true,
-        scrub:1
-    }
-});
-
-/* FINAL CTA ZOOM */
-gsap.from(".panel:last-child", {
-    scrollTrigger:{
-        trigger:".panel:last-child",
-        start:"top center",
-        scrub:1
-    },
-    scale:0.8,
-    opacity:0
-});
-</script>
-
-</body>
-</html>            <div class="process-item reveal" style="transition-delay: 0.1s;">
-                <div class="process-number">02</div>
-                <i data-lucide="git-branch" style="color: var(--accent);"></i>
-                <h3>Strategy</h3>
-                <p>Mapping complex Information Architecture into intuitive user flows.</p>
-                <ul class="process-list">
-                    <li><i data-lucide="check-circle"></i> User Journey Maps</li>
-                    <li><i data-lucide="check-circle"></i> Lo-fi Wireframing</li>
-                    <li><i data-lucide="check-circle"></i> Content Strategy</li>
-                </ul>
-            </div>
-            <div class="process-item reveal" style="transition-delay: 0.2s;">
-                <div class="process-number">03</div>
-                <i data-lucide="palette" style="color: var(--accent);"></i>
-                <h3>Execution</h3>
-                <p>Crafting high-fidelity UI systems that are scalable and accessible.</p>
-                <ul class="process-list">
-                    <li><i data-lucide="check-circle"></i> Figma Design Systems</li>
-                    <li><i data-lucide="check-circle"></i> Interactive Prototypes</li>
-                    <li><i data-lucide="check-circle"></i> WCAG Accessibility</li>
-                </ul>
-            </div>
-            <div class="process-item reveal" style="transition-delay: 0.3s;">
-                <div class="process-number">04</div>
-                <i data-lucide="terminal" style="color: var(--accent);"></i>
-                <h3>Handoff</h3>
-                <p>Ensuring pixel-perfect delivery through documented engineering QA.</p>
-                <ul class="process-list">
-                    <li><i data-lucide="check-circle"></i> Annotated Dev Specs</li>
-                    <li><i data-lucide="check-circle"></i> Design QA Audits</li>
-                    <li><i data-lucide="check-circle"></i> Token Management</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW: Certifications & Achievements Section -->
-    <section class="section" id="credentials">
-        <div class="sec-head reveal">
-            <span class="sec-tag">Validation</span>
-            <h2 class="sec-title">Certifications & <span class="accent-font">Milestones.</span></h2>
-        </div>
-
-        <div class="cert-grid">
-            <!-- Cert 1 -->
-            <div class="cert-card reveal">
-                <div class="cert-icon"><i data-lucide="layout"></i></div>
-                <div class="cert-info">
-                    <h4>Website Design</h4>
-                    <p>Professional certification focused on modern web standards and visual hierarchy.</p>
-                    <span class="cert-tag">NAVTTC Verified</span>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            
+            <!-- HERO -->
+            <section class="panel hero">
+                <div class="container">
+                    <p style="text-align: center; color: var(--accent); margin-bottom: 10px; letter-spacing: 2px;">PRODUCT DESIGNER</p>
+                    <h1>Scaling Products<br><span class="accent">with Precision</span></h1>
+                    <p class="hero-sub">Translating complex B2B and SaaS problems into scalable Figma design systems. Based in Islamabad, working globally.</p>
                 </div>
-            </div>
-            <!-- Cert 2 -->
-            <div class="cert-card reveal" style="transition-delay: 0.1s;">
-                <div class="cert-icon"><i data-lucide="monitor"></i></div>
-                <div class="cert-info">
-                    <h4>Information Technology</h4>
-                    <p>Foundation in systems, digital workflows, and technical problem-solving.</p>
-                    <span class="cert-tag">TEVTA Accredited</span>
-                </div>
-            </div>
-            <!-- Cert 3 -->
-            <div class="cert-card reveal" style="transition-delay: 0.2s;">
-                <div class="cert-icon"><i data-lucide="network"></i></div>
-                <div class="cert-info">
-                    <h4>Networking Technician</h4>
-                    <p>Technical expertise in connectivity and digital infrastructure.</p>
-                    <span class="cert-tag">PSDF Certified</span>
-                </div>
-            </div>
-            <!-- Achievement 1 -->
-            <div class="cert-card reveal" style="transition-delay: 0.3s;">
-                <div class="cert-icon"><i data-lucide="award"></i></div>
-                <div class="cert-info">
-                    <h4>Scalable Design Impact</h4>
-                    <p>Developed a Figma component library at Prime Estimate reducing design time by 40%.</p>
-                    <span class="cert-tag">Core Achievement</span>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section class="section" id="tools">
-        <div class="sec-head reveal" style="text-align: center;">
-            <span class="sec-tag">The Stack</span>
-            <h2 class="sec-title">Powering the <span class="accent-font">Workflow.</span></h2>
-        </div>
-        <div class="tools-grid reveal">
-            <div class="tool-box"><i data-lucide="figma"></i><span>Figma</span></div>
-            <div class="tool-box"><i data-lucide="brush"></i><span>Adobe Creative</span></div>
-            <div class="tool-box"><i data-lucide="sparkles"></i><span>Claude AI</span></div>
-            <div class="tool-box"><i data-lucide="layers"></i><span>Framer</span></div>
-            <div class="tool-box"><i data-lucide="code"></i><span>Webflow</span></div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="sec-head reveal">
-            <span class="sec-tag">Social Proof</span>
-            <h2 class="sec-title">Client <span class="accent-font">Testimonials.</span></h2>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card reveal">
-                <p class="quote-small">"Allah has a rare ability to translate <span class="accent-font">complex product requirements</span> into simple, scalable systems. His work significantly accelerated our shipping speed."</p>
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #222;"></div>
-                    <div>
-                        <h4 style="font-size: 14px;">Product Lead</h4>
-                        <p style="font-size: 12px;">Prime Estimate</p>
+            <!-- ACHIEVEMENTS -->
+            <section class="panel achievements">
+                <div class="container">
+                    <h2 class="title">Proven <span class="accent">Track Record</span></h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-num" data-val="8">0</span>
+                            <span class="stat-label">SaaS Clients Served</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num" data-val="2">0</span>
+                            <span class="stat-label">Years of Mastery</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num" data-val="98">0</span>
+                            <span class="stat-label">% Delivery Speed</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num" data-val="100">0</span>
+                            <span class="stat-label">Components Built</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="testimonial-card reveal">
-                <p class="quote-small">"The ROI tracking dashboard he designed for our AI platform turned a confusing data set into an <span class="accent-font">intuitive experience</span> for our marketing users."</p>
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #222;"></div>
-                    <div>
-                        <h4 style="font-size: 14px;">Founder</h4>
-                        <p style="font-size: 12px;">AI Influencer Platform</p>
+            </section>
+
+            <!-- EXPERIENCE -->
+            <section class="panel experience">
+                <div class="container">
+                    <h2 class="title">Professional <span class="accent">Journey</span></h2>
+                    <div class="exp-list">
+                        <div class="exp-item">
+                            <div class="exp-date">2025 — Present</div>
+                            <div class="exp-content">
+                                <span class="exp-role">Product Designer</span>
+                                <span class="exp-company">Prime Estimate</span>
+                                <p class="exp-desc">Leading end-to-end design for web and mobile. Developed a unified Figma component library that accelerated engineering delivery by reducing design debt across product areas.</p>
+                            </div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-date">2024 — 2025</div>
+                            <div class="exp-content">
+                                <span class="exp-role">UI/UX Designer</span>
+                                <span class="exp-company">Profituned Marketing</span>
+                                <p class="exp-desc">Optimized landing pages using heatmap data and A/B testing. Bridged the gap between marketing goals and user experience to drive measurable conversion growth.</p>
+                            </div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-date">2024 — Present</div>
+                            <div class="exp-content">
+                                <span class="exp-role">Freelance Designer</span>
+                                <span class="exp-company">Global Clients</span>
+                                <p class="exp-desc">Delivered high-fidelity prototypes and lightweight design systems for 8+ SaaS and e-commerce clients. Managed discovery to final developer handoff.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section class="section">
-        <div class="sec-head reveal" style="text-align: center;">
-            <span class="sec-tag">Common Questions</span>
-            <h2 class="sec-title">General <span class="accent-font">FAQs.</span></h2>
-        </div>
-        <div class="faq-wrap reveal">
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">What is your typical turnaround time? <i data-lucide="plus" class="faq-icon"></i></div>
-                <div class="faq-a">For full product designs, I typically work in 2-4 week sprints depending on complexity. Landing pages or small feature audits usually take 5-7 business days.</div>
-            </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">Do you handle development? <i data-lucide="plus" class="faq-icon"></i></div>
-                <div class="faq-a">I specialize in high-end design, but I provide production-ready code via Framer or Webflow for marketing sites, and clean annotated files for developer handoff on custom apps.</div>
-            </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">Can you work with existing design systems? <i data-lucide="plus" class="faq-icon"></i></div>
-                <div class="faq-a">Yes. I frequently lead the evolution of existing Figma libraries, ensuring new features maintain brand consistency while reducing design debt.</div>
-            </div>
-        </div>
-    </section>
+            <!-- WORK -->
+            <section class="panel work">
+                <div class="container">
+                    <h2 class="title">Case <span class="accent">Studies</span></h2>
+                    <div class="grid">
+                        <a href="https://behance.net/allahnawaz175" target="_blank" class="card">
+                            <div class="card-img-wrapper">
+                                <img src="https://www.behance.net/gallery/237969847/Smarter-Influencer-Marketingwith-AI" alt="Smarter Influencer Marketing with AI">
+                            </div>
+                            <div class="card-info">
+                                <span class="card-tag">Mobile UX • Emergency</span>
+                                <span class="card-title">GoRook Assistance</span>
+                                <p class="exp-desc">High-stakes design focusing on speed and clarity for users in distress.</p>
+                            </div>
+                        </a>
+                        <a href="https://behance.net/allahnawaz175" target="_blank" class="card">
+                            <div class="card-img-wrapper">
+                                <img src="https://www.behance.net/gallery/247688047/Fintech-Mobile-App-UIUX-Concept-Payfast" alt="Payfast">
+                            </div>
+                            <div class="card-info">
+                                <span class="card-tag">SaaS • AI Marketing</span>
+                                <span class="card-title">AI Influencer Platform</span>
+                                <p class="exp-desc">Simplifying creator discovery and ROI tracking for non-technical users.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-    <section class="section" style="text-align: center; padding-bottom: 150px;">
-        <div class="reveal">
-            <h2 style="font-size: clamp(32px, 6vw, 64px); margin-bottom: 32px;">Ready to ship <br>the next big thing?</h2>
-            <div style="display: flex; gap: 12px; justify-content: center;">
-                <a href="mailto:allahnawazmalik175@gmail.com" class="btn btn-white">Get in Touch <i data-lucide="mail"></i></a>
-                <a href="tel:+923055742436" class="btn btn-outline">Call Direct</a>
-            </div>
-        </div>
-    </section>
+            <!-- TESTIMONIALS -->
+            <section class="panel testimonials">
+                <div class="container">
+                    <h2 class="title">Social <span class="accent">Proof</span></h2>
+                    <div class="testimonial-card">
+                        <i data-lucide="quote" class="quote-icon" size="80"></i>
+                        <p class="testimonial-text">"Allah has a proven track record of translating complex product problems into scalable Figma systems. He reduced our design debt and significantly accelerated our engineering delivery."</p>
+                        <div class="author">
+                            <div class="author-img"></div>
+                            <div>
+                                <p style="font-weight: 600;">Product Manager</p>
+                                <p style="font-size: 0.8rem; color: var(--muted);">Prime Estimate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <footer style="padding: 40px 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 12px; font-weight: 600;">
-        <div>© 2026 Allah Nawaz • Islamabad, PK</div>
-        <div style="display: flex; gap: 24px;">
-            <a href="https://linkedin.com" target="_blank" style="color: inherit; text-decoration: none;">Linkedin</a>
-            <a href="https://behance.net/allahnawaz175" target="_blank" style="color: inherit; text-decoration: none;">Behance</a>
+            <!-- CONNECT -->
+            <section class="panel connect">
+                <div class="container">
+                    <h2 class="title">Digital <span class="accent">Network</span></h2>
+                    <div class="social-grid">
+                        <a href="https://behance.net/allahnawaz175" target="_blank" class="social-btn">
+                            <i data-lucide="palette"></i>
+                            Behance Portfolio
+                        </a>
+                        <a href="https://linkedin.com/in/allahnawaz" target="_blank" class="social-btn">
+                            <i data-lucide="linkedin"></i>
+                            LinkedIn Profile
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="panel faq">
+                <div class="container">
+                    <h2 class="title">Common <span class="accent">Queries</span></h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How do you handle developer handoff?</span>
+                                <i data-lucide="chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                I deliver clean, annotated Figma prototypes with documented component behaviors and edge cases, ensuring developers can build without constant back-and-forth.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>What is your expertise in Design Systems?</span>
+                                <i data-lucide="chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                I build scalable Figma component libraries using variables, auto-layout, and properties to ensure consistency and speed across entire product ecosystems.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FINAL CTA -->
+            <section class="panel contact">
+                <div class="container" style="text-align: center;">
+                    <h2 class="cta-text">Let’s build something<br><span class="accent">extraordinary</span></h2>
+                    <div style="margin-top: 60px;">
+                        <p style="color: var(--muted); margin-bottom: 20px;">Open for Product Design roles & high-impact projects</p>
+                        <a href="mailto:allahnawazmalik175@gmail.com" style="font-size: 1.5rem; color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--accent);">allahnawazmalik175@gmail.com</a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container footer-content">
+                    <p style="color: var(--muted);">&copy; 2026 Allah Nawaz. Product Thinking & Visual Excellence.</p>
+                    <div class="footer-socials">
+                        <a href="https://behance.net/allahnawaz175" target="_blank">Behance</a>
+                        <a href="https://linkedin.com/in/allahnawaz" target="_blank">LinkedIn</a>
+                        <a href="mailto:allahnawazmalik175@gmail.com">Email</a>
+                    </div>
+                </div>
+            </footer>
+
         </div>
-    </footer>
+    </div>
 
     <script>
-        function init() {
-            lucide.createIcons();
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) entry.target.classList.add('active');
+        lucide.createIcons();
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 1. Hero Entrance
+        gsap.from(".hero h1, .hero-sub", {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power4.out"
+        });
+
+        // 2. Section Stacking Effect
+        const panels = gsap.utils.toArray('.panel');
+        panels.forEach((panel, i) => {
+            if(i !== panels.length - 1) {
+                ScrollTrigger.create({
+                    trigger: panel,
+                    start: "top top",
+                    pin: true,
+                    pinSpacing: false,
+                    scrub: true
                 });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        }
-        window.onload = init;
+                gsap.to(panel, {
+                    scrollTrigger: {
+                        trigger: panel,
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true
+                    },
+                    opacity: 0.3,
+                    scale: 0.9,
+                    filter: "blur(10px)"
+                });
+            }
+        });
+
+        // 3. Achievement Counter
+        gsap.utils.toArray('.stat-num').forEach(num => {
+            const val = parseInt(num.getAttribute('data-val'));
+            gsap.to(num, {
+                scrollTrigger: {
+                    trigger: num,
+                    start: "top 80%",
+                },
+                innerText: val,
+                duration: 2,
+                snap: { innerText: 1 },
+                ease: "power2.out"
+            });
+        });
+
+        // 4. Experience Reveal
+        gsap.from(".exp-item", {
+            scrollTrigger: {
+                trigger: ".experience",
+                start: "top 60%"
+            },
+            x: -30,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power2.out"
+        });
+
+        // 5. FAQ Logic
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+                if(!isActive) item.classList.add('active');
+            });
+        });
+
+        // 6. Project Card Reveal
+        gsap.from(".card", {
+            scrollTrigger: {
+                trigger: ".work",
+                start: "top 60%"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.3,
+            ease: "power3.out"
+        });
     </script>
 </body>
 </html>

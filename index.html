@@ -1,39 +1,156 @@
+```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allah Nawaz | Senior 3D Product Designer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-<title>Allah Nawaz | Product Designer</title>
+    <!-- Premium Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600&f[]=cabinet-grotesk@800,700&f[]=plus-jakarta-sans@700,600,500,400&display=swap" rel="stylesheet">
 
-<!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Clash Display', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: '#ffffff',
+                        surface: '#050505',
+                        accent: '#38bdf8'
+                    }
+                }
+            }
+        }
+    </script>
 
-<!-- Fonts -->
-<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,500&f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
 
-<style>
-:root{
-  --bg:#050505;
-  --text:#fff;
-  --muted:rgba(255,255,255,0.6);
-  --glass:rgba(255,255,255,0.04);
-  --stroke:rgba(255,255,255,0.08);
-}
+        .glass-nav {
+            background: rgba(5, 5, 5, 0.5);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
 
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:'Satoshi',sans-serif;
-  overflow-x:hidden;
-}
+        .hero-gradient-text {
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.4) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.font-display{font-family:'Cabinet Grotesk',sans-serif;}
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-::selection{
-  background:white;
-  color:black;
+        .noise {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03; pointer-events: none; z-index: 60;
+        }
+
+        /* 3D Container responsive height */
+        .spline-container {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+    </style>
+</head>
+<body class="selection:bg-white selection:text-black">
+
+    <div class="noise"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav py-5 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="font-display font-bold text-xl tracking-tight">AN.</a>
+            
+            <div class="hidden md:flex items-center gap-10 text-[10px] font-bold uppercase tracking-[0.3em] text-neutral-500">
+                <a href="#work" class="hover:text-white transition-colors">Portfolio</a>
+                <a href="#about" class="hover:text-white transition-colors">Strategic Approach</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <a href="mailto:allahnawazmalik175@gmail.com" class="px-6 py-2.5 bg-white text-black rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 transition-transform duration-300">
+                Hire Me
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20">
+        <!-- Background 3D Scene (Spline) -->
+        <div class="absolute inset-0 z-0 spline-container">
+            <!-- Replace URL with your actual export link -->
+            <iframe src="https://my.spline.design/roomsceneexample-89196b69b59695d7398e0964724b1f81/" frameborder="0" width="100%" height="100%" class="opacity-60 scale-110"></iframe>
+        </div>
+
+        <!-- Hero Content Overlay -->
+        <div class="relative z-10 text-center px-6 max-w-5xl">
+            <div class="reveal inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-black/40 backdrop-blur-md mb-8">
+                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-300">Senior 3D Product Designer</span>
+            </div>
+
+            <h1 class="reveal font-display text-5xl md:text-8xl lg:text-9xl font-bold leading-[0.85] tracking-tighter hero-gradient-text mb-8">
+                Designing <br>Beyond <span class="italic font-medium">Flat.</span>
+            </h1>
+
+            <p class="reveal font-body text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed mb-12">
+                I translate complex B2B and SaaS logic into immersive 3D interfaces and scalable Figma systems. Currently leading product design at <span class="text-white">Prime Estimate</span>.
+            </p>
+
+            <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="#work" class="w-full sm:w-auto px-10 py-4 bg-white text-black rounded-full font-bold uppercase text-xs tracking-widest hover:bg-neutral-200 transition-colors">
+                    Explore Work
+                </a>
+                <a href="#about" class="w-full sm:w-auto px-10 py-4 border border-white/20 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-white/5 transition-colors">
+                    My Process
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Badge -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 animate-float opacity-40">
+            <div class="w-px h-12 bg-gradient-to-b from-white to-transparent"></div>
+            <span class="text-[9px] font-bold uppercase tracking-[0.4em]">Scroll</span>
+        </div>
+    </section>
+
+    <!-- Selected Work -->
+    <section id="work" class="py-32 px-6 lg:px-12 max-w-7xl mx-auto relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+            <div class="reveal">
+                <h2 class="font
+
+```
 }
 
 /* FRAMER-LIKE REVEAL */

@@ -3,29 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allah Nawaz | Senior 3D Product Designer</title>
+    <title>Allah Nawaz | Senior Strategic Product Designer</title>
     
-    <!-- Tailwind CSS -->
+    <!-- Meta Tags for SEO & GitHub Pages -->
+    <meta name="description" content="Portfolio of Allah Nawaz - Strategic Product Designer specializing in SaaS, B2B, and Design Systems.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS (CDN for GitHub Pages compatibility) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <!-- Premium Fonts -->
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600&f[]=cabinet-grotesk@800,700&f[]=plus-jakarta-sans@700,600,500,400&display=swap" rel="stylesheet">
-
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        display: ['Clash Display', 'sans-serif'],
-                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Instrument Serif"', 'serif'],
                     },
                     colors: {
-                        brand: '#ffffff',
-                        surface: '#050505',
-                        accent: '#38bdf8'
+                        brand: {
+                            primary: '#CCFF00', 
+                            dark: '#050505',
+                            surface: '#0A0A0A',
+                            accent: '#1A1A1A',
+                        }
+                    },
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 35s linear infinite',
+                        'float': 'float 8s ease-in-out infinite',
+                        'orb-move': 'orb-move 20s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-50%)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'orb-move': {
+                            '0%': { transform: 'translate(0, 0) scale(1)' },
+                            '100%': { transform: 'translate(5vw, 5vh) scale(1.1)' },
+                        }
                     }
                 }
             }
@@ -33,8 +59,317 @@
     </script>
 
     <style>
-        body {
-            background-color: #050505;
+        /* Base Dark Theme & Typography */
+        body { 
+            background-color: #030303; 
+            color: #F4F4F5; 
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            selection-background-color: #CCFF00;
+            selection-color: #000;
+        }
+
+        ::selection { background: #CCFF00; color: #000; }
+
+        /* Atmospheric Framer-Style Background */
+        .glass-background {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: #030303;
+            overflow: hidden;
+        }
+        .glass-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.15;
+            animation: orb-move 25s infinite alternate;
+        }
+
+        /* High-End UI Elements */
+        .glass-ui {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .glass-hover:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(204, 255, 0, 0.2);
+            transform: translateY(-4px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Project Card Styling */
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 24px;
+            background: #0A0A0A;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s ease;
+        }
+        
+        .project-card img {
+            transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            filter: grayscale(100%) contrast(1.1) brightness(0.8);
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+            filter: grayscale(0%) contrast(1) brightness(0.9);
+        }
+
+        .project-btn {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            right: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 16px 24px;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .project-card:hover .project-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-btn:hover {
+            background: #CCFF00;
+            color: #000;
+            border-color: #CCFF00;
+        }
+
+        /* Reveal Animations */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Marquee */
+        .marquee-container {
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+        .marquee-content {
+            display: inline-flex;
+            gap: 6rem;
+            animation: infinite-scroll 30s linear infinite;
+        }
+        .marquee-item {
+            flex-shrink: 0; display: flex; align-items: center; gap: 1rem; padding: 0 4rem;
+            opacity: 0.4; transition: all 0.4s ease;
+        }
+        .marquee-item:hover { opacity: 1; transform: scale(1.1); }
+
+        /* FAQ */
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary i { transform: rotate(45deg); }
+
+        /* Bento Grid Specifics */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+        }
+        @media (max-width: 640px) {
+            .bento-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Nav Link Hover effect */
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 1px; bottom: -4px; left: 0;
+            background-color: #CCFF00; transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #030303; }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #CCFF00; }
+    </style>
+</head>
+<body class="font-sans selection:bg-brand-primary selection:text-black">
+
+    <!-- Atmospheric Background -->
+    <div class="glass-background">
+        <div class="glass-blob w-[800px] h-[800px] bg-brand-primary top-[-20%] left-[-10%]"></div>
+        <div class="glass-blob w-[600px] h-[600px] bg-zinc-400 bottom-[-10%] right-[-10%] opacity-10"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-[100] px-4 sm:px-6 py-6 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto glass-ui rounded-full px-6 py-3 flex justify-between items-center shadow-2xl shadow-black/50">
+            <div class="flex items-center gap-3 group cursor-pointer" onclick="window.scrollTo(0,0)">
+                <div class="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center text-black font-black text-xs group-hover:scale-110 transition-transform duration-300">AN</div>
+                <span class="font-bold tracking-tighter text-lg hidden sm:block group-hover:text-brand-primary transition-colors">Allah Nawaz</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400">
+                <a href="#work" class="nav-link hover:text-white transition-colors">Casestudies</a>
+                <a href="#expertise" class="nav-link hover:text-white transition-colors">Expertise</a>
+                <a href="#experience" class="nav-link hover:text-white transition-colors">Timeline</a>
+                <a href="#packages" class="nav-link hover:text-white transition-colors">Packages</a>
+            </div>
+
+            <div class="flex items-center gap-5">
+                <div class="hidden sm:flex items-center gap-4 text-zinc-400">
+                    <a href="https://linkedin.com/in/allah-nawaz-256a81286" target="_blank" class="hover:text-brand-primary transition-colors hover:-translate-y-0.5 transform"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://behance.net/allahnawaz175" target="_blank" class="hover:text-brand-primary transition-colors hover:-translate-y-0.5 transform"><i class="fa-brands fa-behance"></i></a>
+                    <a href="#" target="_blank" class="hover:text-brand-primary transition-colors hover:-translate-y-0.5 transform"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" class="hover:text-brand-primary transition-colors hover:-translate-y-0.5 transform"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <div class="w-px h-4 bg-white/10 hidden sm:block"></div>
+                <a href="#contact" class="px-6 py-2.5 rounded-full bg-white text-black text-[10px] font-black uppercase tracking-widest hover:bg-brand-primary hover:scale-105 transition-all shadow-lg">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="relative min-h-[90vh] flex flex-col justify-center items-center px-6 pt-32 pb-20 text-center">
+            <div class="reveal active max-w-5xl mx-auto w-full">
+                <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full mb-8 glass-ui border-brand-primary/20">
+                    <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse shadow-[0_0_8px_#CCFF00]"></span>
+                    <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-zinc-300">Senior Product Designer • Open for Q3 Partnerships</span>
+                </div>
+                
+                <h1 class="text-[12vw] md:text-[8.5rem] font-medium tracking-tighter text-white mb-8 leading-[0.9] drop-shadow-2xl">
+                    Strategic <span class="font-serif italic text-zinc-500 italic">Product</span> <br> Design.
+                </h1>
+
+                <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-16 font-light leading-relaxed">
+                    Translating complex business problems into scalable <span class="text-white font-medium">Figma design systems</span> that reduce design debt and accelerate engineering delivery.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-24">
+                    <a href="#contact" class="w-full sm:w-auto px-10 py-4 bg-white text-black font-bold rounded-full text-sm hover:scale-105 transition-transform">Start a Project</a>
+                    <a href="#work" class="w-full sm:w-auto px-10 py-4 glass-ui text-white font-bold rounded-full text-sm hover:bg-white/5 transition-all">Explore Projects</a>
+                </div>
+
+                <!-- Framer Style Scroll Indicator -->
+                <div class="flex items-center gap-6 justify-center opacity-40 animate-float">
+                    <span class="text-[9px] font-black uppercase tracking-widest">Scroll</span>
+                    <div class="w-5 h-8 border-2 border-white/40 rounded-full flex justify-center p-1">
+                        <div class="w-1 h-1.5 bg-white rounded-full animate-bounce"></div>
+                    </div>
+                    <span class="text-[9px] font-black uppercase tracking-widest">Down</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Marquee Logos (Apple, Google, etc) -->
+        <section class="py-16 border-y border-white/5 bg-zinc-950/40 backdrop-blur-3xl overflow-hidden">
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <!-- Group 1 -->
+                    <div class="marquee-item"><i class="fa-brands fa-apple text-5xl"></i> <span class="text-2xl font-bold tracking-tighter">Apple</span></div>
+                    <div class="marquee-item"><i class="fa-brands fa-google text-4xl"></i> <span class="text-2xl font-bold tracking-tighter">Google</span></div>
+                    <div class="marquee-item"><i class="fa-brands fa-stripe text-5xl"></i></div>
+                    <div class="marquee-item"><i class="fa-brands fa-microsoft text-4xl"></i> <span class="text-2xl font-bold tracking-tighter">Microsoft</span></div>
+                    <div class="marquee-item"><i class="fa-brands fa-meta text-4xl"></i> <span class="text-2xl font-bold tracking-tighter">Meta</span></div>
+                    <div class="marquee-item"><i class="fa-brands fa-figma text-4xl"></i> <span class="text-2xl font-bold tracking-tighter">Figma</span></div>
+                    <!-- Loop -->
+                    <div class="marquee-item"><i class="fa-brands fa-apple text-5xl"></i> <span class="text-2xl font-bold tracking-tighter">Apple</span></div>
+                    <div class="marquee-item"><i class="fa-brands fa-google text-4xl"></i> <span class="text-2xl font-bold tracking-tighter">Google</span></div>
+                    <div class="marquee-item"><i class="fa-brands fa-stripe text-5xl"></i></div>
+                    <div class="marquee-item"><i class="fa-brands fa-microsoft text-4xl"></i> <span class="text-2xl font-bold tracking-tighter">Microsoft</span></div>
+                    <div class="marquee-item"><i class="fa-brands fa-meta text-4xl"></i> <span class="text-2xl font-bold tracking-tighter">Meta</span></div>
+                    <div class="marquee-item"><i class="fa-brands fa-figma text-4xl"></i> <span class="text-2xl font-bold tracking-tighter">Figma</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Stats / Achievements -->
+        <section class="py-32 px-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 reveal">
+                <div class="glass-ui p-8 rounded-[2rem] text-center glass-hover">
+                    <h3 class="text-4xl font-bold text-white tracking-tighter mb-2">40+</h3>
+                    <p class="text-[9px] font-black uppercase tracking-widest text-zinc-500">Projects Shipped</p>
+                </div>
+                <div class="glass-ui p-8 rounded-[2rem] text-center glass-hover border-brand-primary/20">
+                    <h3 class="text-4xl font-bold text-brand-primary tracking-tighter mb-2">98%</h3>
+                    <p class="text-[9px] font-black uppercase tracking-widest text-zinc-500">Client Satisfaction</p>
+                </div>
+                <div class="glass-ui p-8 rounded-[2rem] text-center glass-hover">
+                    <h3 class="text-4xl font-bold text-white tracking-tighter mb-2">2.5x</h3>
+                    <p class="text-[9px] font-black uppercase tracking-widest text-zinc-500">Faster Handover</p>
+                </div>
+                <div class="glass-ui p-8 rounded-[2rem] text-center glass-hover">
+                    <h3 class="text-4xl font-bold text-white tracking-tighter mb-2">5yr+</h3>
+                    <p class="text-[9px] font-black uppercase tracking-widest text-zinc-500">Design Experience</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Selected Work (Comprehensive Metadata) -->
+        <section id="work" class="py-32 px-6 max-w-7xl mx-auto">
+            <div class="mb-20 flex flex-col md:flex-row justify-between items-end gap-6 reveal">
+                <div>
+                    <p class="text-[10px] font-black uppercase tracking-[0.5em] text-brand-primary mb-4">Case Studies</p>
+                    <h2 class="text-5xl md:text-7xl font-bold tracking-tighter leading-none">Selected Work.</h2>
+                </div>
+                <a href="https://behance.net/allahnawaz175" target="_blank" class="text-[10px] font-black uppercase tracking-widest border-b border-zinc-600 pb-1 hover:text-brand-primary hover:border-brand-primary transition-all">View Full Archive</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card reveal aspect-[4/5] flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=1200" alt="GoRook App" class="absolute inset-0 w-full h-full object-cover z-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/60 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 flex flex-col justify-end h-full p-8">
+                        <div class="mb-auto pt-4">
+                            <span class="px-3 py-1.5 glass-ui rounded-full text-[9px] font-black uppercase tracking-widest text-white">Mobile UX</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white tracking-tighter mb-2">GoRook Ecosystem</h3>
+                        <p class="text-zinc-400 text-sm mb-6 leading-relaxed">High-stakes emergency assistance app focusing on rapid service discovery and zero cognitive load.</p>
+                        
+                        <div class="grid grid-cols-3 gap-4 py-5 border-t border-white/10 mb-16">
+                            <div>
+                                <p class="text-[8px] uppercase text-zinc-500 font-bold mb-1">Duration</p>
+                                <p class="text-[10px] font-bold text-white">4 Months</p>
+                            </div>
+                            <div>
+                                <p class="text-[8px] uppercase text-zinc-500 font-bold mb-1">Tools</p>
+                                <p class="text-[10px] font-bold text-white">Figma, Maze</p>
+                            </div>
+                            <div>
+                                <p class="text-[8px] uppercase text-zinc-500 font-bold mb-1">Impact</p>
+                                <p class="text-[10px] font-bold text-brand-primary">35% Faster UX</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://behance.net/allahnawaz175" target="_blank" class="project-btn z-30">View Casestudy <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal aspect-[4/5] flex flex-col" style="transition-delay: 100ms">
+                    <img src="https://images.unsplash.com/photo-1551288            background-color: #050505;
             color: #ffffff;
             font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
@@ -1081,7 +1416,7 @@ cart"></i> Giga E-commerce</span>
             btn.disabled = true;
             spinner.style.display = 'block';
             resultDiv.style.display = 'none';
-
+            
             const result = await callGemini(input.value);
             if (result) {
                 resultDiv.innerHTML = result.analysis.map(item => `
@@ -1093,10 +1428,10 @@ cart"></i> Giga E-commerce</span>
                 resultDiv.style.display = 'grid';
                 gsap.from(".strategy-card", { y: 20, opacity: 0, duration: 0.8, stagger: 0.1 });
             }
-
             btn.disabled = false;
             spinner.style.display = 'none';
         }
     </script>
 </body>
+                    
 </html>

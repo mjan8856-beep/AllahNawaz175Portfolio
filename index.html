@@ -30,11 +30,11 @@
 
     <meta name="csrf-token" content="Obcp2cb53zRCuwya5vn2SkVgUBAkAZ1Hyza3mF4x">
 
-    <!-- Detailed Page, Detailed item Seo -->
+    <!-- Detailed Page , Detailed item Seo -->
     <meta property="og:title" content="ZeeFrames - UI UX Design Agency" />
     <meta property="og:site_name" content="ZeeFrames" />
     <meta property="og:url" content="https://zeeframes.com" />
-    <meta property="og: description" content=" AN Product Lab is a UI UX design agency delivering user-centered UI UX design for web, mobile, and SaaS products using Figma and Webflow." />
+    <meta property="og:description" content="ZeeFrames is a UI UX design agency delivering user-centered UI UX design for web, mobile, and SaaS products using Figma and Webflow." />
     <meta property="og:type" content="Organization" />
     <meta property="og:image" content="https://zeeframes.com/frontend-assets/images/preview-img.webp" />
     <meta property="og:image:width" content="1200" />
@@ -467,7 +467,8 @@
         animation: 1.25s cubic-bezier(0.66, 0, 0, 1) 0s infinite normal none running pulsing;
         transition: 0.3s ease-in-out
     }
- .cursor-circle {
+
+    .cursor-circle {
         top: 0px;
         left: 0px;
         transform: translate(-50%, -50%);
@@ -917,6 +918,7 @@
         grid-template-columns: 280px 1fr;
         gap: 24px
     }
+
     .tab-button {
         background: transparent;
         border: none;
@@ -1267,7 +1269,7 @@
                                                     alt="design-systems" fetchpriority="high" loading="eager"
                                                     decoding="async" />
                                             </div>
-                                            <div>
+                                             <div>
                                                 <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
                                                     Prototyping & User Testing
                                                 </p>
@@ -1485,575 +1487,453 @@
                     </div>
                 </li>
                 <li>
-                        .tab-button {
-        background: transparent;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: 0.3s;
-        color: var(--color-gray-200);
-        padding: 16px;
-        gap: 12px
-    }
-
-    .tab-button:hover,
-    .tab-button.active {
-        background: var(--color-black-08)
-    }
-
-    .mega-menu-panels {
-        position: relative
-    }
-
-    .mega-menu-tabs {
-        height: fit-content;
-        position: sticky;
-        top: 0px
-    }
-
-    @media (max-width:1204px) {
-        .container {
-            padding: 0px 60px
-        }
-        .no-code{
-            display: none !important;
-        }
-    }
-
-    @media (max-width:991px) {
-        .container {
-            padding: 0px 40px
-        }
-
-        .mobile-menu {
-            position: fixed;
-            bottom: 0px;
-            left: 100%;
-            width: 100%;
-            height: calc(-80.8px + 100dvh);
-            background-color: var(--color-black-300);
-            z-index: 1000;
-            padding: 48px 24px;
-            transition: left 0.3s ease-in-out
-        }
-
-        .mobile-menu .nav-link {
-            padding: 8px 16px
-        }
-
-        .services-dropdown .nav-link {
-            justify-content: center
-        }
-
-        .mega-menu-tabs {
-            position: unset
-        }
-
-        .services-mega-menu {
-            position: unset;
-            max-height: 0px;
-            overflow: hidden;
-            padding: 0px
-        }
-
-        .mega-menu-content,
-        .tab-panel {
-            grid-template-columns: 1fr
-        }
-    }
-
-    @media (min-width:576px) {
-        .sm-hidden {
-            display: block
-        }
-
-        .trusted-craft .icon-box-wraper {
-            max-width: 170px
-        }
-    }
-
-    @media (max-width:495px) {
-        .star-wrapper {
-            top: 66%
-        }
-    }
-
-    @media (max-width:471px) {
-        .star-wrapper {
-            top: 56%;
-            left: -16px;
-        }
-
-        .star-wrapper img {
-            width: 40px;
-        }
-    }
-
-    @media (max-width:240px) {
-        #toast-container>div {
-            padding: 8px 8px 8px 50px;
-            width: 11em
-        }
-    }
-
-    @media (min-width:241px) and (max-width:480px) {
-        #toast-container>div {
-            padding: 8px 8px 8px 50px;
-            width: 18em
-        }
-    }
-
-    @media (min-width:481px) and (max-width:768px) {
-        #toast-container>div {
-            padding: 15px 15px 15px 50px;
-            width: 25em
-        }
-    }
-
-    @media (max-width:768px) {
-        .footer-grid .footer-text p {
-            max-width: 100%
-        }
-
-        .main-animate .slide-track {
-            gap: 42px
-        }
-    }
-
-    @media (max-width:575px) {
-        .theme-toggler .theme-icon svg {
-            width: 12px !important
-        }
-
-        .header {
-            padding: 20px 0px
-        }
-
-        .container {
-            padding: 0px 24px
-        }
-
-        .sm-hidden {
-            display: none
-        }
-
-        .sm-flex-wrap {
-            flex-wrap: wrap
-        }
-
-        .btn-component {
-            padding: 10px 16px
-        }
-
-        .btn-slide-in {
-            min-width: 170px
-        }
-    }
-</style>
-
-<link rel="preload" as="image" href="https://zeeframes.com/frontend-assets/images/home-hero-bg.webp" fetchpriority="high" />
-<link rel="preload" as="image" href="https://zeeframes.com/frontend-assets/images/home-process-1.webp" fetchpriority="high" />
-
-    <script async>
-        (function(h, o, t, j, a, r) {
-            h.hj = h.hj || function() {
-                (h.hj.q = h.hj.q || []).push(arguments)
-            };
-            h._hjSettings = {
-                hjid: 6616636,
-                hjsv: 6
-            };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script');
-            r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18050616396"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-18050616396');
-    </script>
-
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="CkqGZvQnn/Ki9zwsYSnOkA" async></script>
-</head>
-
-<body>
-
-    <header class="header z_999">
+                    <a href="https://zeeframes.com/work"
+                        class="nav-link fs_18 lh_27 ff_inter text_white ">Work</a>
+                </li>
+                <li>
+                    <a href="https://zeeframes.com/insights"
+                        class="nav-link fs_18 lh_27 ff_inter text_white ">Insights</a>
+                </li>
+            </ul>
+            <div class="flex items-center" style="gap: 12px">
+                <button class="theme-toggler relative hidden" id="theme-toggler" aria-label="Toggle theme">
+                    <div class="theme-icon flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path
+                                d="M10.0192 1.65965C9.43727 1.47632 8.93987 2.11231 9.24834 2.63898C9.73567 3.46964 9.99834 4.40698 9.99834 5.34698C9.99834 8.29231 7.61054 10.6803 4.665 10.6803C4.1104 10.6803 3.54947 10.5903 3.04 10.4303C2.45807 10.247 1.9398 10.883 2.24834 11.4096C3.43334 13.431 5.59914 14.6803 7.99834 14.6803C11.6802 14.6803 14.665 11.6956 14.665 8.01364C14.665 5.07965 12.7713 2.52498 10.0192 1.65965ZM11.0817 3.65965C12.4577 4.63231 13.3317 6.23565 13.3317 8.01364C13.3317 10.959 10.9439 13.347 7.99834 13.347C6.64627 13.347 5.4104 12.827 4.45667 11.9723C4.5278 11.9743 4.59414 12.0136 4.665 12.0136C8.34694 12.0136 11.3317 9.02897 11.3317 5.34698C11.3317 4.77565 11.2303 4.21031 11.0817 3.65965Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                </button>
+                <a href="https://zeeframes.com/work-with-us"
+                    class="btn-component btn-primary sm-hidden btn-animate-swap relative overflow-hidden ff_inter">
+                    <span class="flex work-us" style="gap: 12px">
+                        <span class="btn-text">Work with us</span>
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                            viewBox="0 0 21 20" fill="none">
+                            <path d="M15.0833 5.41667L5.5 15" stroke="#0D0D0D" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M7.16663 5H15.5V13.3333" stroke="#0D0D0D" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="lets-talk absolute">Lets Talk</span>
+                </a>
+                <button class="toggle-header hidden lg_block" id="toggleHeader" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                        <path d="M10 5H20" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M4 12H20" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M4 19H14" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+</header>    <main>
+        <section class="hero-section">
     <div class="container">
-        <nav class="flex items-center justify-between">
-            <a href="https://zeeframes.com" aria-label="Zeeframes">
-                <img src="https://zeeframes.com/frontend-assets/images/svgs/logo.svg" alt="Zeeframes" width="179"
-                    height="36" />
-            </a>
-            <ul class="list-unstyled flex items-center gap-12 mobile-menu" id="mobile-menu">
-                <li>
-                    <a href="https://zeeframes.com"
-                        class="nav-link fs_18 lh_27 ff_inter text_white active">Home</a>
-                </li>
-                <li>
-                    <a href="https://zeeframes.com/about"
-                        class="nav-link fs_18 lh_27 ff_inter text_white ">About</a>
-                </li>
-                <li class="services-dropdown mobile-tab-button">
-                    <a role="button" class="nav-link fs_18 lh_27 ff_inter text_white flex items-center ">
-                        Services
-                        <img width="14" height="14"
-                            src="https://zeeframes.com/frontend-assets/images/svgs/dropwodn-arrow.svg" alt="Dropdown Arrow"
-                            loading="eager" fetchpriority="high" decoding="async" />
-                    </a>
-                    <div class="services-mega-menu services-mobile-menu">
-                        <div class="container">
-                            <div class="mega-menu-content">
-                                <div class="mega-menu-tabs">
-                                    <button class="tab-button flex items-center w-full" data-tab="design">
-                                        <img class="shrink-0" width="24" height="24"
-                                            src="https://zeeframes.com/frontend-assets/images/svgs/bulb.svg" alt="bulb"
-                                            fetchpriority="high" loading="eager" decoding="async" />
-                                        <span class="ff_inter fs_16 lh_24 fw_600 text_white">UI UX Design</span>
-                                    </button>
-                                    <button class="tab-button flex items-center w-full" data-tab="branding">
-                                        <img class="shrink-0" width="24" height="24"
-                                            src="https://zeeframes.com/frontend-assets/images/svgs/pen.svg" alt="bulb"
-                                            fetchpriority="high" loading="eager" decoding="async" />
-                                        <span class="ff_inter fs_16 lh_24 fw_600 text_white">Brand Design</span>
-                                    </button>
-                                    <button class="tab-button flex items-center w-full" data-tab="development">
-                                        <img class="shrink-0" width="24" height="24"
-                                            src="https://zeeframes.com/frontend-assets/images/svgs/dev.svg" alt="bulb"
-                                            fetchpriority="high" loading="eager" decoding="async" />
-                                        <span class="ff_inter fs_16 lh_24 fw_600 text_white">No-Code Development</span>
-                                    </button>
-                                </div>
-                                <div class="mega-menu-panels">
-                                    <div class="tab-panel" id="design-panel">
-                                        <a href="https://zeeframes.com/services/ui-ux-consulting"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/product-sc.svg"
-                                                    alt="bulb" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    UI UX Consulting
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Shape your product vision with insights, market analysis, and growth
-                                                    strategies.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/ux-research-insights"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/ux-research.svg"
-                                                    alt="research" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    UX Research & Insights
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Uncover user needs and behaviors through research
-                                                    that drives design decisions.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/ux-audit-product-optimization"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/roadmap.svg"
-                                                    alt="roadmap" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    UX Audit & Product Optimization
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Align goals and deliverables into a strategic roadmap for market
-                                                    success.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/experience-architecture"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/experience.svg"
-                                                    alt="experience" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Experience Architecture
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Design intuitive structures and user flows that
-                                                    make products effortless.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/design-systems-guidelines"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/design-systems.svg"
-                                                    alt="ui-ux" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Design Systems & Guidelines
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Develop scalable ecosystems that ensure brand consistency across
-                                                    platforms.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/prototyping-user-testing"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/design-systems.svg"
-                                                    alt="design-systems" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Prototyping & User Testing
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Turn ideas into prototypes, validate with users, and refine before
-                                                    launch.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/web-design"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/ui-ux.svg"
-                                                    alt="prototyping" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Web Design
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Deliver striking, functional interfaces that enhance user
-                                                    satisfaction.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/mobile-design"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/phone.svg"
-                                                    alt="interaction" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Mobile Design
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Enrich experiences with animations that bring interfaces to life.
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="tab-panel" id="branding-panel">
-                                        <a href="https://zeeframes.com/services/brand-identity-design"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/product-sc.svg"
-                                                    alt="brand-identity" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Brand Identity Design
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Create clear brand identities that reflect values, resonate with
-                                                    audiences, and support long-term growth.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/brand-strategy-positioning"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/ux-research.svg"
-                                                    alt="ux-research" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Brand Strategy & Positioning
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Define brand direction through research-driven strategy,
-                                                    positioning, and insights that guide design decisions.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/motion-design"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/roadmap.svg"
-                                                    alt="motion-design" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Motion Design
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Evolve brands with scalable systems that ensure clarity,
-                                                    consistency, and relevance.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/visual-communication-design"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/experience.svg"
-                                                    alt="visual-communication" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Visual Communication Design
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Deliver cohesive assets from social to campaigns,
-                                                    reinforcing consistency.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/rebranding-evolution"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/design-systems.svg"
-                                                    alt="rebranding" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Rebranding & Evolution
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Evolve brands with scalable systems that ensure clarity,
-                                                    consistency, and relevance.
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="tab-panel" id="development-panel">
-                                        <a href="https://zeeframes.com/services/webflow-development"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/product-sc.svg"
-                                                    alt="brand-identity" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Webflow Development
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Build responsive, scalable Webflow websites focused on performance,
-                                                    usability, and long-term flexibility.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/framer-development"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/ux-research.svg"
-                                                    alt="ux-research" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Framer Development
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Build interactive Framer websites with smooth animations and modern
-                                                    experiences.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/figma-sites"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/roadmap.svg"
-                                                    alt="motion-design" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Figma Sites
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Design and launch Figma-based websites with clean structure,
-                                                    consistency, and rapid iteration.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="https://zeeframes.com/services/platform-maintenance-support"
-                                            class="service_item flex ">
-                                            <div class="service-icon">
-                                                <img class="shrink-0" width="24" height="24"
-                                                    src="https://zeeframes.com/frontend-assets/images/services-icons/experience.svg"
-                                                    alt="visual-communication" fetchpriority="high" loading="eager"
-                                                    decoding="async" />
-                                            </div>
-                                            <div>
-                                                <p class="service-title ff_inter fs_16 lh_24 fw_600 text_white">
-                                                    Platform Maintenance & Support
-                                                </p>
-                                                <p class="service-description ff_inter fs_16 lh_24 fw_400 text_white">
-                                                    Maintain, optimize, and support platforms to ensure stability,
-                                                    performance, updates, and reliability.
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="content-wraper flex items-center">
+            <div class="content mx-auto relative">
+                <div class="star-wrapper">
+                    <img width="73" height="80" src="https://zeeframes.com/frontend-assets/images/svgs/hero-star.svg"
+                        alt="start" fetchpriority="high" decoding="async" />
+                </div>
+                <img class="bubble-img sm-hidden" src="https://zeeframes.com/frontend-assets/images/home-bubble.webp" alt="bubble"
+                    width="435" height="429" fetchpriority="high" decoding="async" />
+                <img class="bubble-img hidden sm-block" src="https://zeeframes.com/frontend-assets/images/home-bubble-mobile.webp"
+                    alt="bubble" width="176" height="174" fetchpriority="high" decoding="async" />
+                <div class="trusted-craft sm-flex-wrap flex items-center w-fit mx-auto relative behind-cursor">
+                    <div class="flex items-center" style="gap: 12px">
+                        <div class="power-icon flex items-center justify-center shrink-0">
+                            <img width="20" height="20"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/sheild.svg" alt="sheild"
+                                decoding="async" />
+                        </div>
+                        <p class="text_white fs_16 lh_normal ff_inter">
+                            Trusted by startups to craft $100M+ designs with
+                        </p>
+                    </div>
+                    <div class="flex icon-box-wraper">
+                        <div class="icon-box shrink-0 flex items-center justify-center">
+                            <img width="12" height="16"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/figma.svg" alt="figma"
+                                decoding="async" />
+                        </div>
+                        <div class="icon-box shrink-0 flex items-center justify-center">
+                            <img width="16" height="16"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/sketch.svg" alt="sketch"
+                                decoding="async" />
+                        </div>
+                        <div class="icon-box shrink-0 flex items-center justify-center">
+                            <img width="18" height="16"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/adobe-xd.svg" alt="adobe-xd"
+                                decoding="async" />
+                        </div>
+                        <div class="icon-box shrink-0 flex items-center justify-center">
+                            <img width="12" height="16"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/framer.svg" alt="framer"
+                                decoding="async" />
+                        </div>
+                        <div class="icon-box shrink-0 flex items-center justify-center">
+                            <img width="16" height="10"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/framer2.svg" alt="framer2"
+                                decoding="async" />
+                        </div>
+                        <div class="icon-box shrink-0 flex items-center justify-center">
+                            <img width="16" height="16" src="https://zeeframes.com/frontend-assets/images/svgs/b.svg"
+                                alt="b" decoding="async" />
                         </div>
                     </div>
-                </li>
-                <li>
-                      </div>
+                </div>
+                <div class="relative w-fit">
+                    <h1 class="main-heading text_white text-center mt-48 sm-mt-32 relative fw_800 uppercase">
+                    Creative Intelligence in Every Pixel
+                </h1>
+                <sup class="no-code uppercase fs_12 lh_normal text_black_300 sm-hidden">No Code</sup>
+                </div>
+                <p class="text_white text-center fs_20 lh_normal ff_inter capitalize mt-12 sm-max-w-319 mx-auto">
+                    We craft <span class="text_primary">stunning</span> designs for
+                    businesses worldwide.
+                </p>
+                <div class="flex mt-48 sm-mt-24 justify-center" style="gap: 20px">
+                    <a href="https://calendly.com/contact-zeeframes/30min?month=2025-11" target="_blank"
+                        class="btn-component btn-light btn-slide-in relative overflow-hidden ff_inter">
+                        <span class="default-text absolute">Schedule Call</span>
+                        <span class="hover-content absolute flex items-center w-full justify-start"
+                            style="gap: 16px; padding: 0 3px">
+                            <img src="https://zeeframes.com/frontend-assets/images/svgs/lets-talk.svg" alt="Avatar" />
+                            <span class="hover-text">Lets Talk 🤙</span>
+                        </span>
+                    </a>
+                    <a href="https://www.figma.com/proto/Wvc5EAdw0leAMdlJ3tF6Be/ZeeFrames-Portfolio-New-Branding?page-id=0%3A1&node-id=1653-10&viewport=-98%2C1247%2C0.16&t=I70aaK7I2yFjTlya-1&scaling=scale-down&content-scaling=fixed"
+                        target="_blank"
+                        class="btn-component btn-outlined anim-translate overflow-hidden relative ff_inter">
+                        <span class="anim-translate-content">© 2025 Work</span>
+                        <span class="anim-translate-slice absolute flex items-center" style="gap: 8px">
+                            Open
+                            <span class="hover-icon mt-10">
+                                <!-- Yellow hover SVG icon -->
+                                <svg style="margin-top: 5px" xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M12.5 12.5C13.8807 12.5 15 11.3807 15 10C15 8.61929 13.8807 7.5 12.5 7.5C11.1193 7.5 10 8.61929 10 10C10 11.3807 11.1193 12.5 12.5 12.5Z"
+                                        stroke="#FFE800" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path
+                                        d="M7.5 17.5C8.88075 17.5 10 16.3807 10 15V12.5H7.5C6.11929 12.5 5 13.6192 5 15C5 16.3807 6.11929 17.5 7.5 17.5Z"
+                                        stroke="#FFE800" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path
+                                        d="M10 7.5V12.5H7.5C6.11929 12.5 5 11.3807 5 10C5 8.61925 6.11929 7.5 7.5 7.5H10Z"
+                                        stroke="#FFE800" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M10 2.5V7.5H7.5C6.11929 7.5 5 6.38071 5 5C5 3.61929 6.11929 2.5 7.5 2.5H10Z"
+                                        stroke="#FFE800" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M10 2.5V7.5H12.5C13.8807 7.5 15 6.38071 15 5C15 3.61929 13.8807 2.5 12.5 2.5H10Z"
+                                        stroke="#FFE800" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="trusted-partners-wraper overflow-hidden">
+        <div class="container overflow-hidden">
+            <p class="text-center ff_inter fs_14 fw_500 lh_normal uppercase">
+                Trusted by Industry Leaders & Fast-Growing Startups
+            </p>
+            <div class="main-animate grid items-center mt-24">
+                <div class="slider m-auto relative w-full grid items-center">
+                    <div class="slide-track flex">
+                        <!-- <div class="slide flex items-center">
+                            <img width="135" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/wal-mart.svg" alt="wal-mart"
+                                decoding="async" />
+                        </div> -->
+                        <!-- <div class="slide flex items-center">
+                            <img width="62" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/cisco.svg" alt="cisco"
+                                decoding="async" />
+                        </div> -->
+                        <div class="slide flex items-center">
+                            <img width="138" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/trafilea.svg" alt="trafilea"
+                                decoding="async" />
+                        </div>
+                        <div class="slide flex items-center">
+                            <img width="152" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/yallaMotor.svg" alt="yallaMotor"
+                                decoding="async" />
+                        </div>
+                        <!-- <div class="slide flex items-center">
+                            <img width="143" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/nissan-motor-corporation.svg"
+                                alt="nissan-motor-corporation" decoding="async" />
+                        </div> -->
+                        <div class="slide flex items-center">
+                            <img width="198" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/repurpose.svg" alt="repurpose"
+                                decoding="async" />
+                        </div>
+                        <div class="slide flex items-center">
+                            <img width="56" height="40"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/adiqat.svg" alt="adiqat"
+                                decoding="async" />
+                        </div>
+                        <div class="slide flex items-center">
+                            <img width="198" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/repurpose.svg" alt="repurpose"
+                                decoding="async" />
+                        </div>
+                        <div class="slide flex items-center">
+                            <img width="56" height="40"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/adiqat.svg" alt="adiqat"
+                                decoding="async" />
+                        </div>
+                        <!-- <div class="slide flex items-center">
+                            <img width="135" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/wal-mart.svg" alt="wal-mart"
+                                decoding="async" />
+                        </div>
+                        <div class="slide flex items-center">
+                            <img width="62" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/cisco.svg" alt="cisco"
+                                decoding="async" />
+                        </div> -->
+                        <div class="slide flex items-center">
+                            <img width="138" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/trafilea.svg" alt="trafilea"
+                                decoding="async" />
+                        </div>
+                        <div class="slide flex items-center">
+                            <img src="https://zeeframes.com/frontend-assets/images/svgs/yallaMotor.svg" alt="yallaMotor"
+                                width="152" height="32" decoding="async" />
+                        </div>
+                       
+                        <div class="slide flex items-center">
+                            <img src="https://zeeframes.com/frontend-assets/images/svgs/repurpose.svg" alt="repurpose"
+                                width="198" height="32" decoding="async" />
+                        </div>
+                        <div class="slide flex items-center">
+                            <img src="https://zeeframes.com/frontend-assets/images/svgs/adiqat.svg" alt="adiqat"
+                                width="56" height="40" decoding="async" />
+                        </div>
+                        <div class="slide flex items-center">
+                            <img width="138" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/trafilea.svg" alt="trafilea"
+                                decoding="async" />
+                        </div>
+                        <div class="slide flex items-center">
+                            <img width="152" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/yallaMotor.svg" alt="yallaMotor"
+                                decoding="async" />
+                        </div>
+                       
+                        <div class="slide flex items-center">
+                            <img width="198" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/repurpose.svg" alt="repurpose"
+                                decoding="async" />
+                        </div>
+                        <div class="slide flex items-center">
+                            <img width="56" height="40"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/adiqat.svg" alt="adiqat"
+                                decoding="async" />
+                        </div>
+                        <div class="slide flex items-center">
+                            <img width="198" height="32"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/repurpose.svg" alt="repurpose"
+                                decoding="async" />
+                        </div>
+                        <div class="slide flex items-center">
+                            <img width="56" height="40"
+                                src="https://zeeframes.com/frontend-assets/images/svgs/adiqat.svg" alt="adiqat"
+                                decoding="async" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="videos-section relative overflow-hidden behind-cursor">
+    <video id="mainVideo" class="object-cover w-full h-auto" width="1440" height="766" autoplay muted loop
+        playsinline preload="auto">
+        <source src="https://zeeframes.com/frontend-assets/media/zeeframes-process-short.mp4" type="video/mp4" />
+    </video>
+
+    <a href="https://zeeframes.com/work" class="floating-btn btn-component btn-light absolute">
+        All Works
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M14.5833 5.41699L5 15.0003" stroke="#0D0D0D" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M6.66666 5H15V13.3333" stroke="#0D0D0D" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </a>
+</section>
+
+<section class="py_80 sm_py_32 relative behind-cursor" style="background-color: var(--color-black-300)">
+    <div class="container">
+        <div class="pt_80 sm_pt_0">
+            <div class="text-center">
+                <p class="fs_14 text_primary uppercase">WE are great at</p>
+                <h2 class="fs_40 sm_fs_28 lh_40 fw_700 text_white section-heading">
+                    UI UX Design and Product Experience Services
+                </h2>
+                <p class="fs_14 lh_21 ff_inter text_gray_495">
+                    Designs with Exceptional User Experiences
+                </p>
+            </div>
+            <div class="services-wraper grid md_grid-cols-2 mt_64 sm_mt_32">
+                <a href="https://zeeframes.com/services/ui-ux-design" class="service-card relative">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="fs_18 sm_fs_16 lh_27 ff_inter text_white uppercase servic-text ff_inter">
+                                FOR DIGITAL EXPERIENCES
+                            </p>
+                            <h3 class="fs_28 sm_fs_22 lh_normal text_white servic-title">
+                                UI UX Design
+                            </h3>
+                        </div>
+                        <div
+                            class="arrow-box shrink-0 flex items-center justify-center"
+                            aria-label="Read more about our UI UX Design service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 20 20" fill="none">
+                                <path d="M14.5833 5.41663L5 15" stroke="#9D9D9D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.66663 5H15V13.3333" stroke="#9D9D9D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://zeeframes.com/services/product-revamp" class="service-card relative">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="fs_18 sm_fs_16 lh_27 ff_inter text_white uppercase servic-text ff_inter">
+                                For Startups & Existing Companies
+                            </p>
+                            <h3 class="fs_28 sm_fs_22 lh_normal text_white servic-title">
+                                Product Revamp
+                            </h3>
+                        </div>
+                        <div
+                            class="arrow-box shrink-0 flex items-center justify-center"
+                            aria-label="Read more about our Product Revamp service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 20 20" fill="none">
+                                <path d="M14.5833 5.41663L5 15" stroke="#9D9D9D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.66663 5H15V13.3333" stroke="#9D9D9D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://zeeframes.com/services/brand-design" class="service-card relative">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="fs_18 sm_fs_16 lh_27 ff_inter text_white uppercase servic-text ff_inter">
+                                FOR VISUAL STORYTELLERS
+                            </p>
+                            <h3 class="fs_28 sm_fs_22 lh_normal text_white servic-title">
+                                Brand Design
+                            </h3>
+                        </div>
+                        <siv
+                            class="arrow-box shrink-0 flex items-center justify-center"
+                            aria-label="Read more about our Brand Design service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 20 20" fill="none">
+                                <path d="M14.5833 5.41663L5 15" stroke="#9D9D9D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.66663 5H15V13.3333" stroke="#9D9D9D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </siv>
+                    </div>
+                </a>
+                <a href="https://zeeframes.com/services/no-code-development" class="service-card relative">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="fs_18 sm_fs_16 lh_27 ff_inter text_white uppercase servic-text ff_inter">
+                                FOR RAPID APP BUILDERS
+                            </p>
+                            <h3 class="fs_28 sm_fs_22 lh_normal text_white servic-title">
+                                No Code Development
+                            </h3>
+                        </div>
+                        <div
+                            class="arrow-box shrink-0 flex items-center justify-center"
+                            aria-label="Read more about our No Code Development service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 20 20" fill="none">
+                                <path d="M14.5833 5.41663L5 15" stroke="#9D9D9D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.66663 5H15V13.3333" stroke="#9D9D9D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://zeeframes.com/services/mvp-design" class="service-card relative">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="fs_18 sm_fs_16 lh_27 ff_inter text_white uppercase servic-text ff_inter">
+                                FOR STARTUPS & FOUNDERS
+                            </p>
+                            <h3 class="fs_28 sm_fs_22 lh_normal text_white servic-title">
+                                MVP Design
+                            </h3>
+                        </div>
+                        <div
+                            class="arrow-box shrink-0 flex items-center justify-center"
+                            aria-label="Read more about our Brand Design service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 20 20" fill="none">
+                                <path d="M14.5833 5.41663L5 15" stroke="#9D9D9D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.66663 5H15V13.3333" stroke="#9D9D9D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://zeeframes.com/services/team-extension" class="service-card relative">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="fs_18 sm_fs_16 lh_27 ff_inter text_white uppercase servic-text ff_inter">
+                                Dedicated ux ui Team
+                            </p>
+                            <h3 class="fs_28 sm_fs_22 lh_normal text_white servic-title">
+                                Team Extension
+                            </h3>
+                        </div>
+                        <div
+                            class="arrow-box shrink-0 flex items-center justify-center"
+                            aria-label="Read more about our Brand Design service">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 20 20" fill="none">
+                                <path d="M14.5833 5.41663L5 15" stroke="#9D9D9D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.66663 5H15V13.3333" stroke="#9D9D9D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
         </div>
     </div>
 </section>
@@ -2183,8 +2063,7 @@
                 about what we do.
             </p>
         </div>
-
-        <div class="mt_64 sm_mt_32">
+   <div class="mt_64 sm_mt_32">
             <div class="flex justify-between gap-80 relative">
                 <div class="services-content relative w-full" style="max-width: 609px; padding-left: 50px">
                     <ul class="services-listing list-unstyled flex flex-col">
@@ -2394,7 +2273,7 @@
     </div>
 </section>
 
-                <section class="py_80 sm_py_32 relative behind-cursor" style="background-color: var(--color-black-300)">
+<section class="py_80 sm_py_32 relative behind-cursor" style="background-color: var(--color-black-300)">
     <div class="container">
         <div class="flex md-flex-wrap" style="column-gap: 48px; row-gap: 32px">
             <div class="w-full" style="max-width: 409px">
@@ -2430,9 +2309,8 @@
                     <button class="flex items-center w-full bg-transparent border-0">
                         <span class="grow text-start fs_16 lh_normal fw_500  text_white ff_geologica">What is UI UX
                             design, and why
-                            is it important?</span>
-
-                        <span class="accordion-icon shrink-0 flex items-center justify-center">
+                            Is it important?</span>
+                              <span class="accordion-icon shrink-0 flex items-center justify-center">
                             <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 viewBox="0 0 16 16" fill="none">
                                 <path d="M8 2.66699V13.3337" stroke="#6D6D6D" stroke-width="1.5"
@@ -2718,8 +2596,7 @@
                 <p class="ff_inter fs_14 lh_21 text_gray_495" style="max-width: 534px">
                     Have a project in mind? Whether you need a full UI/UX redesign, a new digital product, or a stronger online presence, our team is ready to help turn your ideas into reality.
                 </p>
-
-                <div class="mt-32 flex items-center sm-flex-wrap" style="gap: 24px">
+                 <div class="mt-32 flex items-center sm-flex-wrap" style="gap: 24px">
                     <div class="flex items-center" style="gap: 16px">
                         <img width="48" height="48" src="https://zeeframes.com/frontend-assets/images/svgs/ali.svg"
                             alt="Ali" loading="lazy" />
@@ -3097,7 +2974,7 @@
                         </ul>
                         </div>
                     </div>
-                    <div>
+                     <div>
                         <textarea class="textarea input w-full fs_14 lh_normal fw_500 ff_inter text_gray_140" name="about_project"
                             id="aboutProject" placeholder="Tell us about your project, goals, timeline, or requirements*" required></textarea>
                     </div>
@@ -3112,15 +2989,15 @@
                     </p>
                     <div class="flex items-center sm-flex-wrap"
                         style="margin-top: 12px; column-gap: 16px; row-gap: 12px">
-                        <a href="allahnawazmalik175@gmail.com" class="flex items-center" style="gap: 6px"
-                            aria-label=" mail us on allahnawazmalik175@gmail.com">
+                        <a href="mailto:businessmanager@zeeframes.com" class="flex items-center" style="gap: 6px"
+                            aria-label="mail us on businessmanager@zeeframes.com">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 viewBox="0 0 24 24" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M9.944 3.25H14.056C15.894 3.25 17.35 3.25 18.489 3.403C19.661 3.561 20.61 3.893 21.359 4.641C22.107 5.39 22.439 6.339 22.597 7.511C22.75 8.651 22.75 10.106 22.75 11.944V12.056C22.75 13.894 22.75 15.35 22.597 16.489C22.439 17.661 22.107 18.61 21.359 19.359C20.61 20.107 19.661 20.439 18.489 20.597C17.349 20.75 15.894 20.75 14.056 20.75H9.944C8.106 20.75 6.65 20.75 5.511 20.597C4.339 20.439 3.39 20.107 2.641 19.359C1.893 18.61 1.561 17.661 1.403 16.489C1.25 15.349 1.25 13.894 1.25 12.056V11.944C1.25 10.106 1.25 8.65 1.403 7.511C1.561 6.339 1.893 5.39 2.641 4.641C3.39 3.893 4.339 3.561 5.511 3.403C6.651 3.25 8.106 3.25 9.944 3.25ZM5.71 4.89C4.704 5.025 4.124 5.279 3.7 5.702C3.278 6.125 3.024 6.705 2.889 7.711C2.751 8.739 2.749 10.093 2.749 12C2.749 13.907 2.751 15.262 2.889 16.29C3.024 17.295 3.278 17.875 3.701 18.298C4.124 18.721 4.704 18.975 5.71 19.11C6.738 19.248 8.092 19.25 9.999 19.25H13.999C15.906 19.25 17.261 19.248 18.289 19.11C19.294 18.975 19.874 18.721 20.297 18.298C20.72 17.875 20.974 17.295 21.109 16.289C21.247 15.261 21.249 13.907 21.249 12C21.249 10.093 21.247 8.739 21.109 7.71C20.974 6.705 20.72 6.125 20.297 5.702C19.874 5.279 19.294 5.025 18.288 4.89C17.261 4.752 15.906 4.75 13.999 4.75H9.999C8.092 4.75 6.739 4.752 5.71 4.89ZM5.422 7.52C5.54934 7.36729 5.7321 7.27139 5.93013 7.25338C6.12815 7.23538 6.32521 7.29675 6.478 7.424L8.64 9.223C9.573 10 10.22 10.538 10.768 10.89C11.297 11.23 11.656 11.345 12.001 11.345C12.346 11.345 12.705 11.231 13.234 10.89C13.781 10.538 14.429 10 15.362 9.223L17.521 7.423C17.5967 7.35997 17.6841 7.31246 17.7782 7.2832C17.8722 7.25393 17.9711 7.24348 18.0692 7.25244C18.1673 7.2614 18.2627 7.2896 18.3499 7.33542C18.4371 7.38124 18.5145 7.44379 18.5775 7.5195C18.6405 7.59521 18.688 7.68259 18.7173 7.77665C18.7466 7.87072 18.757 7.96963 18.7481 8.06774C18.7391 8.16584 18.7109 8.26122 18.6651 8.34843C18.6193 8.43564 18.5567 8.51297 18.481 8.576L16.285 10.406C15.398 11.146 14.68 11.744 14.045 12.152C13.385 12.577 12.742 12.845 12.001 12.845C11.26 12.845 10.617 12.576 9.956 12.152C9.322 11.744 8.604 11.145 7.717 10.407L5.52 8.577C5.44424 8.51394 5.38165 8.43656 5.33582 8.34929C5.28998 8.26202 5.2618 8.16657 5.25289 8.0684C5.24397 7.97023 5.25449 7.87127 5.28385 7.77717C5.31322 7.68307 5.36084 7.59568 5.424 7.52"
                                     fill="#BDBDBD" />
                             </svg>
-                            <span class="fs_14 lh_21 ff_inter text_gray_495">allahnawazmalik175@gmail.com</span>
+                            <span class="fs_14 lh_21 ff_inter text_gray_495">contact@zeeframes.com</span>
                         </a>
                     </div>
                 </div>
@@ -3128,10 +3005,11 @@
         </div>
     </div>
 </section>
- </main>
+
+            </main>
 
         <div class="floating_btn flex flex-col items-center justify-center">
-        <a target="_blank" href="https://wa.me/+923055742436" aria-label="Chat with us on WhatsApp">
+        <a target="_blank" href="https://wa.me/+923203244280" aria-label="Chat with us on WhatsApp">
             <div class="contact_icon flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
                     fill="none">
@@ -3152,6 +3030,7 @@
 
     <div class="cursor-circle"></div>
         <!-- AI Chatbot Widget -->
+    <div id="ai-chatbot-widget" data-chat-url="https://zeeframes.com/chatbot/message" data-capture-url="https://zeeframes.com/chatbot/capture-email"></div>
 
     <footer class="footer relative behind-cursor">
       <div class="container">
@@ -3164,9 +3043,9 @@
           <div class="footer-grid">
               <div class="footer-text">
                   <p class="fs_18 lh_27 ff_inter text_gray_495">
-                      We transform ideas into user-centred digital experiences for
+                      We transform ideas into user-centered digital experiences for
                       businesses worldwide, from Fortune 500s to startups, using Figma,
-                      Webflow and no-code solutions.
+                      Webflow, and no-code solutions.
                   </p>
 
                    <ul class="list-unstyled flex md_hidden" style="gap: 16px;margin-top:32px">
@@ -3331,7 +3210,7 @@
                   </ul>
               </div>
           </div>
-          <!-- <div class="addresses-container">
+           <!-- <div class="addresses-container">
               <div class="address-box">
                   <img width="32" height="24" src="https://zeeframes.com/frontend-assets/images/svgs/usa-flag.svg" alt="USA flag"
                       loading="lazy" />
@@ -3399,7 +3278,7 @@
                       </a>
                   </li>
                   <li>
-                      <a class="social-item flex items-centre justify-centre"
+                      <a class="social-item flex items-center justify-center"
                           href="https://www.linkedin.com/company/zeeframes/" target="_blank"
                           aria-label="Follow us on LinkedIn">
                           <img width="19" height="18" src="https://zeeframes.com/frontend-assets/images/svgs/linkedin.svg" alt="linkedin"
@@ -3407,7 +3286,7 @@
                       </a>
                   </li>
                   <li>
-                      <a class="social-item flex items-centre justify-centre"
+                      <a class="social-item flex items-center justify-center"
                           href="https://www.instagram.com/zeeframes.design/" target="_blank"
                           aria-label="Follow us on Instagram">
                           <img width="20" height="18" src="https://zeeframes.com/frontend-assets/images/svgs/instagram.svg" alt="instagram"
@@ -3415,7 +3294,7 @@
                       </a>
                   </li>
                   <li>
-                      <a class="social-item flex items-centre justify-centre"
+                      <a class="social-item flex items-center justify-center"
                           href="https://www.facebook.com/zeeframes.design" target="_blank"
                           aria-label="Follow us on Facebook">
                           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19" viewBox="0 0 10 19"
@@ -3659,8 +3538,7 @@
             // remove after animation ends
             setTimeout(() => bubble.remove(), 900)
         }
-
-        // animate trailing circle smoothly
+         // animate trailing circle smoothly
         function animateCircle() {
             currentX2 += (targetX2 - currentX2) * 0.15
             currentY2 += (targetY2 - currentY2) * 0.15
@@ -3672,7 +3550,7 @@
         animateCircle()
 
         const video = document.getElementById('mainVideo')
-    
+        const realVideoSrc = "https://zeeframes.com/frontend-assets/media/zeeframes-process.mp4"
 
         // Preload real video in background
         const realVideo = document.createElement('video')
@@ -3689,59 +3567,78 @@
         })
     }
 </script>
+<link rel="stylesheet" href="https://zeeframes.com/frontend-assets/css/home.css" media="print"
+    onload="this.media='all'; this.onload=null;" />
+
 <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Allah Nawaz",
-  "jobTitle": "UI/UX & Product Designer",
-  "description": "Allah Nawaz is a UI/UX and Product Designer specializing in creating user-centered digital experiences for SaaS, fintech, e-commerce, and modern web platforms. With expertise in Figma, Framer, Spline 3D, and no-code tools, he designs scalable design systems, intuitive user flows, interactive prototypes, and modern digital products that improve usability and business growth.",
-  "url": "https://yourportfolio.com",
-  "image": "https://yourportfolio.com/profile-image.jpg",
-  "sameAs": [
-    "https://www.linkedin.com/in/yourprofile",
-    "https://www.behance.net/yourprofile",
-    "https://dribbble.com/yourprofile",
-    "https://www.instagram.com/yourprofile"
-  ],
-  "knowsAbout": [
-    "UI/UX Design",
-    "Product Design",
-    "Design Systems",
-    "User Research",
-    "Wireframing",
-    "Prototyping",
-    "Figma",
-    "Framer",
-    "Spline 3D",
-    "No-Code Development",
-    "Web Design",
-    "Mobile App Design"
-  ],
-  "worksFor": [
-    {
-      "@type": "Organization",
-      "name": "ClikMasters"
-    },
-    {
-      "@type": "Organization",
-      "name": "T Tech"
+     {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ZeeFrames",
+        "url": "https://zeeframes.com",
+        "logo": "https://zeeframes.com/assets/images/svgs/logo.svg",
+        "description": "We transform ideas into user-centered digital experiences for businesses worldwide, from Fortune 500s to startups, using Figma, Webflow, and no-code solutions.",
+        "foundingDate": "2020",
+        "sameAs": [
+            "https://www.linkedin.com/company/zeeframes/",
+            "https://www.instagram.com/zeeframes.design/",
+            "https://www.facebook.com/zeeframes.design",
+            "https://x.com/zeeframes",
+            "https://www.behance.net/",
+            "https://dribbble.com/"
+        ],
+        "contactPoint": [{
+                "@type": "ContactPoint",
+                "telephone": "+1-480-920-1123",
+                "contactType": "customer service",
+                "areaServed": "US"
+            },
+            {
+                "@type": "ContactPoint",
+                "telephone": "+44-746-0766-922",
+                "contactType": "customer service",
+                "areaServed": "GB"
+            }
+        ],
+        "address": [{
+                "@type": "PostalAddress",
+                "streetAddress": "1832 Norfolk st",
+                "addressLocality": "Houston",
+                "addressRegion": "Texas",
+                "postalCode": "77098",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "PostalAddress",
+                "streetAddress": "West Tower, 371 Deansgate",
+                "addressLocality": "Manchester",
+                "postalCode": "M15 4UP",
+                "addressCountry": "GB"
+            }
+        ],
+        "service": [{
+                "@type": "Service",
+                "name": "UI UX Design",
+                "description": "Digital experience design for web and mobile applications"
+            },
+            {
+                "@type": "Service",
+                "name": "Product Strategy Consulting",
+                "description": "Shape your product vision with insights, market analysis, and growth strategies"
+            },
+            {
+                "@type": "Service",
+                "name": "Brand Design",
+                "description": "Visual storytelling and brand identity design"
+            },
+            {
+                "@type": "Service",
+                "name": "No-Code Development",
+                "description": "Webflow, Framer, and Bubble app development"
+            }
+        ]
     }
-  ],
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Bachelor's in Computer and Arts"
-  },
-  "hasOccupation": {
-    "@type": "Occupation",
-    "name": "UI/UX Designer"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/in/yourprofile",
-    "https://www.behance.net/yourprofile",
-    "https://dribbble.com/yourprofile"
-  ]
-}
+    
 </script>
 
 <script src="https://zeeframes.com/seo/howto-schemas.js"></script>
@@ -3770,7 +3667,7 @@
             chevron.style.transform = 'translateY(-50%) rotate(180deg)';
         });
 
-        // prevent closing when clicking inside the
+        // prevent closing when clicking inside dropdown
         dropdown.addEventListener('click', (e) => {
             e.stopPropagation();
         });
@@ -3831,6 +3728,7 @@
             };
         }
     </script>
+        <!-- <script src="https://zeeframes.com/frontend-assets/js/chatbot.js" defer></script> -->
     <script src="https://zeeframes.com/frontend-assets/js/form-validations.js" defer></script>
 <script src="https://zeeframes.com/frontend-assets/js/common.js" defer></script>
 <script src="https://zeeframes.com/frontend-assets/js/services-dropdown.js" defer></script>
@@ -3848,4 +3746,5 @@
 <link rel="stylesheet" href="https://zeeframes.com/frontend-assets/css/home.css" media="print"
     onload="this.media='all'; this.onload=null;" />
 </body>
+
 </html>

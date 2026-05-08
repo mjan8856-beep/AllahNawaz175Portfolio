@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allah Nawaz — Premium Product Design Agency</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allah Nawaz — Product Designer | UI/UX Executive</title>
+    
+    <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg: #030303;
-            --surface: #0A0A0A;
-            --card: #0F0F0F;
+            --bg: #050505;
+            --surface: #0E0E0E;
+            --card: #161616;
+            --accent: #D4F40C; 
+            --accent-muted: rgba(212, 244, 12, 0.1);
             --border: rgba(255, 255, 255, 0.08);
-            --primary: #D4F40C; /* Neon Lime */
-            --accent: #7C3AED; /* Purple Glow */
-            --text-main: #FFFFFF;
-            --text-muted: #8F8F8F;
-            --font-heading: 'Syne', sans-serif;
+            --text-high: #FFFFFF;
+            --text-med: #A0A0A0;
+            --text-low: #555555;
+            --font-display: 'Syne', sans-serif;
             --font-body: 'Inter', sans-serif;
-            --radius: 12px;
-            --transition: cubic-bezier(0.2, 0, 0, 1);
+            --ease: cubic-bezier(0.2, 1, 0.3, 1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         html { scroll-behavior: smooth; }
-    
+        body { 
+            background: var(--bg); 
+            color: var(--text-high); 
+            font-family: var(--font-body); 
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 5vw; }
+        section { padding: 100px 0; }
+        
+        .reveal { opacity: 0; transform: translateY(40px); transition: 1s var(--ease); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
         /* ════════════ NAV ════════════ */
         nav {
@@ -76,18 +91,70 @@
         .social-icon:hover svg { fill: var(--accent); }
 
         /* ════════════ PROJECTS ════════════ */
-        .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 60px; }
-        .project-card { 
-            position: relative; border-radius: 32px; overflow: hidden; 
-            background: var(--card); border: 1px solid var(--border);
-            transition: 0.6s var(--ease);
-        }
-        .project-card:hover { border-color: var(--accent); }
-        .p-img-box { height: 500px; overflow: hidden; }
-        .p-img { width: 100%; height: 100%; object-fit: cover; transition: 1s var(--ease); filter: grayscale(100%); opacity: 0.6; }
-        .project-card:hover .p-img { transform: scale(1.05); filter: grayscale(0%); opacity: 1; }
-        .p-content { padding: 40px; }
-        .p-tag { font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: block; }
+       <main class="container">
+        <header>
+            <span class="section-label">Bento Portfolio v2</span>
+            <h1>Curation of digital artifacts where form meets function through a glass lens.</h1>
+        </header>
+
+        <section class="work-grid">
+            <!-- Large Feature Card -->
+            <a href="#" class="project-card span-8">
+                <div class="p-img-box">
+                    <img class="p-img" src="https://images.unsplash.com/photo-1635405074683-96d6921a2a2c?auto=format&fit=crop&q=80&w=1200" alt="Nebula Systems">
+                </div>
+                <div class="p-content">
+                    <div class="p-meta">
+                        <span class="p-tag">Visual Identity</span>
+                        <h3 class="p-title">Nebula Systems</h3>
+                    </div>
+                    <span class="p-year">2024</span>
+                </div>
+            </a>
+
+            <!-- Small Side Card -->
+            <a href="#" class="project-card span-4">
+                <div class="p-img-box">
+                    <img class="p-img" src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=1200" alt="Aether Interface">
+                </div>
+                <div class="p-content">
+                    <div class="p-meta">
+                        <span class="p-tag">UI / UX</span>
+                        <h3 class="p-title">Aether</h3>
+                    </div>
+                    <span class="p-year">2023</span>
+                </div>
+            </a>
+
+            <!-- Medium Half Card -->
+            <a href="#" class="project-card span-6">
+                <div class="p-img-box">
+                    <img class="p-img" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200" alt="Monolith Arch">
+                </div>
+                <div class="p-content">
+                    <div class="p-meta">
+                        <span class="p-tag">Architecture</span>
+                        <h3 class="p-title">Monolith Arch</h3>
+                    </div>
+                    <span class="p-year">2023</span>
+                </div>
+            </a>
+
+            <!-- Medium Half Card -->
+            <a href="#" class="project-card span-6">
+                <div class="p-img-box">
+                    <img class="p-img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" alt="Core Hardware">
+                </div>
+                <div class="p-content">
+                    <div class="p-meta">
+                        <span class="p-tag">Industrial</span>
+                        <h3 class="p-title">Core Hardware</h3>
+                    </div>
+                    <span class="p-year">2022</span>
+                </div>
+            </a>
+        </section>
+    </main>
 
         /* ════════════ EXPERIENCE ════════════ */
         .exp-container { max-width: 900px; margin-top: 60px; }

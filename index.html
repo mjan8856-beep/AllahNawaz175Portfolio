@@ -23,6 +23,26 @@
             --transition: cubic-bezier(0.2, 0, 0, 1);
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+       
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        html { scroll-behavior: smooth; }
+        body { 
+            background: var(--bg); 
+            color: var(--text-high); 
+            font-family: var(--font-body); 
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 5vw; }
+        section { padding: 100px 0; }
+        
+        .reveal { opacity: 0; transform: translateY(40px); transition: 1s var(--ease); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
         /* ════════════ NAV ════════════ */
         nav {
             position: fixed; top: 0; width: 100%; z-index: 1000; padding: 30px 0;
@@ -72,33 +92,19 @@
         .social-icon:hover svg { fill: var(--accent); }
 
         /* ════════════ PROJECTS ════════════ */
-        <!-- Work -->
-    <section class="section-padding" id="work">
-        <div class="container">
-            <span class="section-tag reveal">Portfolio</span>
-            <h2 class="section-title reveal">Selected Case Studies</h2>
-            <div class="work-grid">
-                <div class="work-card reveal">
-                    <div class="work-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bbbda5366391?auto=format&fit=crop&q=80&w=1200" alt="SaaS Dashboard">
-                    </div>
-                    <div class="work-content">
-                        <h3>AI Influencer Platform</h3>
-                        <p>End-to-end design for a creator discovery engine.</p>
-                    </div>
-                </div>
-                <div class="work-card reveal">
-                    <div class="work-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" alt="Fintech">
-                    </div>
-                    <div class="work-content">
-                        <h3>GoRook Emergency</h3>
-                        <p>High-stakes mobile UX for emergency response.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 60px; }
+        .project-card { 
+            position: relative; border-radius: 32px; overflow: hidden; 
+            background: var(--card); border: 1px solid var(--border);
+            transition: 0.6s var(--ease);
+        }
+        .project-card:hover { border-color: var(--accent); }
+        .p-img-box { height: 500px; overflow: hidden; }
+        .p-img { width: 100%; height: 100%; object-fit: cover; transition: 1s var(--ease); filter: grayscale(100%); opacity: 0.6; }
+        .project-card:hover .p-img { transform: scale(1.05); filter: grayscale(0%); opacity: 1; }
+        .p-content { padding: 40px; }
+        .p-tag { font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: block; }
+
         /* ════════════ EXPERIENCE ════════════ */
         .exp-container { max-width: 900px; margin-top: 60px; }
         .exp-item { display: flex; gap: 40px; padding-bottom: 60px; position: relative; }
@@ -275,19 +281,11 @@
             </div>
         </section>
 
-        <!-- EXPERT CREDENTIALS -->
+        <!-- CERTIFICATIONS -->
         <section id="certifications" style="background:#080808;">
             <div class="container">
                 <h2 style="font-family:var(--font-display); font-size:48px; margin-bottom:10px;">Expert Credentials</h2>
-                <p style="color:var(--text-med); margin-bottom:40px; max-width:600px;">A multifaceted background in technology and design, blending creative visual systems with technical infrastructure.</p>
-                
                 <div class="cert-grid reveal">
-                    <!-- Tech & Networking -->
-                    <div class="cert-card" style="border-left: 4px solid var(--accent);"><h4>Information Technology</h4><p>Systems Architecture & Infrastructure</p></div>
-                    <div class="cert-card" style="border-left: 4px solid var(--accent);"><h4>Networking & Security</h4><p>Network Configuration & Data Integrity</p></div>
-                    <div class="cert-card" style="border-left: 4px solid var(--accent);"><h4>Advanced Web Design</h4><p>Modern Frontend Architectures</p></div>
-                    
-                    <!-- Design & Management -->
                     <div class="cert-card"><h4>Google Professional UX Design</h4><p>Google Career Certificates</p></div>
                     <div class="cert-card"><h4>Design Thinking & Innovation</h4><p>IDEO U Certification</p></div>
                     <div class="cert-card"><h4>Advanced Figma Architecture</h4><p>Verified Figma Specialist</p></div>
@@ -298,7 +296,7 @@
             </div>
         </section>
 
-        <!-- THE METHODOLOGY -->
+        <!-- THE METHODOLOGY (EXPANDED) -->
         <section id="process" style="background:#050505;">
             <div class="container">
                 <h2 style="font-family:var(--font-display); font-size:48px; margin-bottom:10px;">The Methodology</h2>

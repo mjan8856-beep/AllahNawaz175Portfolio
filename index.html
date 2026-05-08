@@ -1,54 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Allah Nawaz — Product Designer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<style>
-/* ═══════════════════════════════════════
-   DESIGN TOKENS
-═══════════════════════════════════════ */
-:root {
-  --bg:        #08080a;
-  --bg2:       #0c0c10;
-  --surface:   #111116;
-  --card:      #14141a;
-  --card2:     #18181f;
-  --lime:      #c8f135;
-  --lime-dim:  rgba(200,241,53,.12);
-  --lime-glow: rgba(200,241,53,.20);
-  --white:     #ffffff;
-  --hi:        rgba(255,255,255,.92);
-  --md:        rgba(255,255,255,.50);
-  --lo:        rgba(255,255,255,.22);
-  --lo2:       rgba(255,255,255,.08);
-  --border:    rgba(255,255,255,.06);
-  --border2:   rgba(255,255,255,.11);
-  --radius-sm: 12px;
-  --radius-md: 18px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
-  --ease:      cubic-bezier(.22,1,.36,1);
-  --ease-back: cubic-bezier(.34,1.56,.64,1);
-  --ff-disp:   'Bricolage Grotesque', sans-serif;
-  --ff-body:   'Instrument Sans', sans-serif;
-  --ff-serif:  'Instrument Serif', serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allah Nawaz | Senior Product Designer</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body {
-  background: var(--bg);
-  color: var(--hi);
-  font-family: var(--ff-body);
-  line-height: 1.6;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    <!-- Typography: General Sans & Inter -->
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@700,600,500,400&f[]=inter@700,600,500,400&display=swap" rel="stylesheet">
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['General Sans', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: '#ffffff',
+                        surface: '#050505',
+                        accent: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* 3D Spline Mask & Noise Overlay */
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 99;
+            filter: contrast(150%) brightness(100%);
+        }
+
+        /* Marquee Animation */
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+
+        .marquee-content {
+            display: inline-flex;
+            animation: scroll 35s linear infinite;
+            gap: 5rem;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        /* Premium Brand Styling */
+        .marquee-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: 'General Sans', sans-serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.2);
+            letter-spacing: -0.02em;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+        }
+        
+        .marquee-item i {
+            font-size: 1.5rem;
+            opacity: 0.4;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .marquee-item:hover { 
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+        
+        .marquee-item:hover i {
+            transform: scale(1.1);
+            opacity: 1;
+            color: #10b981;
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth Hide Scrollbar */
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+    </style>
+</head>
+<body>
+
+    <div class="grain-overlay"></div>
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-[100] flex justify-between items-center px-8 md:px-14 py-8">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 bg-white flex items-center justify-center rounded-[4px] rotate-45">
+                <div class="w-4 h-4 bg-black -rotate-45"></div>
+            </div>
+            <span class="font-display font-bold text-xl tracking-tighter uppercase">Nawaz.</span>
+        </div>
+        <button class="w-12 h-12 flex items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white hover:text-black transition-all duration-300">
+            <i class="ph ph-dots-three-outline-vertical text-xl"></i>
+        </button>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center pt-24 px-6 overflow-hidden">
+        <div class="hero-bg"></div>
+        <div class="absolute inset-0 z-0 opacity-30 grayscale contrast-125">
+            <iframe src="https://my.spline.design/roomsceneexample-89196b69b59695d7398e0964724b1f81/" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+
+        <div class="relative z-10 text-center max-w-5xl">
+            <div class="reveal mb-10 inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Ready for scale
+            </div>
+
+            <h1 class="reveal font-display text-6xl md:text-9xl font-bold leading-[0.95] mb-10 tracking-tighter">
+                Identity that <br> works <span class="italic font-light opacity-50 text-emerald-400">Silently</span>
+            </h1>
+
+            <p class="reveal text-neutral-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-12 font-light">
+                Bridging the gap between aesthetic excellence and business objectives. I design systems that empower teams and products that users love.
+            </p>
+
+            <div class="reveal flex flex-wrap justify-center gap-5 mb-24">
+                <button class="group bg-white text-black px-10 py-4 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-emerald-400 transition-all">
+                    Start Project 
+                    <i class="ph ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </button>
+                <button class="bg-white/5 border border-white/10 backdrop-blur-md px-10 py-4 rounded-full font-bold text-sm hover:bg-white/10 transition-all">
+                    Archives
+                </button>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="reveal flex items-center justify-center gap-12 w-full max-w-3xl mx-auto">
+                <div class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-white/20 to-white/5"></div>
+                <div class="flex flex-col items-center gap-3">
+                    <span class="text-[10px] uppercase tracking-[0.4em] text-neutral-600 font-bold">Trusted by Industry Leaders</span>
+                    <i class="ph ph-caret-down text-xs text-neutral-700 animate-bounce"></i>
+                </div>
+                <div class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-white/20 to-white/5"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Logo Marquee (Apple, Google, Figma etc.) -->
+    <section class="py-12 border-y border-white/5 bg-white/[0.02]">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <!-- Tech & Design Leaders -->
+                <div class="marquee-item"><i class="ph-bold ph-apple-logo"></i> Apple</div>
+                <div class="marquee-item"><i class="ph-bold ph-google-logo"></i> Google</div>
+                <div class="marquee-item"><i class="ph-bold ph-figma-logo"></i> Figma</div>
+                <div class="marquee-item"><i class="ph-bold ph-airbnb-logo"></i> Airbnb</div>
+                <div class="marquee-item"><i class="ph-bold ph-frame-corners"></i> Framer</div>
+                <div class="marquee-item"><i class="ph-bold ph-pencil-circle"></i> Adobe Ps</div>
+                <div class="marquee-item"><i class="ph-bold ph-bezier-curve"></i> Illustrator</div>
+                <div class="marquee-item"><i class="ph-bold ph-browsers"></i> Webflow</div>
+                <div class="marquee-item"><i class="ph-bold ph-palette"></i> Canva</div>
+
+                <!-- Duplicate for seamless loop -->
+                <div class="marquee-item"><i class="ph-bold ph-apple-logo"></i> Apple</div>
+                <div class="marquee-item"><i class="ph-bold ph-google-logo"></i> Google</div>
+                <div class="marquee-item"><i class="ph-bold ph-figma-logo"></i> Figma</div>
+                <div class="marquee-item"><i class="ph-bold ph-airbnb-logo"></i> Airbnb</div>
+                <div class="marquee-item"><i class="ph-bold ph-frame-corners"></i> Framer</div>
+                <div class="marquee-item"><i class="ph-bold ph-pencil-circle"></i> Adobe Ps</div>
+                <div class="marquee-item"><i class="ph-bold ph-bezier-curve"></i> Illustrator</div>
+                <div class="marquee-item"><i class="ph-bold ph-browsers"></i> Webflow</div>
+                <div class="marquee-item"><i class="ph-bold ph-palette"></i> Canva</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
 /* ═══════════════════════════════════════
    GRAIN TEXTURE
 ═══════════════════════════════════════ */

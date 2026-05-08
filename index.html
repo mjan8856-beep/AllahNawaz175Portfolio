@@ -1,37 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
- <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- SEO & Meta Tags -->
-  <title>Allah Nawaz | Product Designer | SaaS & Design Systems Specialist</title>
-  <meta name="description" content="Strategic Product Designer with 2+ years of experience in B2B SaaS and mobile platforms. Specialist in reducing design debt and building scalable design systems.">
-  <meta name="keywords" content="Product Designer, UI/UX, Design Systems, SaaS Design, B2B UX, Figma Expert, Islamabad">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="Allah Nawaz | Senior Product Designer">
-  <meta property="og:description" content="Designing high-performance digital experiences for SaaS and B2B.">
-  <meta property="og:type" content="website">
-
-  <!-- Premium Fonts Pairing: Syne (Display) + Inter (Body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+ <title>Allah Nawaz — Senior Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#050505;--s1:#0a0a0a;--s2:#111111;--card:#141414;--lime:#d4f40c;--lime-10:rgba(212,244,12,.10);--lime-15:rgba(212,244,12,.15);--border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.12);--hi:#ffffff;--md:rgba(255,255,255,.55);--lo:rgba(255,255,255,.22);--ease:cubic-bezier(.16,1,.3,1);--ff-d:'Syne',sans-serif;--ff-b:'DM Sans',sans-serif}
+/* ─── TOKENS ─────────────────────────────────────── */
+:root {
+  --bg:       #050505;
+  --s1:       #0a0a0a;
+  --s2:       #111111;
+  --card:     #141414;
+  --lime:     #d4f40c;
+  --lime-10:  rgba(212,244,12,.10);
+  --lime-15:  rgba(212,244,12,.15);
+  --border:   rgba(255,255,255,.07);
+  --border2:  rgba(255,255,255,.12);
+  --hi:       #ffffff;
+  --md:       rgba(255,255,255,.55);
+  --lo:       rgba(255,255,255,.22);
+  --ease:     cubic-bezier(.16,1,.3,1);
+  --ff-d:     'Syne', sans-serif;
+  --ff-b:     'DM Sans', sans-serif;
+}
+
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--bg);color:var(--hi);font-family:var(--ff-b);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-.grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:9000;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");opacity:.028;animation:grain 6s steps(8) infinite}
+
+/* ─── GRAIN ────────────────────────────────────────*/
+.grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:9000;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  opacity:.028;animation:grain 6s steps(8) infinite}
 @keyframes grain{0%,100%{transform:translate(0,0)}12%{transform:translate(-4%,-6%)}25%{transform:translate(5%,3%)}37%{transform:translate(-3%,8%)}50%{transform:translate(6%,-2%)}62%{transform:translate(-5%,5%)}75%{transform:translate(4%,-7%)}87%{transform:translate(-6%,2%)}}
+
+/* ─── LAYOUT ───────────────────────────────────────*/
 .wrap{max-width:1360px;margin:0 auto;padding:0 5vw}
+
+/* ─── REVEAL ───────────────────────────────────────*/
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.on{opacity:1;transform:none}
-.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
- 
-/* NAV */
+.reveal-d1{transition-delay:.08s}
+.reveal-d2{transition-delay:.16s}
+.reveal-d3{transition-delay:.24s}
+.reveal-d4{transition-delay:.32s}
+
+/* ─── NAV ──────────────────────────────────────────*/
 #nav{position:fixed;top:0;left:0;width:100%;z-index:500;padding:28px 0;transition:padding .5s var(--ease),background .5s}
-#nav.scrolled{padding:14px 0;background:rgba(5,5,5,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+#nav.scrolled{padding:14px 0;background:rgba(5,5,5,.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .logo{font-family:var(--ff-d);font-weight:800;font-size:22px;letter-spacing:-.04em;color:#fff;text-decoration:none}
 .logo em{color:var(--lime);font-style:normal}
@@ -41,16 +63,17 @@ body{background:var(--bg);color:var(--hi);font-family:var(--ff-b);line-height:1.
 .nav-cta{padding:10px 22px;background:var(--lime);color:#000;border-radius:100px;font-family:var(--ff-d);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:opacity .25s,transform .25s}
 .nav-cta:hover{opacity:.85;transform:scale(1.03)}
 .nav-ham{display:none;background:none;border:none;color:#fff;cursor:pointer;padding:8px}
+
 .mob-menu{position:fixed;inset:0;background:var(--bg);z-index:490;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;transform:translateX(110%);transition:transform .6s var(--ease)}
 .mob-menu.open{transform:none}
 .mob-menu a{font-family:var(--ff-d);font-size:36px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:-.03em;transition:color .2s}
 .mob-menu a:hover{color:var(--lime)}
- 
-/* HERO */
+
+/* ─── HERO ─────────────────────────────────────────*/
 #hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;position:relative;overflow:hidden}
 .hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(212,244,12,.04)0%,transparent 70%);top:-200px;right:-200px;pointer-events:none}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border:1px solid var(--border2);border-radius:100px;background:rgba(255,255,255,.02);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:36px}
-.hero-eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--lime);animation:blink 2s infinite;flex-shrink:0}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border:1px solid var(--border2);border-radius:100px;background:rgba(255,255,255,.02);backdrop-filter:blur(8px);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:36px}
+.hero-eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--lime);animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 h1.hero-h{font-family:var(--ff-d);font-size:clamp(52px,9vw,128px);font-weight:800;letter-spacing:-.04em;line-height:.88;margin-bottom:40px}
 h1.hero-h .ghost{color:rgba(255,255,255,.12);display:block}
@@ -65,47 +88,51 @@ h1.hero-h .ghost{color:rgba(255,255,255,.12);display:block}
 .soc svg{width:20px;height:20px;fill:var(--md);transition:fill .25s}
 .soc:hover{border-color:var(--lime);transform:translateY(-5px)}
 .soc:hover svg{fill:var(--lime)}
- 
-/* STATS */
-#stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--s1)}
+
+/* ─── STATS ────────────────────────────────────────*/
+#stats{padding:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--s1)}
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr)}
 .stat-cell{padding:52px 40px;border-right:1px solid var(--border);transition:background .3s}
 .stat-cell:last-child{border-right:none}
 .stat-cell:hover{background:var(--s2)}
 .stat-val{font-family:var(--ff-d);font-size:clamp(36px,4vw,56px);font-weight:800;color:var(--lime);letter-spacing:-.04em;line-height:1;display:block;margin-bottom:10px}
 .stat-label{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--lo)}
- 
-/* SECTION HEADER */
+
+/* ─── SECTION HEADER ───────────────────────────────*/
 .sec-tag{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);margin-bottom:20px}
 .sec-tag::before{content:'';width:24px;height:1px;background:var(--lime)}
 .sec-h{font-family:var(--ff-d);font-size:clamp(36px,4.5vw,60px);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin-bottom:16px}
 .sec-sub{font-size:17px;color:var(--md);font-weight:300;max-width:520px;line-height:1.65}
 .sec-head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:64px;flex-wrap:wrap}
- 
-/* WORK */
-#work{padding:120px 0}
+ /* ─── WORK ─────────────────────────────────────────*/
+#work{padding:120px 0;background:var(--bg)}
 .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-.ba{grid-column:span 7}.bb{grid-column:span 5}.bc{grid-column:span 5}.bd{grid-column:span 7}
-.work-card{border-radius:28px;border:1px solid var(--border);overflow:hidden;background:var(--card);display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:border-color .4s,transform .4s,box-shadow .4s;position:relative}
+.bento-a{grid-column:span 7}
+.bento-b{grid-column:span 5}
+.bento-c{grid-column:span 5}
+.bento-d{grid-column:span 7}
+.work-card{border-radius:28px;border:1px solid var(--border);overflow:hidden;background:var(--card);display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:border-color .4s var(--ease),transform .4s var(--ease),box-shadow .4s var(--ease);position:relative}
 .work-card:hover{border-color:rgba(212,244,12,.4);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.5)}
-.work-img{width:100%;aspect-ratio:16/10;overflow:hidden;background:#0e0e0e}
+.work-img{width:100%;aspect-ratio:16/10;overflow:hidden;position:relative;background:#0e0e0e}
 .work-img img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease),filter .4s}
 .work-card:hover .work-img img{transform:scale(1.06);filter:brightness(1.1)}
+.work-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6)0%,transparent 60%);opacity:0;transition:opacity .4s}
+.work-card:hover .work-img-overlay{opacity:1}
 .work-meta{padding:28px 30px}
 .work-tag{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:10px;display:block}
 .work-title{font-family:var(--ff-d);font-size:clamp(20px,2.2vw,28px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}
 .work-desc{font-size:14px;color:var(--md);font-weight:300;line-height:1.6}
 .work-arrow{position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.5);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;opacity:0;transform:translate(8px,-8px);transition:all .4s var(--ease)}
 .work-card:hover .work-arrow{opacity:1;transform:none}
- 
-/* EXPERIENCE */
+
+/* ─── EXPERIENCE ───────────────────────────────────*/
 #experience{padding:120px 0;background:var(--s1)}
-.exp-wrap{position:relative}
+.exp-list{margin-top:0;position:relative}
 .exp-line{position:absolute;left:7px;top:24px;bottom:24px;width:1px;background:var(--border)}
-.exp-item{display:grid;grid-template-columns:64px 1fr;padding-bottom:56px;position:relative}
+.exp-item{display:grid;grid-template-columns:64px 1fr;gap:0 24px;padding-bottom:56px;position:relative}
 .exp-item:last-child{padding-bottom:0}
-.exp-dot-col{display:flex;justify-content:flex-start;position:relative;z-index:2;padding-top:6px}
-.exp-dot{width:15px;height:15px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px rgba(212,244,12,.15),0 0 20px rgba(212,244,12,.3)}
+.exp-dot-col{display:flex;flex-direction:column;align-items:center;position:relative;z-index:2}
+.exp-dot{width:15px;height:15px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px rgba(212,244,12,.15),0 0 20px rgba(212,244,12,.3);flex-shrink:0;margin-top:6px}
 .exp-body{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px;transition:border-color .3s}
 .exp-item:hover .exp-body{border-color:var(--border2)}
 .exp-period{font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--lime);margin-bottom:14px;display:block}
@@ -115,125 +142,165 @@ h1.hero-h .ghost{color:rgba(255,255,255,.12);display:block}
 .exp-tags{display:flex;flex-wrap:wrap;gap:8px}
 .exp-tag{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:100px;border:1px solid var(--border);color:var(--lo);transition:all .25s;cursor:default}
 .exp-tag:hover{color:#fff;border-color:rgba(255,255,255,.25)}
- 
-/* CERTIFICATIONS */
-#certs{padding:120px 0}
-.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+
+/* ─── PROCESS ──────────────────────────────────────*/
+#process{padding:120px 0;background:var(--bg)}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:64px}
+.proc-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;transition:all .35s var(--ease)}
+.proc-card:hover{border-color:rgba(212,244,12,.3);background:#161616;transform:translateY(-4px)}
+.proc-num{position:absolute;top:20px;right:20px;font-family:var(--ff-d);font-size:11px;font-weight:700;color:var(--lime);opacity:.4;letter-spacing:.1em}
+.proc-card h3{font-family:var(--ff-d);font-size:15px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px;color:#fff}
+.proc-card p{font-size:12px;color:var(--lo);line-height:1.55}
+.proc-card.featured{border-color:rgba(212,244,12,.35);background:var(--lime-10)}
+.proc-card.featured h3{color:var(--lime)}
+.proc-card.featured p{color:rgba(255,255,255,.6)}
+.proc-card.featured .proc-num{opacity:.8}
+
+/* ─── CERTIFICATIONS ───────────────────────────────*/
+#certs{padding:120px 0;background:var(--s1)}
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:64px}
 .cert-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px;transition:all .35s var(--ease);display:flex;flex-direction:column;gap:12px}
 .cert-card:hover{border-color:rgba(212,244,12,.35);background:#161616;transform:translateY(-3px)}
 .cert-badge{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--lime)}
 .cert-badge::before{content:'✦';font-size:8px}
 .cert-card h4{font-family:var(--ff-d);font-size:18px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
-.cert-card p{font-size:13px;color:var(--md)}
- 
-/* PROCESS */
-#process{padding:120px 0;background:var(--s1)}
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:64px}
-.proc-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;transition:all .35s var(--ease)}
-.proc-card:hover{border-color:rgba(212,244,12,.3);background:#161616;transform:translateY(-4px)}
-.proc-num{position:absolute;top:20px;right:20px;font-family:var(--ff-d);font-size:11px;font-weight:700;color:var(--lime);opacity:.4;letter-spacing:.1em}
-.proc-card h3{font-family:var(--ff-d);font-size:15px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
-.proc-card p{font-size:12px;color:var(--lo);line-height:1.55}
-.proc-feat{border-color:rgba(212,244,12,.35)!important;background:var(--lime-10)!important}
-.proc-feat h3{color:var(--lime)}
-.proc-feat p{color:rgba(255,255,255,.6)}
-.proc-feat .proc-num{opacity:.8}
- 
-/* TESTIMONIALS */
-#testimonials{padding:120px 0}
-.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.testi-card{background:var(--card);border:1px solid var(--border);border-radius:28px;padding:44px;display:flex;flex-direction:column;gap:28px;transition:border-color .3s}
+.cert-card p{font-size:13px;color:var(--md);font-weight:400}
+
+/* ─── TESTIMONIALS ─────────────────────────────────*/
+#testimonials{padding:120px 0;background:var(--bg)}
+.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:64px}
+.testi-card{background:var(--card);border:1px solid var(--border);border-radius:28px;padding:44px;display:flex;flex-direction:column;gap:32px;transition:border-color .3s}
 .testi-card:hover{border-color:var(--border2)}
 .testi-stars{display:flex;gap:4px}
 .testi-stars span{color:var(--lime);font-size:14px}
-.testi-quote{font-size:17px;font-style:italic;color:rgba(255,255,255,.88);line-height:1.7;font-weight:300;position:relative}
-.testi-quote::before{content:'"';font-family:Georgia,serif;font-size:64px;color:var(--lime);line-height:0;display:block;margin-bottom:20px;vertical-align:-.5em}
+.testi-quote{font-size:18px;font-style:italic;color:rgba(255,255,255,.9);line-height:1.65;font-weight:300;font-family:'DM Sans',sans-serif}
+.testi-quote::before{content:'"';font-family:Georgia,serif;font-size:60px;color:var(--lime);line-height:0;display:block;margin-bottom:16px;vertical-align:-.4em}
 .testi-author{display:flex;align-items:center;gap:16px}
-.testi-avatar{width:48px;height:48px;border-radius:50%;background:#1e1e1e;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--ff-d);font-size:13px;font-weight:700;color:var(--lime);flex-shrink:0}
+.testi-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#1e1e1e,#2a2a2a);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--ff-d);font-size:14px;font-weight:700;color:var(--lime);flex-shrink:0}
 .testi-name{font-family:var(--ff-d);font-size:15px;font-weight:700;letter-spacing:-.02em;margin-bottom:2px}
 .testi-role{font-size:12px;color:var(--lo)}
  
-/* SERVICES */
+/* ─── SERVICES ─────────────────────────────────────*/
 #services{padding:120px 0;background:var(--s1)}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:64px}
 .svc-card{background:var(--card);border:1px solid var(--border);border-radius:28px;padding:44px;display:flex;flex-direction:column;gap:24px;transition:all .4s var(--ease);position:relative;overflow:hidden}
 .svc-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 0%,rgba(212,244,12,.04)0%,transparent 60%);opacity:0;transition:opacity .4s}
 .svc-card:hover::before{opacity:1}
 .svc-card:hover{border-color:rgba(212,244,12,.3);transform:translateY(-4px)}
-.svc-feat{border-color:rgba(212,244,12,.35)!important;background:#111!important}
+.svc-card.featured{border-color:rgba(212,244,12,.35);background:#111}
 .svc-pill{display:inline-block;padding:6px 16px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-.pill-default{background:var(--lime-10);color:var(--lime)}
-.pill-hi{background:var(--lime);color:#000}
+.svc-pill.default{background:var(--lime-10);color:var(--lime)}
+.svc-pill.highlight{background:var(--lime);color:#000}
 .svc-title{font-family:var(--ff-d);font-size:22px;font-weight:700;letter-spacing:-.03em}
 .svc-price{font-family:var(--ff-d);font-size:clamp(36px,4vw,48px);font-weight:800;letter-spacing:-.04em;color:var(--lime)}
-.svc-price.wh{color:#fff}
+.svc-price.white{color:#fff}
 .svc-desc{font-size:14px;color:var(--md);font-weight:300;line-height:1.7}
-.svc-div{height:1px;background:var(--border)}
-.svc-feats{list-style:none;display:flex;flex-direction:column;gap:12px}
-.svc-feats li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--md)}
-.svc-feats li::before{content:'→';color:var(--lime);flex-shrink:0;font-size:12px;margin-top:2px}
- 
-/* FAQ */
-#faq{padding:120px 0}
-.faq-list{display:flex;flex-direction:column}
+.svc-divider{height:1px;background:var(--border)}
+.svc-features{list-style:none;display:flex;flex-direction:column;gap:12px}
+.svc-features li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--md)}
+.svc-features li::before{content:'→';color:var(--lime);flex-shrink:0;font-size:12px;margin-top:2px}
+
+/* ─── CONTACT ──────────────────────────────────────*/
+#contact{padding:120px 0;background:var(--bg);position:relative;overflow:hidden}
+.contact-bg-text{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);font-family:var(--ff-d);font-size:clamp(80px,14vw,200px);font-weight:800;color:rgba(255,255,255,.015);white-space:nowrap;letter-spacing:-.05em;pointer-events:none;user-select:none}
+.contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start;margin-top:64px;position:relative;z-index:1}
+.contact-info{display:flex;flex-direction:column;gap:32px}
+.contact-info-label{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lo)}
+.contact-info-val{font-size:17px;color:#fff}
+.contact-info-val a{color:var(--lime);text-decoration:none;transition:opacity .2s}
+.contact-info-val a:hover{opacity:.7}
+.contact-form-box{background:var(--card);border:1px solid var(--border);border-radius:28px;padding:48px}
+.form-group{margin-bottom:24px}
+.form-label{display:block;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lo);margin-bottom:12px}
+.form-control{width:100%;background:#0a0a0a;border:1px solid var(--border);border-radius:12px;padding:16px 18px;color:#fff;font-family:var(--ff-b);font-size:15px;outline:none;transition:border-color .3s;resize:none}
+.form-control::placeholder{color:var(--lo)}
+.form-control:focus{border-color:rgba(212,244,12,.4)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-submit{width:100%;padding:18px;background:var(--lime);color:#000;border:none;border-radius:100px;font-family:var(--ff-d);font-size:14px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .3s var(--ease);display:flex;align-items:center;justify-content:center;gap:10px}
+.form-submit:hover{transform:scale(1.02);box-shadow:0 0 40px rgba(212,244,12,.2)}
+.form-submit:active{transform:scale(.98)}
+
+/* ─── FAQ ───────────────────────────────────────────*/
+#faq{padding:120px 0;background:var(--s1)}
+.faq-list{margin-top:64px;display:flex;flex-direction:column}
 .faq-item{border-bottom:1px solid var(--border);overflow:hidden;cursor:pointer}
-.faq-q{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 0;transition:color .25s}
-.faq-q-text{font-family:var(--ff-d);font-size:clamp(15px,2vw,21px);font-weight:700;letter-spacing:-.02em;line-height:1.25}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:28px 0;transition:color .25s}
+.faq-q-text{font-family:var(--ff-d);font-size:clamp(16px,2vw,22px);font-weight:700;letter-spacing:-.02em;line-height:1.2}
 .faq-icon{width:40px;height:40px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s var(--ease)}
-.faq-icon svg{width:16px;height:16px;stroke:var(--md);transition:transform .4s,stroke .25s}
+.faq-icon svg{width:16px;height:16px;stroke:var(--md);transition:transform .4s var(--ease),stroke .25s}
 .faq-item.open .faq-icon{background:var(--lime);border-color:var(--lime)}
 .faq-item.open .faq-icon svg{stroke:#000;transform:rotate(45deg)}
 .faq-item.open .faq-q-text{color:var(--lime)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease),padding .4s}
 .faq-a-inner{padding:0 0 28px;font-size:16px;color:var(--md);font-weight:300;line-height:1.75;max-width:760px}
 .faq-item.open .faq-a{max-height:400px}
- 
-/* CONTACT */
-#contact{padding:120px 0;position:relative;overflow:hidden}
-.contact-bg-text{position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);font-family:var(--ff-d);font-size:clamp(80px,14vw,200px);font-weight:800;color:rgba(255,255,255,.015);white-space:nowrap;letter-spacing:-.05em;pointer-events:none;user-select:none}
-.contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start;position:relative;z-index:1}
-.contact-info{display:flex;flex-direction:column;gap:32px}
-.c-label{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lo);margin-bottom:6px}
-.c-val{font-size:16px;color:#fff}
-.c-val a{color:var(--lime);text-decoration:none;transition:opacity .2s}
-.c-val a:hover{opacity:.7}
-.cfbox{background:var(--card);border:1px solid var(--border);border-radius:28px;padding:48px}
-.fg{margin-bottom:22px}
-.fl{display:block;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lo);margin-bottom:10px}
-.fc{width:100%;background:#0a0a0a;border:1px solid var(--border);border-radius:12px;padding:15px 18px;color:#fff;font-family:var(--ff-b);font-size:15px;outline:none;transition:border-color .3s;resize:none}
-.fc::placeholder{color:var(--lo)}
-.fc:focus{border-color:rgba(212,244,12,.4)}
-.fg2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
-.fsub{width:100%;padding:18px;background:var(--lime);color:#000;border:none;border-radius:100px;font-family:var(--ff-d);font-size:14px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .3s var(--ease);display:flex;align-items:center;justify-content:center;gap:10px}
-.fsub:hover{transform:scale(1.02);box-shadow:0 0 40px rgba(212,244,12,.2)}
- 
-/* FOOTER */
+
+/* ─── FOOTER ───────────────────────────────────────*/
 footer{background:#000;border-top:1px solid var(--border);padding:80px 0 40px}
-.foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;margin-bottom:64px}
-.foot-logo{font-family:var(--ff-d);font-weight:800;font-size:24px;letter-spacing:-.04em;color:#fff;text-decoration:none;display:block;margin-bottom:16px}
-.foot-logo em{color:var(--lime);font-style:normal}
-.foot-tag{font-size:14px;color:var(--lo);max-width:280px;line-height:1.6}
-.foot-col h5{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--lo);margin-bottom:20px}
-.foot-col a{display:block;font-size:14px;color:var(--md);text-decoration:none;margin-bottom:12px;transition:color .2s}
-.foot-col a:hover{color:var(--lime)}
-.foot-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:32px;border-top:1px solid var(--border)}
-.foot-copy{font-size:13px;color:var(--lo)}
-.foot-socs{display:flex;gap:10px}
-.fsoc{width:40px;height:40px;border-radius:10px;border:1px solid var(--border);background:var(--s1);display:flex;align-items:center;justify-content:center;transition:all .3s;text-decoration:none}
-.fsoc svg{width:16px;height:16px;fill:var(--lo);transition:fill .25s}
-.fsoc:hover{border-color:var(--lime);transform:translateY(-3px)}
-.fsoc:hover svg{fill:var(--lime)}
-::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(212,244,12,.3);border-radius:2px}
- 
-@media(max-width:1100px){.process-grid{grid-template-columns:repeat(3,1fr)}.ba,.bd{grid-column:span 8}.bb,.bc{grid-column:span 4}}
-@media(max-width:900px){.stats-row{grid-template-columns:repeat(2,1fr)}.cert-grid{grid-template-columns:repeat(2,1fr)}.services-grid{grid-template-columns:1fr}.testi-grid{grid-template-columns:1fr}.process-grid{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr;gap:48px}}
-@media(max-width:768px){.nav-links,.nav-cta{display:none}.nav-ham{display:flex}.bento{display:flex;flex-direction:column}.cert-grid{grid-template-columns:1fr}.sec-head-row{flex-direction:column;align-items:flex-start}.fg2{grid-template-columns:1fr}}
-@media(max-width:480px){.process-grid{grid-template-columns:1fr}.stats-row{grid-template-columns:1fr}.stat-cell{border-right:none;border-top:1px solid var(--border)}.stat-cell:first-child{border-top:none}}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;margin-bottom:64px}
+.footer-logo-block{}
+.footer-logo{font-family:var(--ff-d);font-weight:800;font-size:24px;letter-spacing:-.04em;color:#fff;text-decoration:none;display:block;margin-bottom:16px}
+.footer-logo em{color:var(--lime);font-style:normal}
+.footer-tagline{font-size:14px;color:var(--lo);max-width:280px;line-height:1.6}
+.footer-nav-col h5{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--lo);margin-bottom:20px}
+.footer-nav-col a{display:block;font-size:14px;color:var(--md);text-decoration:none;margin-bottom:12px;transition:color .2s}
+.footer-nav-col a:hover{color:var(--lime)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:32px;border-top:1px solid var(--border)}
+.footer-copy{font-size:13px;color:var(--lo)}
+.footer-socials{display:flex;gap:10px}
+.foot-soc{width:40px;height:40px;border-radius:10px;border:1px solid var(--border);background:var(--s1);display:flex;align-items:center;justify-content:center;transition:all .3s;text-decoration:none}
+.foot-soc svg{width:16px;height:16px;fill:var(--lo);transition:fill .25s}
+.foot-soc:hover{border-color:var(--lime);transform:translateY(-3px)}
+.foot-soc:hover svg{fill:var(--lime)}
+
+/* ─── SCROLLBAR ────────────────────────────────────*/
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(212,244,12,.3);border-radius:2px}
+
+/* ─── RESPONSIVE ───────────────────────────────────*/
+@media(max-width:1100px){
+  .process-grid{grid-template-columns:repeat(3,1fr)}
+  .bento-a,.bento-d{grid-column:span 8}
+  .bento-b,.bento-c{grid-column:span 4}
+}
+@media(max-width:900px){
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .stat-cell:nth-child(2){border-right:none}
+  .stat-cell:nth-child(3){border-top:1px solid var(--border)}
+  .stat-cell:nth-child(4){border-top:1px solid var(--border);border-right:none}
+  .cert-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr;gap:48px}
+  .footer-top{gap:48px}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .nav-ham{display:flex}
+  .bento{display:flex;flex-direction:column}
+  .bento-a,.bento-b,.bento-c,.bento-d{grid-column:span 12}
+  .cert-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr 1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
+  .sec-head-row{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:480px){
+  .process-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr}
+  .stat-cell{border-right:none;border-top:1px solid var(--border)}
+  .stat-cell:first-child{border-top:none}
+}
 </style>
 </head>
 <body>
+
+<!-- GRAIN -->
 <div class="grain" aria-hidden="true"></div>
- 
+
+<!-- MOBILE MENU -->
 <div class="mob-menu" id="mobMenu">
   <a href="#work" onclick="closeMob()">Work</a>
   <a href="#experience" onclick="closeMob()">Experience</a>
@@ -241,7 +308,8 @@ footer{background:#000;border-top:1px solid var(--border);padding:80px 0 40px}
   <a href="#services" onclick="closeMob()">Services</a>
   <a href="#contact" onclick="closeMob()" style="color:var(--lime)">Start a Project</a>
 </div>
- 
+
+<!-- NAV -->
 <nav id="nav">
   <div class="wrap nav-inner">
     <a href="#" class="logo">NAWAZ<em>.</em></a>
@@ -252,115 +320,206 @@ footer{background:#000;border-top:1px solid var(--border);padding:80px 0 40px}
       <li><a href="#services">Services</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Start a Project</a>
-    <button class="nav-ham" onclick="openMob()" aria-label="Menu">
+    <button class="nav-ham" onclick="openMob()" aria-label="Open menu">
       <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </div>
 </nav>
- 
+
+<!-- ══════════════ HERO ══════════════ -->
 <section id="hero">
   <div class="hero-glow"></div>
   <div class="wrap">
     <div class="reveal">
       <div class="hero-eyebrow">Available for Senior Roles &amp; Freelance</div>
-      <h1 class="hero-h"><span class="ghost">Senior Product</span>Designer<br/>Executive.</h1>
+      <h1 class="hero-h">
+        <span class="ghost">Senior Product</span>
+        Designer<br/>Executive.
+      </h1>
       <p class="hero-sub">Building high-conversion B2B and SaaS products. Specializing in design systems that bridge the gap between complex data and delightful user experience.</p>
       <div class="hero-actions">
-        <a href="#work" class="btn-lime">View Case Studies <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#work" class="btn-lime">
+          View Case Studies
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
         <a href="#contact" class="btn-ghost">Start a Project</a>
       </div>
       <div class="hero-socials">
-        <a href="https://pk.linkedin.com/in/allah-nawaz-256a81286" target="_blank" class="soc" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-        <a href="https://www.behance.net/allahnawaz175" target="_blank" class="soc" aria-label="Behance"><svg viewBox="0 0 24 24"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.73-3.35h3.979c-.005-.366-.068-.707-.2-1.015-.29-.695-.962-1.178-1.853-1.178-.778 0-1.494.342-1.906 1.178-.135.298-.208.645-.22 1.015zM7.18 17.01c-1.35 0-2.264-.474-2.787-1.016V18H1V6h3.393v4.474c.523-.572 1.378-.965 2.634-.965 2.748 0 4.567 2.117 4.567 3.75 0 1.635-1.82 3.751-4.413 3.751zM6.5 11.5c-.877 0-1.591.674-1.591 1.507 0 .833.714 1.508 1.591 1.508.878 0 1.591-.675 1.591-1.508 0-.833-.713-1.507-1.591-1.507z"/></svg></a>
-        <a href="https://instagram.com/allahnawaz.design" target="_blank" class="soc" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://pk.linkedin.com/in/allah-nawaz-256a81286" target="_blank" class="soc" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://www.behance.net/allahnawaz175" target="_blank" class="soc" aria-label="Behance">
+          <svg viewBox="0 0 24 24"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.73-3.35h3.979c-.005-.366-.068-.707-.2-1.015-.29-.695-.962-1.178-1.853-1.178-.778 0-1.494.342-1.906 1.178-.135.298-.208.645-.22 1.015zM7.18 17.01c-1.35 0-2.264-.474-2.787-1.016V18H1V6h3.393v4.474c.523-.572 1.378-.965 2.634-.965 2.748 0 4.567 2.117 4.567 3.75 0 1.635-1.82 3.751-4.413 3.751zM6.5 11.5c-.877 0-1.591.674-1.591 1.507 0 .833.714 1.508 1.591 1.508.878 0 1.591-.675 1.591-1.508 0-.833-.713-1.507-1.591-1.507z"/></svg>
+        </a>
+        <a href="https://instagram.com/allahnawaz.design" target="_blank" class="soc" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
       </div>
     </div>
   </div>
 </section>
- 
+
+<!-- ══════════════ STATS ══════════════ -->
 <section id="stats">
   <div class="stats-row wrap">
     <div class="stat-cell reveal"><span class="stat-val">40%</span><span class="stat-label">Avg. Conversion Growth</span></div>
-    <div class="stat-cell reveal d1"><span class="stat-val">150+</span><span class="stat-label">SaaS Modules Designed</span></div>
-    <div class="stat-cell reveal d2"><span class="stat-val">8+</span><span class="stat-label">Clients Served</span></div>
-    <div class="stat-cell reveal d3"><span class="stat-val">98%</span><span class="stat-label">Client Satisfaction Rate</span></div>
+    <div class="stat-cell reveal reveal-d1"><span class="stat-val">150+</span><span class="stat-label">SaaS Modules Designed</span></div>
+    <div class="stat-cell reveal reveal-d2"><span class="stat-val">8+</span><span class="stat-label">Clients Served</span></div>
+    <div class="stat-cell reveal reveal-d3"><span class="stat-val">98%</span><span class="stat-label">Client Satisfaction Rate</span></div>
   </div>
 </section>
- 
+
+<!-- ══════════════ WORK ══════════════ -->
 <section id="work">
   <div class="wrap">
     <div class="sec-head-row">
       <div>
         <div class="sec-tag">Case Studies</div>
         <h2 class="sec-h">Selected Work</h2>
-        <p class="sec-sub">High-impact product design across SaaS, B2B, e-commerce, and mobile platforms.</p>
+        <p class="sec-sub">A curated selection of high-impact product design projects across SaaS, B2B, and mobile platforms.</p>
       </div>
       <a href="https://behance.net/allahnawaz175" target="_blank" class="btn-ghost">All Projects ↗</a>
     </div>
     <div class="bento">
-      <div class="ba reveal">
+      <div class="bento-a reveal">
         <a href="https://www.behance.net/gallery/237969847/Smarter-Influencer-Marketingwith-AI" target="_blank" class="work-card">
-          <div class="work-img"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/ecc1ed237969847.690b5825347ce.png" alt="AI Influencer" loading="lazy"/></div>
+          <div class="work-img"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/ecc1ed237969847.690b5825347ce.png" alt="AI Influencer Platform" loading="lazy"/><div class="work-img-overlay"></div></div>
           <div class="work-arrow"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-          <div class="work-meta"><span class="work-tag">AI · SaaS Dashboard</span><div class="work-title">AI Influencer Marketing Platform</div><p class="work-desc">Comprehensive SaaS dashboard simplifying creator discovery and ROI tracking for non-technical marketing users.</p></div>
+          <div class="work-meta">
+            <span class="work-tag">AI · SaaS Dashboard</span>
+            <div class="work-title">AI Influencer Marketing Platform</div>
+            <p class="work-desc">Comprehensive SaaS dashboard simplifying creator discovery and ROI tracking for non-technical marketing users.</p>
+          </div>
         </a>
       </div>
-      <div class="bb reveal d1">
+      <div class="bento-b reveal reveal-d1">
         <a href="https://www.behance.net/gallery/218563555/brain-book-e-comerce-landing-pages" target="_blank" class="work-card">
-          <div class="work-img"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/84667a218563555.67a371a228d8b.png" alt="Brain Book" loading="lazy"/></div>
+          <div class="work-img"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/84667a218563555.67a371a228d8b.png" alt="Brain Book" loading="lazy"/><div class="work-img-overlay"></div></div>
           <div class="work-arrow"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-          <div class="work-meta"><span class="work-tag">Brand Identity</span><div class="work-title">Brain Book Branding</div><p class="work-desc">Cognitive-focused visual identity system elevating learning retention and trust.</p></div>
+          <div class="work-meta">
+            <span class="work-tag">Brand Identity</span>
+            <div class="work-title">Brain Book Branding</div>
+            <p class="work-desc">A cognitive-focused visual identity system that elevates learning retention and trust.</p>
+          </div>
         </a>
       </div>
-      <div class="bc reveal d2">
+      <div class="bento-c reveal reveal-d2">
         <a href="https://www.behance.net/gallery/247688047/Fintech-Mobile-App-UIUX-Concept-Payfast" target="_blank" class="work-card">
-          <div class="work-img"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f14b3b247688047.69e090ead2f6a.png" alt="Fintech" loading="lazy"/></div>
+          <div class="work-img"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f14b3b247688047.69e090ead2f6a.png" alt="Fintech" loading="lazy"/><div class="work-img-overlay"></div></div>
           <div class="work-arrow"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-          <div class="work-meta"><span class="work-tag">Fintech · Mobile</span><div class="work-title">PayFast Mobile App</div><p class="work-desc">Fintech mobile UX with enterprise-grade clarity and zero-friction onboarding.</p></div>
+          <div class="work-meta">
+            <span class="work-tag">Fintech · Mobile</span>
+            <div class="work-title">PayFast Mobile App</div>
+            <p class="work-desc">End-to-end fintech mobile UX with enterprise-grade clarity and zero-friction onboarding.</p>
+          </div>
         </a>
       </div>
-      <div class="bd reveal d3">
+      <div class="bento-d reveal reveal-d3">
         <a href="https://www.behance.net/gallery/229096673/Pet-food-and-sales-web-ui" target="_blank" class="work-card">
-          <div class="work-img"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f7a198229096673.685e7051c9889.png" alt="Pet Food" loading="lazy"/></div>
+          <div class="work-img"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f7a198229096673.685e7051c9889.png" alt="Pet Food" loading="lazy"/><div class="work-img-overlay"></div></div>
           <div class="work-arrow"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-          <div class="work-meta"><span class="work-tag">E-commerce · UI/UX</span><div class="work-title">Pet Food E-Commerce UI</div><p class="work-desc">Frictionless retail experience combining smart IA with high-end product photography.</p></div>
+          <div class="work-meta">
+            <span class="work-tag">E-commerce · UI/UX</span>
+            <div class="work-title">Pet Food E-Commerce UI</div>
+            <p class="work-desc">A vibrant, frictionless retail experience combining smart IA with high-end product photography.</p>
+          </div>
         </a>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ══════════════ EXPERIENCE ══════════════ -->
 <section id="experience">
   <div class="wrap">
-    <div class="sec-head-row"><div><div class="sec-tag">Career</div><h2 class="sec-h">Professional Journey</h2></div></div>
-    <div class="exp-wrap">
+    <div class="sec-head-row">
+      <div>
+        <div class="sec-tag">Career</div>
+        <h2 class="sec-h">Professional Journey</h2>
+      </div>
+    </div>
+    <div class="exp-list" style="position:relative">
       <div class="exp-line"></div>
-      <div class="exp-item reveal"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-body"><span class="exp-period">May 2025 — Present</span><div class="exp-role">Product Designer</div><div class="exp-company">Prime Estimate · Full-time Remote</div><p class="exp-desc">Leading end-to-end design across web and mobile products. Architected a shared Figma component library reducing repeated design work by 40%. Worked directly with PMs and engineers to move features from concept to shipped with clear design rationale that accelerated stakeholder reviews.</p><div class="exp-tags"><span class="exp-tag">UX Strategy</span><span class="exp-tag">Design Systems</span><span class="exp-tag">Figma</span><span class="exp-tag">Prototyping</span></div></div></div>
-      <div class="exp-item reveal"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-body"><span class="exp-period">April 2024 — Present</span><div class="exp-role">Freelance Product Designer</div><div class="exp-company">Independent · 8+ Clients</div><p class="exp-desc">Worked with 8+ clients across SaaS and e-commerce — handling everything from early discovery to final developer handoff. Built lightweight design systems for small teams and delivered annotated Figma prototypes ready to build without back-and-forth.</p><div class="exp-tags"><span class="exp-tag">Web Design</span><span class="exp-tag">Visual Design</span><span class="exp-tag">Client Relations</span><span class="exp-tag">Freelancing</span></div></div></div>
-      <div class="exp-item reveal"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-body"><span class="exp-period">April 2024 — May 2025</span><div class="exp-role">UI/UX Designer</div><div class="exp-company">Profituned Marketing · Full-time</div><p class="exp-desc">Redesigned landing pages using heatmap and session data. Designed paid ad creatives for Meta and Google, ran A/B tests on key page layouts, and embedded with the marketing team to align designs with campaign goals from day one.</p><div class="exp-tags"><span class="exp-tag">Product Design</span><span class="exp-tag">A/B Testing</span><span class="exp-tag">CRO</span><span class="exp-tag">Data Viz</span></div></div></div>
-      <div class="exp-item reveal"><div class="exp-dot-col"><div class="exp-dot"></div></div><div class="exp-body"><span class="exp-period">Oct 2023 — Apr 2024</span><div class="exp-role">Product Design Intern</div><div class="exp-company">Design Peeps · Internship</div><p class="exp-desc">Assisted the design team creating wireframes, mockups, and responsive layouts. Participated actively in design critiques and contributed to the foundation of component libraries.</p><div class="exp-tags"><span class="exp-tag">Figma</span><span class="exp-tag">UI Design</span><span class="exp-tag">Wireframing</span><span class="exp-tag">Design Systems</span></div></div></div>
+
+      <div class="exp-item reveal">
+        <div class="exp-dot-col"><div class="exp-dot"></div></div>
+        <div class="exp-body">
+          <span class="exp-period">May 2025 — Present</span>
+          <div class="exp-role">Product Designer</div>
+          <div class="exp-company">Prime Estimate · Full-time Remote</div>
+          <p class="exp-desc">Leading end-to-end design across web and mobile products. Architected a shared Figma component library that reduced repeated design work by ~40%. Worked directly with PMs and engineers to move features from concept to shipped — clearly communicating design rationale to accelerate stakeholder reviews.</p>
+          <div class="exp-tags"><span class="exp-tag">UX Strategy</span><span class="exp-tag">Design Systems</span><span class="exp-tag">Figma</span><span class="exp-tag">Prototyping</span></div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-dot-col"><div class="exp-dot"></div></div>
+        <div class="exp-body">
+          <span class="exp-period">April 2024 — Present</span>
+          <div class="exp-role">Freelance Product Designer</div>
+          <div class="exp-company">Independent · 8+ Clients</div>
+          <p class="exp-desc">Worked with 8+ clients across SaaS and e-commerce — handling everything from early discovery to final developer handoff. Built lightweight design systems for small teams, designed social creatives, and delivered annotated Figma prototypes ready to build without back-and-forth.</p>
+          <div class="exp-tags"><span class="exp-tag">Web Design</span><span class="exp-tag">Visual Design</span><span class="exp-tag">Client Relations</span><span class="exp-tag">Freelancing</span></div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-dot-col"><div class="exp-dot"></div></div>
+        <div class="exp-body">
+          <span class="exp-period">April 2024 — May 2025</span>
+          <div class="exp-role">UI/UX Designer</div>
+          <div class="exp-company">Profituned Marketing · Full-time</div>
+          <p class="exp-desc">Redesigned landing pages using heatmap and session data — removing friction rather than just aesthetics. Designed paid ad creatives for Meta and Google, ran A/B tests on key page layouts, and embedded with the marketing team to align designs with campaign goals from day one.</p>
+          <div class="exp-tags"><span class="exp-tag">Product Design</span><span class="exp-tag">Data Viz</span><span class="exp-tag">A/B Testing</span><span class="exp-tag">CRO</span></div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-dot-col"><div class="exp-dot"></div></div>
+        <div class="exp-body">
+          <span class="exp-period">Oct 2023 — Apr 2024</span>
+          <div class="exp-role">Product Design Intern</div>
+          <div class="exp-company">Design Peeps · Internship</div>
+          <p class="exp-desc">Assisted the design team creating wireframes, mockups, and responsive layouts. Participated actively in design critiques and contributed to the foundation of component libraries and UI documentation.</p>
+          <div class="exp-tags"><span class="exp-tag">Figma</span><span class="exp-tag">UI Design</span><span class="exp-tag">Wireframing</span><span class="exp-tag">Design Systems</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
- 
+
+<!-- ══════════════ CERTIFICATIONS ══════════════ -->
 <section id="certs">
   <div class="wrap">
-    <div class="sec-head-row"><div><div class="sec-tag">Credentials</div><h2 class="sec-h">Expert Certifications</h2></div></div>
+    <div class="sec-head-row">
+      <div>
+        <div class="sec-tag">Credentials</div>
+        <h2 class="sec-h">Expert Certifications</h2>
+      </div>
+    </div>
     <div class="cert-grid">
-      <div class="cert-card reveal"><span class="cert-badge">Certified</span><h4>Website Design</h4><p>NAVTTC · National Vocational &amp; Technical Training Commission</p></div>
-      <div class="cert-card reveal d1"><span class="cert-badge">Certified</span><h4>Information Technology</h4><p>TEVTA · Technical Education &amp; Vocational Training Authority</p></div>
-      <div class="cert-card reveal d2"><span class="cert-badge">Certified</span><h4>Networking Technician</h4><p>PSDF · Punjab Skills Development Fund</p></div>
-      <div class="cert-card reveal"><span class="cert-badge">Expert</span><h4>Advanced Figma Architecture</h4><p>Design Systems &amp; Component Libraries</p></div>
-      <div class="cert-card reveal d1"><span class="cert-badge">Expert</span><h4>User Research &amp; Testing</h4><p>Usability Testing · A/B Testing · Maze · UserTesting</p></div>
-      <div class="cert-card reveal d2"><span class="cert-badge">Expert</span><h4>Accessibility Standards</h4><p>WCAG 2.1 — Web Content Accessibility Guidelines</p></div>
+      <div class="cert-card reveal"><span class="cert-badge">Certified</span><h4>Website Design</h4><p>NAVTTC · National Vocational & Technical Training Commission</p></div>
+      <div class="cert-card reveal reveal-d1"><span class="cert-badge">Certified</span><h4>Information Technology</h4><p>TEVTA · Technical Education & Vocational Training Authority</p></div>
+      <div class="cert-card reveal reveal-d2"><span class="cert-badge">Certified</span><h4>Networking Technician</h4><p>PSDF · Punjab Skills Development Fund</p></div>
+      <div class="cert-card reveal"><span class="cert-badge">Expert</span><h4>Advanced Figma Architecture</h4><p>Design Systems & Component Libraries</p></div>
+      <div class="cert-card reveal reveal-d1"><span class="cert-badge">Expert</span><h4>User Research & Testing</h4><p>Usability Testing · A/B Testing · Maze · UserTesting</p></div>
+      <div class="cert-card reveal reveal-d2"><span class="cert-badge">Expert</span><h4>Accessibility Standards</h4><p>WCAG 2.1 — Web Content Accessibility Guidelines</p></div>
     </div>
   </div>
 </section>
- 
+
+<!-- ══════════════ PROCESS ══════════════ -->
 <section id="process">
   <div class="wrap">
-    <div class="sec-head-row"><div><div class="sec-tag">Methodology</div><h2 class="sec-h">The Process</h2><p class="sec-sub">A comprehensive 16-step operational framework built for scalable product excellence.</p></div></div>
+    <div class="sec-head-row">
+      <div>
+        <div class="sec-tag">Methodology</div>
+        <h2 class="sec-h">The Process</h2>
+        <p class="sec-sub">A comprehensive 16-step operational framework built for scalable product excellence — from first brief to launch and beyond.</p>
+      </div>
+    </div>
     <div class="process-grid reveal">
-      <div class="proc-card"><span class="proc-num">01</span><h3>Discovery</h3><p>Defining objectives and stakeholder alignment.</p></div>
+      <div class="proc-card"><span class="proc-num">01</span><h3>Discovery</h3><p>Defining objectives and stakeholder alignment sessions.</p></div>
       <div class="proc-card"><span class="proc-num">02</span><h3>Research</h3><p>User interviews and competitive market audits.</p></div>
       <div class="proc-card"><span class="proc-num">03</span><h3>Define</h3><p>Synthesizing insights into actionable personas.</p></div>
       <div class="proc-card"><span class="proc-num">04</span><h3>Information Architecture</h3><p>Structuring data for optimal findability.</p></div>
@@ -375,114 +534,295 @@ footer{background:#000;border-top:1px solid var(--border);padding:80px 0 40px}
       <div class="proc-card"><span class="proc-num">13</span><h3>Launch</h3><p>Production deployment and QA support cycles.</p></div>
       <div class="proc-card"><span class="proc-num">14</span><h3>Analytics</h3><p>Tracking user behaviour and KPI measurement.</p></div>
       <div class="proc-card"><span class="proc-num">15</span><h3>Optimization</h3><p>Continuous enhancement and A/B testing loops.</p></div>
-      <div class="proc-card proc-feat"><span class="proc-num">16</span><h3>Scale</h3><p>Growing the product ecosystem and design org.</p></div>
+      <div class="proc-card featured"><span class="proc-num">16</span><h3>Scale</h3><p>Growing the product ecosystem and design org.</p></div>
     </div>
   </div>
 </section>
- 
-<section id="testimonials">
+
+<!-- ══════════════ TESTIMONIALS ══════════════ -->
+<section id="testimonials" style="background:var(--s1)">
   <div class="wrap">
-    <div class="sec-head-row"><div><div class="sec-tag">Social Proof</div><h2 class="sec-h">Vouched For</h2></div></div>
+    <div class="sec-head-row">
+      <div>
+        <div class="sec-tag">Social Proof</div>
+        <h2 class="sec-h">Vouched For</h2>
+      </div>
+    </div>
     <div class="testi-grid">
-      <div class="testi-card reveal"><div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testi-quote">Nawaz has a rare ability to understand complex business logic and turn it into a beautiful, simple interface. He doesn't just deliver screens — he delivers clarity.</p><div class="testi-author"><div class="testi-avatar">MR</div><div><div class="testi-name">Michael Ross</div><div class="testi-role">Product Head · Prime Estimate</div></div></div></div>
-      <div class="testi-card reveal d1"><div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testi-quote">He doesn't just design screens; he designs solutions. We increased conversions by 200% within a month of launching his redesign. Highly recommended for any serious SaaS team.</p><div class="testi-author"><div class="testi-avatar">SJ</div><div><div class="testi-name">Sarah Jenkins</div><div class="testi-role">Founder · GoRook</div></div></div></div>
-      <div class="testi-card reveal"><div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testi-quote">Working with him was a complete game changer. His design system alone saved us weeks of engineering time and completely unified our UI across every platform.</p><div class="testi-author"><div class="testi-avatar">PK</div><div><div class="testi-name">Pranav Kumar</div><div class="testi-role">CTO · SaaS Platform</div></div></div></div>
-      <div class="testi-card reveal d1"><div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testi-quote">From the first brief to the final handoff, the level of craft and strategic thinking was exceptional. Our onboarding drop-off rate fell by 35% after launch.</p><div class="testi-author"><div class="testi-avatar">VM</div><div><div class="testi-name">Vijay Mehta</div><div class="testi-role">Founder · E-commerce Brand</div></div></div></div>
+      <div class="testi-card reveal">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">Nawaz has a rare ability to understand complex business logic and turn it into a beautiful, simple interface. He doesn't just deliver screens — he delivers clarity.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MR</div>
+          <div><div class="testi-name">Michael Ross</div><div class="testi-role">Product Head · Prime Estimate</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-d1">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">He doesn't just design screens; he designs solutions. We increased our conversions by 200% within a month of launching his redesign. Highly recommended for any serious SaaS team.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SJ</div>
+          <div><div class="testi-name">Sarah Jenkins</div><div class="testi-role">Founder · GoRook</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">Working with him was a complete game changer for our product. His design system alone saved us weeks of engineering time and completely unified our UI.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">PK</div>
+          <div><div class="testi-name">Pranav Kumar</div><div class="testi-role">CTO · SaaS Platform</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-d1">
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">From the first brief to the final handoff, the level of craft and strategic thinking was exceptional. Our onboarding drop-off rate fell by 35% after launch.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">VM</div>
+          <div><div class="testi-name">Vijay Mehta</div><div class="testi-role">Founder · E-commerce Brand</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
- 
+
+<!-- ══════════════ SERVICES ══════════════ -->
 <section id="services">
   <div class="wrap">
-    <div class="sec-head-row"><div><div class="sec-tag">Engagement Models</div><h2 class="sec-h">How We Work</h2><p class="sec-sub">Flexible models designed to fit your stage, budget, and timeline.</p></div></div>
+    <div class="sec-head-row">
+      <div>
+        <div class="sec-tag">Engagement Models</div>
+        <h2 class="sec-h">How We Work</h2>
+        <p class="sec-sub">Flexible engagement models designed to fit your stage, budget, and timeline.</p>
+      </div>
+    </div>
     <div class="services-grid">
-      <div class="svc-card reveal"><span class="svc-pill pill-default">Strategic Audit</span><div class="svc-title">UX Audit</div><div class="svc-price">$1,200</div><p class="svc-desc">A deep diagnostic of your existing product. Identify friction points, accessibility gaps, and high-impact opportunities for immediate improvement.</p><div class="svc-div"></div><ul class="svc-feats"><li>Heatmap &amp; session analysis</li><li>Friction &amp; drop-off mapping</li><li>WCAG accessibility review</li><li>Prioritized recommendations report</li></ul></div>
-      <div class="svc-card svc-feat reveal d1"><span class="svc-pill pill-hi">Most Popular</span><div class="svc-title">Product Redesign</div><div class="svc-price wh">$4,500</div><p class="svc-desc">End-to-end product design — from discovery and research through to a production-ready design system and annotated developer handoff.</p><div class="svc-div"></div><ul class="svc-feats"><li>User research &amp; persona definition</li><li>Information architecture &amp; flows</li><li>High-fidelity UI design</li><li>Component library &amp; design system</li><li>Interactive prototype + handoff</li></ul></div>
-      <div class="svc-card reveal d2"><span class="svc-pill pill-default">Retainer</span><div class="svc-title">Design Partnership</div><div class="svc-price">Custom</div><p class="svc-desc">Ongoing embedded design leadership for growing teams. Your dedicated senior designer without the cost of a full-time hire.</p><div class="svc-div"></div><ul class="svc-feats"><li>Weekly design delivery cycles</li><li>Design system stewardship</li><li>Engineering collaboration</li><li>Monthly strategy sessions</li></ul></div>
+      <div class="svc-card reveal">
+        <div><span class="svc-pill default">Strategic Audit</span></div>
+        <div class="svc-title">UX Audit</div>
+        <div class="svc-price">$1,200</div>
+        <p class="svc-desc">A deep diagnostic of your existing product. Identify friction points, accessibility gaps, and high-impact opportunities for immediate improvement.</p>
+        <div class="svc-divider"></div>
+        <ul class="svc-features">
+          <li>Heatmap & session analysis</li>
+          <li>Friction & drop-off mapping</li>
+          <li>WCAG accessibility review</li>
+          <li>Prioritized recommendations report</li>
+        </ul>
+      </div>
+      <div class="svc-card featured reveal reveal-d1">
+        <div><span class="svc-pill highlight">Most Popular</span></div>
+        <div class="svc-title">Product Redesign</div>
+        <div class="svc-price white">$4,500</div>
+        <p class="svc-desc">End-to-end product design — from discovery and research through to a production-ready design system and annotated developer handoff.</p>
+        <div class="svc-divider"></div>
+        <ul class="svc-features">
+          <li>User research & persona definition</li>
+          <li>Information architecture & flows</li>
+          <li>High-fidelity UI design</li>
+          <li>Component library & design system</li>
+          <li>Interactive prototype + handoff</li>
+        </ul>
+      </div>
+      <div class="svc-card reveal reveal-d2">
+        <div><span class="svc-pill default">Retainer</span></div>
+        <div class="svc-title">Design Partnership</div>
+        <div class="svc-price">Custom</div>
+        <p class="svc-desc">Ongoing embedded design leadership for growing teams. Your dedicated senior designer without the cost of a full-time hire.</p>
+        <div class="svc-divider"></div>
+        <ul class="svc-features">
+          <li>Weekly design delivery cycles</li>
+          <li>Design system stewardship</li>
+          <li>Engineering collaboration</li>
+          <li>Monthly strategy sessions</li>
+        </ul>
+      </div>
     </div>
   </div>
-</section>
- 
+                     
+<!-- ══════════════ FAQ ══════════════ -->
 <section id="faq">
   <div class="wrap">
-    <div class="sec-head-row"><div><div class="sec-tag">FAQ</div><h2 class="sec-h">Common Questions</h2></div></div>
-    <div class="faq-list">
-      <div class="faq-item"><div class="faq-q"><span class="faq-q-text">What does your design process look like from start to finish?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-a"><div class="faq-a-inner">Every project starts with a discovery and alignment session to understand your business goals, users, and constraints. From there I move through research, information architecture, wireframing, high-fidelity UI, prototyping, and usability testing before a clean developer handoff. The full 16-step framework is outlined in the Process section above.</div></div></div>
-      <div class="faq-item"><div class="faq-q"><span class="faq-q-text">How long does a typical project take?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-a"><div class="faq-a-inner">A UX Audit typically takes 1–2 weeks. A full Product Redesign ranges from 4–8 weeks depending on scope and revision rounds. Retainer partnerships are ongoing and structured around 2-week sprint cycles.</div></div></div>
-      <div class="faq-item"><div class="faq-q"><span class="faq-q-text">Do you work with international clients?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-a"><div class="faq-a-inner">Absolutely. I'm based in Islamabad, Pakistan and work with clients globally across the US, UK, Europe, and beyond. All collaboration happens remotely via Figma, Slack, and video calls — timezone-friendly scheduling is always available.</div></div></div>
-      <div class="faq-item"><div class="faq-q"><span class="faq-q-text">What tools do you use for design and handoff?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-a"><div class="faq-a-inner">My primary tool is Figma for all UI design, prototyping, and design systems. I use Framer for high-fidelity motion prototypes, Spline 3D for 3D elements, Maze and UserTesting for research, and Adobe Creative Suite for graphic work. Developer handoffs are delivered with full Figma Inspect documentation and design tokens.</div></div></div>
-      <div class="faq-item"><div class="faq-q"><span class="faq-q-text">What makes you different from other product designers?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-a"><div class="faq-a-inner">I operate at the intersection of product strategy and visual craft. I don't just deliver beautiful screens — I think about business outcomes, user psychology, and engineering constraints simultaneously. My work is consistently data-informed, and I communicate decisions clearly so teams move faster. Clients often describe me as someone who makes the complex feel simple.</div></div></div>
+    <div class="sec-head-row">
+      <div>
+        <div class="sec-tag">FAQ</div>
+        <h2 class="sec-h">Common Questions</h2>
+      </div>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">What does your design process look like from start to finish?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Every project starts with a discovery and alignment session to understand your business goals, users, and constraints. From there I move through research, information architecture, wireframing, high-fidelity UI, prototyping, and usability testing before a clean developer handoff. The full 16-step framework is outlined in the Process section above.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">How long does a typical project take?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner">A UX Audit typically takes 1–2 weeks. A full Product Redesign ranges from 4–8 weeks depending on scope and the number of revision rounds. Retainer partnerships are ongoing and structured around 2-week sprint cycles.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">Do you work with international clients?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Absolutely. I'm based in Islamabad, Pakistan and work with clients globally across the US, UK, Europe, and beyond. All collaboration happens remotely via Figma, Slack, and video calls — timezone-friendly scheduling is always available.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">What tools do you use for design and handoff?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner">My primary tool is Figma for all UI design, prototyping, and design systems. I use Framer for high-fidelity motion prototypes, Spline 3D for 3D elements, Maze and UserTesting for research, and Adobe Creative Suite for graphic and brand work. Developer handoffs are delivered with full Figma Inspect documentation and design tokens.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">What makes you different from other designers?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner">I operate at the intersection of product strategy and visual craft. I don't just deliver beautiful screens — I think about business outcomes, user psychology, and engineering constraints simultaneously. My work is consistently data-informed, and I communicate decisions clearly so teams can move faster. Clients often describe me as someone who makes the complex feel simple.</div></div>
+      </div>
     </div>
   </div>
 </section>
- 
+
+<!-- ══════════════ CONTACT ══════════════ -->
 <section id="contact">
   <div class="contact-bg-text">LET'S WORK</div>
   <div class="wrap">
-    <div class="sec-head-row"><div><div class="sec-tag">Get In Touch</div><h2 class="sec-h">Start a Project</h2><p class="sec-sub">Ready to elevate your product? Fill out the form and I'll respond within 24 hours.</p></div></div>
+    <div class="sec-head-row">
+      <div>
+        <div class="sec-tag">Get In Touch</div>
+        <h2 class="sec-h">Start a Project</h2>
+        <p class="sec-sub">Ready to elevate your product? Fill out the form and I'll respond within 24 hours.</p>
+      </div>
+    </div>
     <div class="contact-grid">
       <div class="contact-info reveal">
-        <div><div class="c-label">Email</div><div class="c-val"><a href="mailto:allahnawazmalik175@gmail.com">allahnawazmalik175@gmail.com</a></div></div>
-        <div><div class="c-label">Phone</div><div class="c-val"><a href="tel:+923055742436">+92 305 574 2436</a></div></div>
-        <div><div class="c-label">Location</div><div class="c-val">Islamabad, Pakistan<br/><span style="color:var(--lo);font-size:14px">Available for remote work globally</span></div></div>
-        <div><div class="c-label">Portfolio</div><div class="c-val"><a href="https://behance.net/allahnawaz175" target="_blank">behance.net/allahnawaz175 ↗</a></div></div>
-        <div><div class="c-label">Response Time</div><div class="c-val" style="display:flex;align-items:center;gap:8px"><span style="width:8px;height:8px;border-radius:50%;background:var(--lime);animation:blink 2s infinite;display:inline-block;flex-shrink:0"></span>Within 24 hours</div></div>
+        <div>
+          <div class="contact-info-label">Email</div>
+          <div class="contact-info-val"><a href="mailto:allahnawazmalik175@gmail.com">allahnawazmalik175@gmail.com</a></div>
+        </div>
+        <div>
+          <div class="contact-info-label">Phone</div>
+          <div class="contact-info-val"><a href="tel:+923055742436">+92 305 574 2436</a></div>
+        </div>
+        <div>
+          <div class="contact-info-label">Location</div>
+          <div class="contact-info-val">Islamabad, Pakistan<br/><span style="color:var(--lo);font-size:14px">Available for remote work globally</span></div>
+        </div>
+        <div>
+          <div class="contact-info-label">Portfolio</div>
+          <div class="contact-info-val"><a href="https://behance.net/allahnawaz175" target="_blank">behance.net/allahnawaz175 ↗</a></div>
+        </div>
+        <div>
+          <div class="contact-info-label">Response Time</div>
+          <div class="contact-info-val" style="display:flex;align-items:center;gap:8px">
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--lime);animation:blink 2s infinite"></span>
+            Within 24 hours
+          </div>
+        </div>
       </div>
-      <div class="reveal d1">
-        <form class="cfbox" id="cForm" onsubmit="sendForm(event)" novalidate>
-          <div class="fg2"><div class="fg"><label class="fl">Full Name</label><input type="text" class="fc" placeholder="John Doe" id="fn" required/></div><div class="fg"><label class="fl">Email Address</label><input type="email" class="fc" placeholder="john@company.com" id="fe" required/></div></div>
-          <div class="fg"><label class="fl">Company / Project</label><input type="text" class="fc" placeholder="Your company or project name" id="fc2"/></div>
-          <div class="fg"><label class="fl">Budget Range</label><select class="fc" style="cursor:pointer"><option value="" style="background:#0a0a0a">Select a budget range</option><option style="background:#0a0a0a">UX Audit — $1,200</option><option style="background:#0a0a0a">Product Redesign — $4,500</option><option style="background:#0a0a0a">Design Partnership — Custom</option><option style="background:#0a0a0a">Let's discuss</option></select></div>
-          <div class="fg"><label class="fl">Message</label><textarea class="fc" rows="5" placeholder="Describe your product, what you need, and any timeline..." id="fm" required></textarea></div>
-          <button type="submit" class="fsub" id="sb"><span id="st">Send Inquiry</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+      <div class="reveal reveal-d1">
+        <form class="contact-form-box" id="contactForm" onsubmit="submitForm(event)" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-control" placeholder="John Doe" id="fname" required/></div>
+            <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-control" placeholder="john@company.com" id="femail" required/></div>
+          </div>
+          <div class="form-group"><label class="form-label">Company / Project</label><input type="text" class="form-control" placeholder="Your company or project name" id="fcompany"/></div>
+          <div class="form-group"><label class="form-label">Budget Range</label>
+            <select class="form-control" id="fbudget" style="cursor:pointer">
+              <option value="" style="background:#0a0a0a">Select a budget range</option>
+              <option value="audit" style="background:#0a0a0a">UX Audit — $1,200</option>
+              <option value="redesign" style="background:#0a0a0a">Product Redesign — $4,500</option>
+              <option value="retainer" style="background:#0a0a0a">Design Partnership — Custom</option>
+              <option value="discuss" style="background:#0a0a0a">Let's discuss</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label">Tell Me About Your Project</label><textarea class="form-control" rows="5" placeholder="Describe your product, what you need, and any constraints or timelines..." id="fmessage" required></textarea></div>
+          <button type="submit" class="form-submit" id="submitBtn">
+            <span id="submitText">Send Inquiry</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
         </form>
       </div>
     </div>
   </div>
 </section>
- 
+
+<!-- ══════════════ FOOTER ══════════════ -->
 <footer>
   <div class="wrap">
-    <div class="foot-top">
-      <div><a href="#" class="foot-logo">NAWAZ<em>.</em></a><p class="foot-tag">Senior Product Designer crafting high-conversion B2B and SaaS experiences. Islamabad, Pakistan.</p></div>
-      <div class="foot-col"><h5>Navigation</h5><a href="#work">Work</a><a href="#experience">Experience</a><a href="#process">Process</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
-      <div class="foot-col"><h5>Profiles</h5><a href="https://behance.net/allahnawaz175" target="_blank">Behance ↗</a><a href="https://pk.linkedin.com/in/allah-nawaz-256a81286" target="_blank">LinkedIn ↗</a><a href="https://instagram.com/allahnawaz.design" target="_blank">Instagram ↗</a></div>
+    <div class="footer-top">
+      <div class="footer-logo-block">
+        <a href="#" class="footer-logo">NAWAZ<em>.</em></a>
+        <p class="footer-tagline">Senior Product Designer crafting high-conversion B2B and SaaS experiences. Based in Islamabad, Pakistan.</p>
+      </div>
+      <div class="footer-nav-col">
+        <h5>Navigation</h5>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#process">Process</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-nav-col">
+        <h5>Profiles</h5>
+        <a href="https://behance.net/allahnawaz175" target="_blank">Behance ↗</a>
+        <a href="https://pk.linkedin.com/in/allah-nawaz-256a81286" target="_blank">LinkedIn ↗</a>
+        <a href="https://instagram.com/allahnawaz.design" target="_blank">Instagram ↗</a>
+      </div>
     </div>
-    <div class="foot-bottom">
-      <p class="foot-copy">© 2026 Allah Nawaz · Product Design Executive · Islamabad, PK</p>
-      <div class="foot-socs">
-        <a href="https://pk.linkedin.com/in/allah-nawaz-256a81286" target="_blank" class="fsoc" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
-        <a href="https://www.behance.net/allahnawaz175" target="_blank" class="fsoc" aria-label="Behance"><svg viewBox="0 0 24 24"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.73-3.35h3.979c-.005-.366-.068-.707-.2-1.015-.29-.695-.962-1.178-1.853-1.178-.778 0-1.494.342-1.906 1.178-.135.298-.208.645-.22 1.015zM7.18 17.01c-1.35 0-2.264-.474-2.787-1.016V18H1V6h3.393v4.474c.523-.572 1.378-.965 2.634-.965 2.748 0 4.567 2.117 4.567 3.75 0 1.635-1.82 3.751-4.413 3.751zM6.5 11.5c-.877 0-1.591.674-1.591 1.507 0 .833.714 1.508 1.591 1.508.878 0 1.591-.675 1.591-1.508 0-.833-.713-1.507-1.591-1.507z"/></svg></a>
-        <a href="https://instagram.com/allahnawaz.design" target="_blank" class="fsoc" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Allah Nawaz · Product Design Executive · Islamabad, PK</p>
+      <div class="footer-socials">
+        <a href="https://pk.linkedin.com/in/allah-nawaz-256a81286" target="_blank" class="foot-soc" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://www.behance.net/allahnawaz175" target="_blank" class="foot-soc" aria-label="Behance">
+          <svg viewBox="0 0 24 24"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.73-3.35h3.979c-.005-.366-.068-.707-.2-1.015-.29-.695-.962-1.178-1.853-1.178-.778 0-1.494.342-1.906 1.178-.135.298-.208.645-.22 1.015zM7.18 17.01c-1.35 0-2.264-.474-2.787-1.016V18H1V6h3.393v4.474c.523-.572 1.378-.965 2.634-.965 2.748 0 4.567 2.117 4.567 3.75 0 1.635-1.82 3.751-4.413 3.751zM6.5 11.5c-.877 0-1.591.674-1.591 1.507 0 .833.714 1.508 1.591 1.508.878 0 1.591-.675 1.591-1.508 0-.833-.713-1.507-1.591-1.507z"/></svg>
+        </a>
+        <a href="https://instagram.com/allahnawaz.design" target="_blank" class="foot-soc" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2"/></svg>
+        </a>
       </div>
     </div>
   </div>
 </footer>
- 
-<script>
-window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>50))
+ <script>
+/* ── NAV ──────────────────────────────── */
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',scrollY>50)
+})
 function openMob(){document.getElementById('mobMenu').classList.add('open');document.body.style.overflow='hidden'}
 function closeMob(){document.getElementById('mobMenu').classList.remove('open');document.body.style.overflow=''}
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.08})
+
+/* ── REVEAL ───────────────────────────── */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')})
+},{threshold:.08})
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el))
+
+/* ── FAQ ──────────────────────────────── */
 document.querySelectorAll('.faq-item').forEach(item=>{
   item.querySelector('.faq-q').addEventListener('click',()=>{
-    const isOpen=item.classList.contains('open')
+    const open=item.classList.contains('open')
     document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'))
-    if(!isOpen)item.classList.add('open')
+    if(!open)item.classList.add('open')
   })
 })
-async function sendForm(e){
+
+/* ── CONTACT FORM ─────────────────────── */
+async function submitForm(e){
   e.preventDefault()
-  const sb=document.getElementById('sb'),st=document.getElementById('st')
-  const n=document.getElementById('fn').value.trim(),em=document.getElementById('fe').value.trim(),msg=document.getElementById('fm').value.trim()
-  if(!n||!em||!msg){sb.style.background='#ef4444';st.textContent='Fill all required fields';setTimeout(()=>{sb.style.background='var(--lime)';st.textContent='Send Inquiry'},2000);return}
-  sb.disabled=true;st.textContent='Sending...'
+  const btn=document.getElementById('submitBtn')
+  const txt=document.getElementById('submitText')
+  const name=document.getElementById('fname').value.trim()
+  const email=document.getElementById('femail').value.trim()
+  const msg=document.getElementById('fmessage').value.trim()
+  if(!name||!email||!msg){
+    btn.style.background='#ff4444';btn.style.color='#fff'
+    txt.textContent='Please fill required fields'
+    setTimeout(()=>{btn.style.background='var(--lime)';btn.style.color='#000';txt.textContent='Send Inquiry'},2000)
+    return
+  }
+  btn.disabled=true;txt.textContent='Sending...'
   await new Promise(r=>setTimeout(r,1500))
-  sb.disabled=false;sb.style.background='#22c55e';st.textContent='✓ Message Sent!'
-  setTimeout(()=>{sb.style.background='var(--lime)';st.textContent='Send Inquiry';document.getElementById('cForm').reset()},4000)
+  btn.disabled=false
+  btn.style.background='#22c55e'
+  txt.textContent='✓ Message Sent!'
+  setTimeout(()=>{
+    btn.style.background='var(--lime)';btn.style.color='#000';txt.textContent='Send Inquiry'
+    document.getElementById('contactForm').reset()
+  },4000)
 }
 </script>
 </body>
 </html>
- 

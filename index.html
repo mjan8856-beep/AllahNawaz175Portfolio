@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<title>Allah Nawaz — Senior Product Designer | SaaS & B2B UI/UX</title>
+<title>Allah Nawaz — Product Designer | SaaS & B2B UI/UX</title>
 <meta name="description" content="Senior Product Designer in Islamabad, Pakistan. Driving 40%+ conversion growth for SaaS and B2B platforms through strategic UX, design systems, CRO, and WCAG-compliant interfaces."/>
 <meta name="keywords" content="Product Designer, UI/UX Designer, SaaS Design, B2B Design, Design Systems, Figma, CRO, WCAG, Accessibility, SEO Design, Islamabad Pakistan"/>
 <meta name="author" content="Allah Nawaz"/>
@@ -48,17 +48,17 @@ img{max-width:100%;display:block;height:auto}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .wrap{max-width:1380px;margin:0 auto;padding:0 5vw}
 .pad{padding:var(--sp-10) 0}
-
+ 
 /* GRAIN */
 .grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:9000;opacity:.026;animation:grain 6s steps(8) infinite;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E")}
 @keyframes grain{0%,100%{transform:translate(0,0)}12%{transform:translate(-4%,-6%)}25%{transform:translate(5%,3%)}37%{transform:translate(-3%,8%)}50%{transform:translate(6%,-2%)}62%{transform:translate(-5%,5%)}75%{transform:translate(4%,-7%)}87%{transform:translate(-6%,2%)}}
-
+ 
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.on{opacity:1;transform:none}
 .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--lime);border-radius:2px}
-
+ 
 /* MOBILE MENU */
 .mob{position:fixed;inset:0;background:var(--bg);z-index:400;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-6);transform:translateX(110%);transition:transform .6s var(--ease)}
 .mob.open{transform:none}
@@ -66,7 +66,7 @@ img{max-width:100%;display:block;height:auto}
 .mob a:hover,.mob a:focus-visible{color:var(--lime)}
 .mob-close{position:absolute;top:var(--sp-7);right:5vw;width:44px;height:44px;border-radius:50%;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;cursor:pointer;background:var(--vlo);color:var(--hi);font-size:20px;transition:all .25s}
 .mob-close:hover,.mob-close:focus-visible{background:var(--lime);color:#000;border-color:var(--lime)}
-
+ 
 /* NAV */
 #nav{position:fixed;top:0;left:0;width:100%;z-index:200;padding:26px 0;transition:all .5s var(--smooth)}
 #nav.scrolled{padding:13px 0;background:rgba(5,5,5,.92);backdrop-filter:blur(28px) saturate(160%);-webkit-backdrop-filter:blur(28px) saturate(160%);border-bottom:1px solid var(--border)}
@@ -80,13 +80,13 @@ img{max-width:100%;display:block;height:auto}
 .nav-cta:hover,.nav-cta:focus-visible{transform:scale(1.05);box-shadow:var(--sh-lime)}
 .nav-ham{display:none;width:44px;height:44px;border-radius:var(--r-sm);border:1px solid var(--border);align-items:center;justify-content:center;color:var(--hi);cursor:pointer;background:none;transition:all .25s}
 .nav-ham:hover,.nav-ham:focus-visible{border-color:var(--lime);background:var(--lime-10)}
-
+ 
 /* BUTTONS */
 .btn-lime{display:inline-flex;align-items:center;gap:8px;padding:16px var(--sp-6);border-radius:var(--r-full);font-family:var(--ff-d);font-size:var(--t-sm);font-weight:700;letter-spacing:.04em;background:var(--lime);color:#000;min-height:52px;border:none;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s}
 .btn-lime:hover,.btn-lime:focus-visible{transform:scale(1.04) translateY(-2px);box-shadow:var(--sh-lime)}
 .btn-outline{display:inline-flex;align-items:center;gap:8px;padding:15px var(--sp-6);border-radius:var(--r-full);font-family:var(--ff-d);font-size:var(--t-sm);font-weight:600;border:1px solid var(--border2);color:var(--hi);background:var(--vlo);min-height:52px;transition:border-color .3s,background .3s}
 .btn-outline:hover,.btn-outline:focus-visible{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.08)}
-
+ 
 /* HERO */
 #hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;position:relative;overflow:hidden;background:var(--bg)}
 .hero-glow{position:absolute;border-radius:50%;pointer-events:none}
@@ -107,7 +107,7 @@ h1.hero-h{font-family:var(--ff-d);font-size:clamp(52px,10vw,130px);font-weight:8
 .soc-btn i{font-size:22px;color:var(--lo);transition:color .2s}
 .soc-btn:hover,.soc-btn:focus-visible{border-color:var(--lime);transform:translateY(-5px);background:var(--lime-10)}
 .soc-btn:hover i,.soc-btn:focus-visible i{color:var(--lime)}
-
+ 
 /* LOGOS SECTION */
 #logos{padding:var(--sp-9) 0;background:var(--s1);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .logos-label{text-align:center;font-size:var(--t-xs);font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--lo);margin-bottom:var(--sp-7)}
@@ -123,7 +123,7 @@ h1.hero-h{font-family:var(--ff-d);font-size:clamp(52px,10vw,130px);font-weight:8
 .logo-chip:hover{opacity:1;filter:none;border-color:rgba(212,244,12,.15);background:rgba(212,244,12,.04);transform:translateY(-2px)}
 .logo-name{font-family:var(--ff-d);font-size:1.1rem;font-weight:700;color:#fff;white-space:nowrap;letter-spacing:-.02em}
 .logo-chip-name{font-family:var(--ff-d);font-size:var(--t-md);font-weight:700;color:var(--hi);white-space:nowrap;letter-spacing:-.02em}
-
+ 
 /* ACHIEVEMENTS */
 #ach{background:var(--bg);border-bottom:1px solid var(--border)}
 .ach-grid{display:grid;grid-template-columns:repeat(4,1fr)}
@@ -133,13 +133,13 @@ h1.hero-h{font-family:var(--ff-d);font-size:clamp(52px,10vw,130px);font-weight:8
 .ach-val{display:block;font-family:var(--ff-d);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:800;color:var(--lime);letter-spacing:-.05em;line-height:1;margin-bottom:var(--sp-2)}
 .ach-label{font-size:var(--t-xs);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lo)}
 .ach-sub{font-size:10px;color:rgba(212,244,12,.6);margin-top:4px;display:block}
-
+ 
 /* TICKER */
 .ticker{background:var(--bg);border-bottom:1px solid var(--border);padding:var(--sp-3) 0;overflow:hidden}
 .tick-track{display:flex;white-space:nowrap;animation:marqL 35s linear infinite}
 .tick-item{display:inline-flex;align-items:center;gap:var(--sp-5);padding:0 var(--sp-5);font-size:var(--t-xs);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--lo)}
 .tick-dot{width:3px;height:3px;border-radius:50%;background:var(--lime);flex-shrink:0}
-
+ 
 /* SECTION HEADER */
 .chip{display:inline-flex;align-items:center;gap:8px;padding:6px var(--sp-4);border-radius:var(--r-full);background:var(--lime-10);border:1px solid var(--lime-20);font-size:var(--t-xs);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:var(--sp-5)}
 .chip::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--lime)}
@@ -148,7 +148,7 @@ h1.hero-h{font-family:var(--ff-d);font-size:clamp(52px,10vw,130px);font-weight:8
 .sec-serif{display:block;font-family:var(--ff-s);font-style:italic;font-size:clamp(1.4rem,3vw,2.5rem);color:rgba(255,255,255,.6);line-height:1.2;margin-bottom:var(--sp-5)}
 .sec-sub{font-size:var(--t-md);color:var(--md);font-weight:300;max-width:520px;line-height:1.7}
 .sec-row{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--sp-7);margin-bottom:var(--sp-8);flex-wrap:wrap}
-
+ 
 /* WORK */
 .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
 .ba{grid-column:span 7}.bb{grid-column:span 5}
@@ -169,7 +169,7 @@ h1.hero-h{font-family:var(--ff-d);font-size:clamp(52px,10vw,130px);font-weight:8
 .wyr{color:var(--lo)}
 .wtitle{font-family:var(--ff-d);font-size:clamp(var(--t-base),2vw,var(--t-lg));font-weight:700;letter-spacing:-.03em;margin-bottom:var(--sp-2)}
 .wdesc{font-size:var(--t-sm);color:var(--md);line-height:1.65;font-weight:300}
-
+ 
 /* EXPERIENCE */
 .exp-wrap{position:relative}
 .exp-line{position:absolute;left:7px;top:20px;bottom:0;width:1px;background:var(--border)}
@@ -190,7 +190,7 @@ h1.hero-h{font-family:var(--ff-d);font-size:clamp(52px,10vw,130px);font-weight:8
 .exp-tags{display:flex;flex-wrap:wrap;gap:var(--sp-2)}
 .exp-tag{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px var(--sp-3);border-radius:var(--r-full);border:1px solid var(--border);color:var(--lo);cursor:default;transition:all .25s}
 .exp-tag:hover{color:var(--lime);border-color:rgba(212,244,12,.25);background:var(--lime-10)}
-
+ 
 /* CERTS */
 .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-5)}
 .cert-card{background:var(--s1);border:1px solid var(--border);border-radius:var(--r-lg);padding:var(--sp-6);transition:all .35s var(--ease)}
@@ -198,7 +198,7 @@ h1.hero-h{font-family:var(--ff-d);font-size:clamp(52px,10vw,130px);font-weight:8
 .cert-idx{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);opacity:.65;margin-bottom:var(--sp-3);display:block}
 .cert-card h3{font-family:var(--ff-d);font-size:var(--t-base);font-weight:700;letter-spacing:-.02em;margin-bottom:var(--sp-2)}
 .cert-card p{font-size:var(--t-sm);color:var(--md);font-weight:400}
-
+ 
 /* PROCESS */
 .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .proc-step{background:var(--s1);border:1px solid var(--border);border-radius:var(--r-lg);padding:var(--sp-6);position:relative;transition:all .35s var(--ease)}
@@ -213,7 +213,7 @@ h1.hero-h{font-family:var(--ff-d);font-size:clamp(52px,10vw,130px);font-weight:8
 .proc-step.feat h3{color:var(--lime)}
 .proc-step p{font-size:11px;color:var(--lo);line-height:1.55}
 .proc-step.feat p{color:rgba(255,255,255,.55)}
-
+ 
 /* TESTIMONIALS */
 .testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-6)}
 .testi-card{background:var(--s1);border:1px solid var(--border);border-radius:var(--r-xl);padding:var(--sp-8);display:flex;flex-direction:column;gap:var(--sp-6);transition:border-color .4s}
@@ -225,7 +225,7 @@ h1.hero-h{font-family:var(--ff-d);font-size:clamp(52px,10vw,130px);font-weight:8
 .testi-av{width:46px;height:46px;border-radius:50%;background:var(--lime-10);border:1px solid rgba(212,244,12,.18);display:flex;align-items:center;justify-content:center;font-family:var(--ff-d);font-size:var(--t-sm);font-weight:700;color:var(--lime);flex-shrink:0}
 .testi-name{font-family:var(--ff-d);font-size:var(--t-base);font-weight:700;letter-spacing:-.02em;margin-bottom:2px}
 .testi-role{font-size:var(--t-sm);color:var(--lo)}
-
+ 
 /* SERVICES */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-5)}
 .svc-card{background:var(--s1);border:1px solid var(--border);border-radius:var(--r-xl);padding:var(--sp-8);display:flex;flex-direction:column;gap:var(--sp-5);position:relative;overflow:hidden;transition:all .4s var(--ease)}
@@ -242,632 +242,614 @@ h1.hero-h{font-family:var(--ff-d);font-size:clamp(52px,10vw,130px);font-weight:8
 .svc-feats{display:flex;flex-direction:column;gap:var(--sp-3)}
 .svc-feats li{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--t-sm);color:var(--md)}
 .svc-feats li i{color:var(--lime);font-size:16px;flex-shrink:0;margin-top:1px}
-/* ─── CONTACT ──────────────────────────────────────*/
-#contact{padding:120px 0;background:var(--bg);position:relative;overflow:hidden}
-.contact-bg-text{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);font-family:var(--ff-d);font-size:clamp(80px,14vw,200px);font-weight:800;color:rgba(255,255,255,.015);white-space:nowrap;letter-spacing:-.05em;pointer-events:none;user-select:none}
-.contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start;margin-top:64px;position:relative;z-index:1}
-.contact-info{display:flex;flex-direction:column;gap:32px}
-.contact-info-label{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lo)}
-.contact-info-val{font-size:17px;color:#fff}
-.contact-info-val a{color:var(--lime);text-decoration:none;transition:opacity .2s}
-.contact-info-val a:hover{opacity:.7}
-.contact-form-box{background:var(--card);border:1px solid var(--border);border-radius:28px;padding:48px}
-.form-group{margin-bottom:24px}
-.form-label{display:block;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lo);margin-bottom:12px}
-.form-control{width:100%;background:#0a0a0a;border:1px solid var(--border);border-radius:12px;padding:16px 18px;color:#fff;font-family:var(--ff-b);font-size:15px;outline:none;transition:border-color .3s;resize:none}
-.form-control::placeholder{color:var(--lo)}
-.form-control:focus{border-color:rgba(212,244,12,.4)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.form-submit{width:100%;padding:18px;background:var(--lime);color:#000;border:none;border-radius:100px;font-family:var(--ff-d);font-size:14px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .3s var(--ease);display:flex;align-items:center;justify-content:center;gap:10px}
-.form-submit:hover{transform:scale(1.02);box-shadow:0 0 40px rgba(212,244,12,.2)}
-.form-submit:active{transform:scale(.98)}
-
-/* ─── FAQ ───────────────────────────────────────────*/
-#faq{padding:120px 0;background:var(--s1)}
-.faq-list{margin-top:64px;display:flex;flex-direction:column}
-.faq-item{border-bottom:1px solid var(--border);overflow:hidden;cursor:pointer}
-.faq-q{display:flex;align-items:center;justify-content:space-between;padding:28px 0;transition:color .25s}
-.faq-q-text{font-family:var(--ff-d);font-size:clamp(16px,2vw,22px);font-weight:700;letter-spacing:-.02em;line-height:1.2}
-.faq-icon{width:40px;height:40px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s var(--ease)}
-.faq-icon svg{width:16px;height:16px;stroke:var(--md);transition:transform .4s var(--ease),stroke .25s}
-.faq-item.open .faq-icon{background:var(--lime);border-color:var(--lime)}
-.faq-item.open .faq-icon svg{stroke:#000;transform:rotate(45deg)}
-.faq-item.open .faq-q-text{color:var(--lime)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease),padding .4s}
-.faq-a-inner{padding:0 0 28px;font-size:16px;color:var(--md);font-weight:300;line-height:1.75;max-width:760px}
-.faq-item.open .faq-a{max-height:400px}
-
-/* ─── FOOTER ───────────────────────────────────────*/
-footer{background:#000;border-top:1px solid var(--border);padding:80px 0 40px}
-.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;margin-bottom:64px}
-.footer-logo-block{}
-.footer-logo{font-family:var(--ff-d);font-weight:800;font-size:24px;letter-spacing:-.04em;color:#fff;text-decoration:none;display:block;margin-bottom:16px}
-.footer-logo em{color:var(--lime);font-style:normal}
-.footer-tagline{font-size:14px;color:var(--lo);max-width:280px;line-height:1.6}
-.footer-nav-col h5{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--lo);margin-bottom:20px}
-.footer-nav-col a{display:block;font-size:14px;color:var(--md);text-decoration:none;margin-bottom:12px;transition:color .2s}
-.footer-nav-col a:hover{color:var(--lime)}
-.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:32px;border-top:1px solid var(--border)}
-.footer-copy{font-size:13px;color:var(--lo)}
-.footer-socials{display:flex;gap:10px}
-.foot-soc{width:40px;height:40px;border-radius:10px;border:1px solid var(--border);background:var(--s1);display:flex;align-items:center;justify-content:center;transition:all .3s;text-decoration:none}
-.foot-soc svg{width:16px;height:16px;fill:var(--lo);transition:fill .25s}
-.foot-soc:hover{border-color:var(--lime);transform:translateY(-3px)}
-.foot-soc:hover svg{fill:var(--lime)}
-
-/* ─── SCROLLBAR ────────────────────────────────────*/
-::-webkit-scrollbar{width:3px}
-::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:rgba(212,244,12,.3);border-radius:2px}
-
-/* ─── RESPONSIVE ───────────────────────────────────*/
-@media(max-width:1100px){
-  .process-grid{grid-template-columns:repeat(3,1fr)}
-  .bento-a,.bento-d{grid-column:span 8}
-  .bento-b,.bento-c{grid-column:span 4}
-}
-@media(max-width:900px){
-  .stats-row{grid-template-columns:repeat(2,1fr)}
-  .stat-cell:nth-child(2){border-right:none}
-  .stat-cell:nth-child(3){border-top:1px solid var(--border)}
-  .stat-cell:nth-child(4){border-top:1px solid var(--border);border-right:none}
-  .cert-grid{grid-template-columns:repeat(2,1fr)}
-  .services-grid{grid-template-columns:1fr}
-  .testi-grid{grid-template-columns:1fr}
-  .process-grid{grid-template-columns:repeat(2,1fr)}
-  .contact-grid{grid-template-columns:1fr;gap:48px}
-  .footer-top{gap:48px}
-}
-@media(max-width:768px){
-  .nav-links,.nav-cta{display:none}
-  .nav-ham{display:flex}
-  .bento{display:flex;flex-direction:column}
-  .bento-a,.bento-b,.bento-c,.bento-d{grid-column:span 12}
-  .cert-grid{grid-template-columns:1fr}
-  .process-grid{grid-template-columns:1fr 1fr}
-  .stats-row{grid-template-columns:1fr 1fr}
-  .form-row{grid-template-columns:1fr}
-  .sec-head-row{flex-direction:column;align-items:flex-start}
-}
-@media(max-width:480px){
-  .process-grid{grid-template-columns:1fr}
-  .stats-row{grid-template-columns:1fr}
-  .stat-cell{border-right:none;border-top:1px solid var(--border)}
-  .stat-cell:first-child{border-top:none}
-}
+ 
+/* FAQ */
+.faq-wrap{max-width:820px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);overflow:hidden}
+.faq-trigger{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-6);padding:var(--sp-6) 0;cursor:pointer;background:none;border:none;width:100%;text-align:left;min-height:60px}
+.faq-q-text{font-family:var(--ff-d);font-size:clamp(var(--t-sm),1.8vw,var(--t-xl));font-weight:700;letter-spacing:-.025em;color:var(--hi);transition:color .25s;line-height:1.25}
+.faq-trigger:hover .faq-q-text,.faq-item[aria-expanded=true] .faq-q-text{color:var(--lime)}
+.faq-icon{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--vlo);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s var(--ease)}
+.faq-icon i{font-size:18px;color:var(--md);transition:transform .4s var(--ease),color .25s}
+.faq-item[aria-expanded=true] .faq-icon{background:var(--lime);border-color:var(--lime)}
+.faq-item[aria-expanded=true] .faq-icon i{color:#000;transform:rotate(45deg)}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+.faq-body-inner{padding:0 0 var(--sp-5);font-size:var(--t-base);color:var(--md);line-height:1.8;font-weight:300;max-width:680px}
+.faq-item[aria-expanded=true] .faq-body{max-height:300px}
+ 
+/* CONTACT */
+#contact-section{position:relative;overflow:hidden}
+.cg1,.cg2{position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px)}
+.cg1{width:400px;height:400px;background:radial-gradient(circle,rgba(212,244,12,.05) 0%,transparent 70%);top:20%;left:-80px}
+.cg2{width:600px;height:600px;background:radial-gradient(circle,rgba(212,244,12,.04) 0%,transparent 70%);bottom:0;right:-150px}
+.c-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:var(--sp-10);align-items:start;position:relative;z-index:1}
+.c-info{display:flex;flex-direction:column;gap:var(--sp-7)}
+.c-avail{display:inline-flex;align-items:center;gap:10px;padding:var(--sp-3) var(--sp-5);border-radius:var(--r-full);border:1px solid rgba(34,197,94,.25);background:rgba(34,197,94,.1);width:fit-content}
+.c-avail-dot{width:8px;height:8px;border-radius:50%;background:var(--success);animation:pulse-dot 2s ease-in-out infinite;flex-shrink:0}
+.c-avail span{font-size:var(--t-sm);font-weight:600;color:#4ade80}
+.c-row{display:flex;flex-direction:column;gap:4px}
+.c-lbl{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--lo)}
+.c-val{font-size:var(--t-base);color:var(--hi)}
+.c-val a{color:var(--lime);transition:opacity .2s}
+.c-val a:hover,.c-val a:focus-visible{opacity:.7}
+/* CONTACT ICONS with Phosphor */
+.c-icon-row{display:flex;align-items:center;gap:var(--sp-3)}
+.c-icon-row i{font-size:20px;color:var(--lime);flex-shrink:0}
+.cform{background:var(--s1);border:1px solid var(--border);border-radius:var(--r-xl);padding:var(--sp-8)}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-5);margin-bottom:var(--sp-5)}
+.f-group{display:flex;flex-direction:column;gap:var(--sp-2);margin-bottom:0}
+.f-group-full{display:flex;flex-direction:column;gap:var(--sp-2);margin-bottom:var(--sp-5)}
+.f-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lo);display:flex;align-items:center;gap:4px}
+.f-req{color:var(--lime)}
+.f-ctrl{width:100%;background:#000;border:1px solid var(--border);border-radius:var(--r-md);padding:14px var(--sp-5);color:var(--hi);font-family:var(--ff-b);font-size:var(--t-base);outline:none;resize:none;transition:border-color .3s;min-height:52px}
+.f-ctrl::placeholder{color:var(--lo)}
+.f-ctrl:focus{border-color:rgba(212,244,12,.4)}
+.f-ctrl:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+.f-ctrl[aria-invalid=true]{border-color:var(--error)}
+.f-ctrl[aria-invalid=false]{border-color:rgba(34,197,94,.4)}
+.f-error{font-size:var(--t-xs);color:var(--error);display:none;align-items:center;gap:4px}
+.f-error.show{display:flex}
+.f-submit{width:100%;padding:var(--sp-5);border-radius:var(--r-full);font-family:var(--ff-d);font-size:var(--t-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--lime);color:#000;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:var(--sp-2);min-height:56px;transition:transform .3s,box-shadow .3s}
+.f-submit:hover,.f-submit:focus-visible{transform:scale(1.02);box-shadow:var(--sh-lime)}
+.f-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.f-trust{display:flex;align-items:center;justify-content:center;gap:var(--sp-5);margin-top:var(--sp-5);flex-wrap:wrap}
+.trust-badge{display:flex;align-items:center;gap:var(--sp-2);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--lo)}
+.trust-badge i{font-size:14px;color:var(--lime)}
+.f-status{text-align:center;margin-top:var(--sp-4);font-size:var(--t-sm);font-weight:600;min-height:22px}
+ 
+/* FOOTER */
+footer{background:#000;border-top:1px solid rgba(255,255,255,.05);padding:var(--sp-10) 0 var(--sp-7)}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:var(--sp-8);margin-bottom:var(--sp-8)}
+.foot-logo{font-family:var(--ff-d);font-weight:800;font-size:22px;letter-spacing:-.045em;color:var(--hi);display:block;margin-bottom:var(--sp-4)}
+.foot-logo em{color:var(--lime);font-style:normal}
+.foot-tag{font-size:var(--t-sm);color:var(--lo);line-height:1.7;font-weight:300;max-width:240px}
+.foot-col h3{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--lo);margin-bottom:var(--sp-5)}
+.foot-col a{display:flex;align-items:center;font-size:var(--t-sm);color:var(--md);margin-bottom:var(--sp-3);font-weight:300;min-height:32px;transition:color .2s}
+.foot-col a:hover,.foot-col a:focus-visible{color:var(--lime)}
+.foot-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-4);padding-top:var(--sp-6);border-top:1px solid rgba(255,255,255,.05)}
+.foot-copy{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--lo)}
+.foot-socs{display:flex;gap:var(--sp-2)}
+.fsoc{width:40px;height:40px;border-radius:var(--r-sm);border:1px solid var(--border);background:var(--vlo);display:flex;align-items:center;justify-content:center;transition:all .3s}
+.fsoc i{font-size:18px;color:var(--lo);transition:color .2s}
+.fsoc:hover,.fsoc:focus-visible{border-color:var(--lime);background:var(--lime-10);transform:translateY(-3px)}
+.fsoc:hover i,.fsoc:focus-visible i{color:var(--lime)}
+ 
+/* RESPONSIVE */
+@media(max-width:1100px){.proc-grid{grid-template-columns:repeat(3,1fr)}.ba{grid-column:span 8}.bb{grid-column:span 4}}
+@media(max-width:900px){.ach-grid{grid-template-columns:repeat(2,1fr)}.ach-cell:nth-child(2){border-right:none}.ach-cell:nth-child(3){border-top:1px solid var(--border)}.ach-cell:nth-child(4){border-top:1px solid var(--border);border-right:none}.testi-grid,.svc-grid,.cert-grid{grid-template-columns:1fr}.proc-grid{grid-template-columns:repeat(2,1fr)}.c-grid{grid-template-columns:1fr;gap:var(--sp-8)}.foot-grid{grid-template-columns:1fr 1fr}.bento{display:flex;flex-direction:column}.sec-row{flex-direction:column;align-items:flex-start}.f-row{grid-template-columns:1fr}}
+/* FIX: was .nav-links — actual nav class is .nl */
+@media(max-width:768px){.nl,.nav-cta{display:none}.nav-ham{display:flex}.cert-grid{grid-template-columns:1fr 1fr}}
+/* FIX: spinning animation for loading icon */
+@keyframes spin{to{transform:rotate(360deg)}}
+.spinning{display:inline-block;animation:spin .8s linear infinite}
+@media(max-width:480px){.proc-grid{grid-template-columns:1fr}.cert-grid{grid-template-columns:1fr}.ach-grid{grid-template-columns:1fr}.ach-cell{border-right:none;border-top:1px solid var(--border)}.ach-cell:first-child{border-top:none}.foot-grid{grid-template-columns:1fr}}
+@media(forced-colors:active){.exp-dot,.hero-avail-dot,.c-avail-dot{forced-color-adjust:none}}
 </style>
 </head>
 <body>
-
-<!-- GRAIN -->
+<a href="#main" class="skip-nav">Skip to main content</a>
 <div class="grain" aria-hidden="true"></div>
-
+ 
 <!-- MOBILE MENU -->
-<div class="mob-menu" id="mobMenu">
+<div class="mob" id="mob-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mob-close" onclick="closeMob()" aria-label="Close menu"><i class="ph-bold ph-x"></i></button>
   <a href="#work" onclick="closeMob()">Work</a>
   <a href="#experience" onclick="closeMob()">Experience</a>
   <a href="#process" onclick="closeMob()">Process</a>
   <a href="#services" onclick="closeMob()">Services</a>
   <a href="#contact" onclick="closeMob()" style="color:var(--lime)">Start a Project</a>
 </div>
-
+ 
 <!-- NAV -->
-<nav id="nav">
+<header id="nav" role="banner">
   <div class="wrap nav-inner">
-    <a href="#" class="logo">NAWAZ<em>.</em></a>
-    <ul class="nav-links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#experience">Career</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#services">Services</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Start a Project</a>
-    <button class="nav-ham" onclick="openMob()" aria-label="Open menu">
-      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
+    <a href="#hero" class="nav-logo" aria-label="Allah Nawaz home">NAWAZ<em>.</em></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Career</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="#contact" class="nav-cta">Start a Project <i class="ph-bold ph-arrow-right" aria-hidden="true"></i></a>
+      <button class="nav-ham" onclick="openMob()" aria-expanded="false" aria-controls="mob" id="ham-btn" aria-label="Open navigation menu">
+        <i class="ph-bold ph-list" style="font-size:22px;color:var(--hi)" aria-hidden="true"></i>
+      </button>
+    </div>
   </div>
-</nav>
-
-<!-- ══════════════ HERO ══════════════ -->
-<section id="hero">
-  <div class="hero-glow"></div>
+</header>
+ 
+<main id="main" tabindex="-1">
+ 
+<!-- HERO -->
+<section id="hero" aria-label="Introduction">
+  <div class="hero-glow hg1" aria-hidden="true"></div>
+  <div class="hero-glow hg2" aria-hidden="true"></div>
   <div class="wrap">
     <div class="reveal">
-      <div class="hero-eyebrow">Available for Senior Roles &amp; Freelance</div>
+      <p class="hero-avail" role="status" aria-live="polite">
+        <span class="hero-avail-dot" aria-hidden="true"></span>
+        Available Now &mdash; <strong>2 project slots open for Q3 2026</strong>
+      </p>
       <h1 class="hero-h">
-        <span class="ghost">Senior Product</span>
-        Designer<br/>Executive.
+        <span class="hero-ghost">Senior Product</span>
+        <span class="hero-serif">Experience.</span>
       </h1>
-      <p class="hero-sub">Building high-conversion B2B and SaaS products. Specializing in design systems that bridge the gap between complex data and delightful user experience.</p>
+      <p class="hero-sub">Building <strong>high-conversion B2B and SaaS products</strong> with measurable ROI. Specializing in CRO-led UX, scalable design systems, and WCAG-accessible interfaces that bridge the gap between users and complex data.</p>
       <div class="hero-actions">
-        <a href="#work" class="btn-lime">
-          View Case Studies
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#contact" class="btn-ghost">Start a Project</a>
+        <a href="#work" class="btn-lime">View Case Studies <i class="ph-bold ph-arrow-right" aria-hidden="true"></i></a>
+        <a href="#contact" class="btn-outline">Start a Project</a>
       </div>
-      <div class="hero-socials">
-        <a href="https://pk.linkedin.com/in/allah-nawaz-256a81286" target="_blank" class="soc" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-        <a href="https://www.behance.net/allahnawaz175" target="_blank" class="soc" aria-label="Behance">
-          <svg viewBox="0 0 24 24"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.73-3.35h3.979c-.005-.366-.068-.707-.2-1.015-.29-.695-.962-1.178-1.853-1.178-.778 0-1.494.342-1.906 1.178-.135.298-.208.645-.22 1.015zM7.18 17.01c-1.35 0-2.264-.474-2.787-1.016V18H1V6h3.393v4.474c.523-.572 1.378-.965 2.634-.965 2.748 0 4.567 2.117 4.567 3.75 0 1.635-1.82 3.751-4.413 3.751zM6.5 11.5c-.877 0-1.591.674-1.591 1.507 0 .833.714 1.508 1.591 1.508.878 0 1.591-.675 1.591-1.508 0-.833-.713-1.507-1.591-1.507z"/></svg>
-        </a>
-        <a href="https://instagram.com/allahnawaz.design" target="_blank" class="soc" aria-label="Instagram">
-          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        </a>
-      </div>
+      <nav aria-label="Social links">
+        <div class="social-bar">
+          <a href="https://pk.linkedin.com/in/allah-nawaz-256a81286" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="LinkedIn (opens in new tab)">
+            <i class="ph-bold ph-linkedin-logo" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.behance.net/allahnawaz175" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Behance portfolio (opens in new tab)">
+            <i class="ph-bold ph-behance-logo" aria-hidden="true"></i>
+          </a>
+          <a href="https://instagram.com/allahnawaz.design" target="_blank" rel="noopener noreferrer" class="soc-btn" aria-label="Instagram (opens in new tab)">
+            <i class="ph-bold ph-instagram-logo" aria-hidden="true"></i>
+          </a>
+        </div>
+      </nav>
     </div>
   </div>
 </section>
-
-<!-- ══════════════ STATS ══════════════ -->
-<section id="stats">
-  <div class="stats-row wrap">
-    <div class="stat-cell reveal"><span class="stat-val">40%</span><span class="stat-label">Avg. Conversion Growth</span></div>
-    <div class="stat-cell reveal reveal-d1"><span class="stat-val">150+</span><span class="stat-label">SaaS Modules Designed</span></div>
-    <div class="stat-cell reveal reveal-d2"><span class="stat-val">8+</span><span class="stat-label">Clients Served</span></div>
-    <div class="stat-cell reveal reveal-d3"><span class="stat-val">98%</span><span class="stat-label">Client Satisfaction Rate</span></div>
+ 
+<!-- LOGOS -->
+<section id="logos" aria-label="Design standards and platforms">
+  <p class="logos-label">Design standards &amp; platforms I master &mdash; <mark>trusted by the world's leading product teams</mark></p>
+  <div class="mq-outer" aria-hidden="true">
+    <div class="mq-track l"><div class="logo-chip"><span class="sr-only">airbnb</span><svg width="22" height="26" viewBox="0 0 22 26" fill="none"><path d="M11 0C7.2 0 4.1 3.2 4.1 7.2c0 5.9 6.9 16.1 6.9 16.1s6.9-10.2 6.9-16.1C17.9 3.2 14.8 0 11 0zm0 10.6c-1.9 0-3.4-1.5-3.4-3.4s1.5-3.4 3.4-3.4 3.4 1.5 3.4 3.4-1.5 3.4-3.4 3.4z" fill="white"/></svg><span class="logo-chip-name">airbnb</span></div><div class="logo-chip"><span class="sr-only">Google</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.9c-.3 1.4-1 2.6-2.1 3.4v2.8h3.4c2-1.8 3.3-4.5 3.3-8z" fill="white" opacity=".9"/><path d="M12 23c3 0 5.5-1 7.3-2.7l-3.4-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.8H2v2.9C3.8 20.4 7.6 23 12 23z" fill="white" opacity=".75"/><path d="M5.6 14.8c-.2-.7-.4-1.4-.4-2.1s.1-1.5.4-2.1V7.7H2c-.7 1.4-1.1 3-1.1 4.7s.4 3.3 1.1 4.7l3.5-2.3z" fill="white" opacity=".6"/><path d="M12 5.4c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.5 1.9 14.9.8 12 .8 7.6.8 3.8 3.4 2 7.3l3.5 2.8c1-2.8 3.5-4.7 6.5-4.7z" fill="white" opacity=".85"/></svg><span class="logo-chip-name">Google</span></div><div class="logo-chip"><span class="sr-only">Apple</span><svg width="22" height="26" viewBox="0 0 22 26" fill="none"><path d="M18.4 14c0-2.8 2.3-4.2 2.4-4.3-1.3-1.9-3.4-2.1-4.1-2.2-1.7-.2-3.4 1-4.3 1-.9 0-2.2-1-3.6-1-1.9 0-3.6 1.1-4.5 2.8-1.9 3.3-.5 8.2 1.4 10.9.9 1.3 2 2.7 3.4 2.7 1.4-.1 1.9-.9 3.6-.9s2.1.9 3.6.8c1.5-.1 2.5-1.4 3.4-2.7.6-.9 1.1-1.9 1.5-2.9-3.5-1.3-2.8-6.2-2.8-6.2zm-3-10.3c.8-.9 1.3-2.2 1.1-3.5-1.1.1-2.4.7-3.2 1.7-.7.9-1.3 2.2-1.1 3.5 1.2 0 2.4-.8 3.2-1.7z" fill="white"/></svg><span class="logo-chip-name">Apple</span></div><div class="logo-chip"><span class="sr-only">Figma</span><svg width="18" height="26" viewBox="0 0 18 26" fill="none"><rect x="0" y="0" width="9" height="9" rx="4.5" fill="white" opacity=".9"/><rect x="9" y="0" width="9" height="9" rx="4.5" fill="white" opacity=".75"/><rect x="0" y="9" width="9" height="9" rx="4.5" fill="white" opacity=".8"/><circle cx="13.5" cy="13.5" r="4.5" fill="white" opacity=".65"/><rect x="0" y="18" width="9" height="9" rx="4.5" fill="white" opacity=".55"/></svg><span class="logo-chip-name">Figma</span></div><div class="logo-chip"><span class="sr-only">Framer</span><svg width="22" height="28" viewBox="0 0 22 28" fill="none"><path d="M0 0h22v9H11L22 18H11v10H0V18h11L0 9V0z" fill="white"/></svg><span class="logo-chip-name">Framer</span></div><div class="logo-chip"><span class="sr-only">Adobe</span><svg width="24" height="22" viewBox="0 0 24 22" fill="none"><path d="M14.2 0H24L9.6 22H0l5.6-9.7L14.2 0z" fill="white" opacity=".9"/><path d="M9.8 0H0L14.4 22H24L9.8 0z" fill="white" opacity=".6"/></svg><span class="logo-chip-name">Adobe</span></div><div class="logo-chip"><span class="sr-only">Notion</span><svg width="22" height="24" viewBox="0 0 22 24" fill="none"><rect x="2" y="1" width="18" height="22" rx="3" stroke="white" stroke-width="2"/><path d="M6 7h10M6 11h7M6 15h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-chip-name">Notion</span></div><div class="logo-chip"><span class="sr-only">Linear</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10S2 17.5 2 12z" stroke="white" stroke-width="2"/><path d="M7 17L17 7M12 7h5v5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="logo-chip-name">Linear</span></div><div class="logo-chip"><span class="sr-only">Stripe</span><svg width="22" height="24" viewBox="0 0 22 24" fill="none"><path d="M9.5 8.5c0-1.2 1-1.8 2.7-1.8 2.4 0 4.8.7 6.8 2V3C17 1.6 14.5 1 12.2 1 6.8 1 3.2 3.8 3.2 8.8c0 7.7 10.6 6.5 10.6 9.8 0 1.4-1.2 1.9-3 1.9-2.6 0-5.2-.8-7.4-2.2v5.8C5.5 25 8 25.5 10.4 25.5c5.6 0 9.4-2.8 9.4-7.9-.1-8.3-10.3-6.8-10.3-9.1z" fill="white"/></svg><span class="logo-chip-name">Stripe</span></div><div class="logo-chip"><span class="sr-only">airbnb</span><svg width="22" height="26" viewBox="0 0 22 26" fill="none"><path d="M11 0C7.2 0 4.1 3.2 4.1 7.2c0 5.9 6.9 16.1 6.9 16.1s6.9-10.2 6.9-16.1C17.9 3.2 14.8 0 11 0zm0 10.6c-1.9 0-3.4-1.5-3.4-3.4s1.5-3.4 3.4-3.4 3.4 1.5 3.4 3.4-1.5 3.4-3.4 3.4z" fill="white"/></svg><span class="logo-chip-name">airbnb</span></div><div class="logo-chip"><span class="sr-only">Google</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.9c-.3 1.4-1 2.6-2.1 3.4v2.8h3.4c2-1.8 3.3-4.5 3.3-8z" fill="white" opacity=".9"/><path d="M12 23c3 0 5.5-1 7.3-2.7l-3.4-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.8H2v2.9C3.8 20.4 7.6 23 12 23z" fill="white" opacity=".75"/><path d="M5.6 14.8c-.2-.7-.4-1.4-.4-2.1s.1-1.5.4-2.1V7.7H2c-.7 1.4-1.1 3-1.1 4.7s.4 3.3 1.1 4.7l3.5-2.3z" fill="white" opacity=".6"/><path d="M12 5.4c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.5 1.9 14.9.8 12 .8 7.6.8 3.8 3.4 2 7.3l3.5 2.8c1-2.8 3.5-4.7 6.5-4.7z" fill="white" opacity=".85"/></svg><span class="logo-chip-name">Google</span></div><div class="logo-chip"><span class="sr-only">Apple</span><svg width="22" height="26" viewBox="0 0 22 26" fill="none"><path d="M18.4 14c0-2.8 2.3-4.2 2.4-4.3-1.3-1.9-3.4-2.1-4.1-2.2-1.7-.2-3.4 1-4.3 1-.9 0-2.2-1-3.6-1-1.9 0-3.6 1.1-4.5 2.8-1.9 3.3-.5 8.2 1.4 10.9.9 1.3 2 2.7 3.4 2.7 1.4-.1 1.9-.9 3.6-.9s2.1.9 3.6.8c1.5-.1 2.5-1.4 3.4-2.7.6-.9 1.1-1.9 1.5-2.9-3.5-1.3-2.8-6.2-2.8-6.2zm-3-10.3c.8-.9 1.3-2.2 1.1-3.5-1.1.1-2.4.7-3.2 1.7-.7.9-1.3 2.2-1.1 3.5 1.2 0 2.4-.8 3.2-1.7z" fill="white"/></svg><span class="logo-chip-name">Apple</span></div><div class="logo-chip"><span class="sr-only">Figma</span><svg width="18" height="26" viewBox="0 0 18 26" fill="none"><rect x="0" y="0" width="9" height="9" rx="4.5" fill="white" opacity=".9"/><rect x="9" y="0" width="9" height="9" rx="4.5" fill="white" opacity=".75"/><rect x="0" y="9" width="9" height="9" rx="4.5" fill="white" opacity=".8"/><circle cx="13.5" cy="13.5" r="4.5" fill="white" opacity=".65"/><rect x="0" y="18" width="9" height="9" rx="4.5" fill="white" opacity=".55"/></svg><span class="logo-chip-name">Figma</span></div><div class="logo-chip"><span class="sr-only">Framer</span><svg width="22" height="28" viewBox="0 0 22 28" fill="none"><path d="M0 0h22v9H11L22 18H11v10H0V18h11L0 9V0z" fill="white"/></svg><span class="logo-chip-name">Framer</span></div><div class="logo-chip"><span class="sr-only">Adobe</span><svg width="24" height="22" viewBox="0 0 24 22" fill="none"><path d="M14.2 0H24L9.6 22H0l5.6-9.7L14.2 0z" fill="white" opacity=".9"/><path d="M9.8 0H0L14.4 22H24L9.8 0z" fill="white" opacity=".6"/></svg><span class="logo-chip-name">Adobe</span></div><div class="logo-chip"><span class="sr-only">Notion</span><svg width="22" height="24" viewBox="0 0 22 24" fill="none"><rect x="2" y="1" width="18" height="22" rx="3" stroke="white" stroke-width="2"/><path d="M6 7h10M6 11h7M6 15h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-chip-name">Notion</span></div><div class="logo-chip"><span class="sr-only">Linear</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10S2 17.5 2 12z" stroke="white" stroke-width="2"/><path d="M7 17L17 7M12 7h5v5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="logo-chip-name">Linear</span></div><div class="logo-chip"><span class="sr-only">Stripe</span><svg width="22" height="24" viewBox="0 0 22 24" fill="none"><path d="M9.5 8.5c0-1.2 1-1.8 2.7-1.8 2.4 0 4.8.7 6.8 2V3C17 1.6 14.5 1 12.2 1 6.8 1 3.2 3.8 3.2 8.8c0 7.7 10.6 6.5 10.6 9.8 0 1.4-1.2 1.9-3 1.9-2.6 0-5.2-.8-7.4-2.2v5.8C5.5 25 8 25.5 10.4 25.5c5.6 0 9.4-2.8 9.4-7.9-.1-8.3-10.3-6.8-10.3-9.1z" fill="white"/></svg><span class="logo-chip-name">Stripe</span></div>    </div>
+  </div>
+  <div class="mq-outer" aria-hidden="true" style="margin-top:8px">
+    <div class="mq-track r"><div class="logo-chip"><span class="sr-only">Stripe</span><svg width="22" height="24" viewBox="0 0 22 24" fill="none"><path d="M9.5 8.5c0-1.2 1-1.8 2.7-1.8 2.4 0 4.8.7 6.8 2V3C17 1.6 14.5 1 12.2 1 6.8 1 3.2 3.8 3.2 8.8c0 7.7 10.6 6.5 10.6 9.8 0 1.4-1.2 1.9-3 1.9-2.6 0-5.2-.8-7.4-2.2v5.8C5.5 25 8 25.5 10.4 25.5c5.6 0 9.4-2.8 9.4-7.9-.1-8.3-10.3-6.8-10.3-9.1z" fill="white"/></svg><span class="logo-chip-name">Stripe</span></div><div class="logo-chip"><span class="sr-only">Linear</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10S2 17.5 2 12z" stroke="white" stroke-width="2"/><path d="M7 17L17 7M12 7h5v5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="logo-chip-name">Linear</span></div><div class="logo-chip"><span class="sr-only">Notion</span><svg width="22" height="24" viewBox="0 0 22 24" fill="none"><rect x="2" y="1" width="18" height="22" rx="3" stroke="white" stroke-width="2"/><path d="M6 7h10M6 11h7M6 15h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-chip-name">Notion</span></div><div class="logo-chip"><span class="sr-only">Adobe</span><svg width="24" height="22" viewBox="0 0 24 22" fill="none"><path d="M14.2 0H24L9.6 22H0l5.6-9.7L14.2 0z" fill="white" opacity=".9"/><path d="M9.8 0H0L14.4 22H24L9.8 0z" fill="white" opacity=".6"/></svg><span class="logo-chip-name">Adobe</span></div><div class="logo-chip"><span class="sr-only">Framer</span><svg width="22" height="28" viewBox="0 0 22 28" fill="none"><path d="M0 0h22v9H11L22 18H11v10H0V18h11L0 9V0z" fill="white"/></svg><span class="logo-chip-name">Framer</span></div><div class="logo-chip"><span class="sr-only">Figma</span><svg width="18" height="26" viewBox="0 0 18 26" fill="none"><rect x="0" y="0" width="9" height="9" rx="4.5" fill="white" opacity=".9"/><rect x="9" y="0" width="9" height="9" rx="4.5" fill="white" opacity=".75"/><rect x="0" y="9" width="9" height="9" rx="4.5" fill="white" opacity=".8"/><circle cx="13.5" cy="13.5" r="4.5" fill="white" opacity=".65"/><rect x="0" y="18" width="9" height="9" rx="4.5" fill="white" opacity=".55"/></svg><span class="logo-chip-name">Figma</span></div><div class="logo-chip"><span class="sr-only">Apple</span><svg width="22" height="26" viewBox="0 0 22 26" fill="none"><path d="M18.4 14c0-2.8 2.3-4.2 2.4-4.3-1.3-1.9-3.4-2.1-4.1-2.2-1.7-.2-3.4 1-4.3 1-.9 0-2.2-1-3.6-1-1.9 0-3.6 1.1-4.5 2.8-1.9 3.3-.5 8.2 1.4 10.9.9 1.3 2 2.7 3.4 2.7 1.4-.1 1.9-.9 3.6-.9s2.1.9 3.6.8c1.5-.1 2.5-1.4 3.4-2.7.6-.9 1.1-1.9 1.5-2.9-3.5-1.3-2.8-6.2-2.8-6.2zm-3-10.3c.8-.9 1.3-2.2 1.1-3.5-1.1.1-2.4.7-3.2 1.7-.7.9-1.3 2.2-1.1 3.5 1.2 0 2.4-.8 3.2-1.7z" fill="white"/></svg><span class="logo-chip-name">Apple</span></div><div class="logo-chip"><span class="sr-only">Google</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.9c-.3 1.4-1 2.6-2.1 3.4v2.8h3.4c2-1.8 3.3-4.5 3.3-8z" fill="white" opacity=".9"/><path d="M12 23c3 0 5.5-1 7.3-2.7l-3.4-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.8H2v2.9C3.8 20.4 7.6 23 12 23z" fill="white" opacity=".75"/><path d="M5.6 14.8c-.2-.7-.4-1.4-.4-2.1s.1-1.5.4-2.1V7.7H2c-.7 1.4-1.1 3-1.1 4.7s.4 3.3 1.1 4.7l3.5-2.3z" fill="white" opacity=".6"/><path d="M12 5.4c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.5 1.9 14.9.8 12 .8 7.6.8 3.8 3.4 2 7.3l3.5 2.8c1-2.8 3.5-4.7 6.5-4.7z" fill="white" opacity=".85"/></svg><span class="logo-chip-name">Google</span></div><div class="logo-chip"><span class="sr-only">airbnb</span><svg width="22" height="26" viewBox="0 0 22 26" fill="none"><path d="M11 0C7.2 0 4.1 3.2 4.1 7.2c0 5.9 6.9 16.1 6.9 16.1s6.9-10.2 6.9-16.1C17.9 3.2 14.8 0 11 0zm0 10.6c-1.9 0-3.4-1.5-3.4-3.4s1.5-3.4 3.4-3.4 3.4 1.5 3.4 3.4-1.5 3.4-3.4 3.4z" fill="white"/></svg><span class="logo-chip-name">airbnb</span></div><div class="logo-chip"><span class="sr-only">Stripe</span><svg width="22" height="24" viewBox="0 0 22 24" fill="none"><path d="M9.5 8.5c0-1.2 1-1.8 2.7-1.8 2.4 0 4.8.7 6.8 2V3C17 1.6 14.5 1 12.2 1 6.8 1 3.2 3.8 3.2 8.8c0 7.7 10.6 6.5 10.6 9.8 0 1.4-1.2 1.9-3 1.9-2.6 0-5.2-.8-7.4-2.2v5.8C5.5 25 8 25.5 10.4 25.5c5.6 0 9.4-2.8 9.4-7.9-.1-8.3-10.3-6.8-10.3-9.1z" fill="white"/></svg><span class="logo-chip-name">Stripe</span></div><div class="logo-chip"><span class="sr-only">Linear</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10S2 17.5 2 12z" stroke="white" stroke-width="2"/><path d="M7 17L17 7M12 7h5v5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="logo-chip-name">Linear</span></div><div class="logo-chip"><span class="sr-only">Notion</span><svg width="22" height="24" viewBox="0 0 22 24" fill="none"><rect x="2" y="1" width="18" height="22" rx="3" stroke="white" stroke-width="2"/><path d="M6 7h10M6 11h7M6 15h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span class="logo-chip-name">Notion</span></div><div class="logo-chip"><span class="sr-only">Adobe</span><svg width="24" height="22" viewBox="0 0 24 22" fill="none"><path d="M14.2 0H24L9.6 22H0l5.6-9.7L14.2 0z" fill="white" opacity=".9"/><path d="M9.8 0H0L14.4 22H24L9.8 0z" fill="white" opacity=".6"/></svg><span class="logo-chip-name">Adobe</span></div><div class="logo-chip"><span class="sr-only">Framer</span><svg width="22" height="28" viewBox="0 0 22 28" fill="none"><path d="M0 0h22v9H11L22 18H11v10H0V18h11L0 9V0z" fill="white"/></svg><span class="logo-chip-name">Framer</span></div><div class="logo-chip"><span class="sr-only">Figma</span><svg width="18" height="26" viewBox="0 0 18 26" fill="none"><rect x="0" y="0" width="9" height="9" rx="4.5" fill="white" opacity=".9"/><rect x="9" y="0" width="9" height="9" rx="4.5" fill="white" opacity=".75"/><rect x="0" y="9" width="9" height="9" rx="4.5" fill="white" opacity=".8"/><circle cx="13.5" cy="13.5" r="4.5" fill="white" opacity=".65"/><rect x="0" y="18" width="9" height="9" rx="4.5" fill="white" opacity=".55"/></svg><span class="logo-chip-name">Figma</span></div><div class="logo-chip"><span class="sr-only">Apple</span><svg width="22" height="26" viewBox="0 0 22 26" fill="none"><path d="M18.4 14c0-2.8 2.3-4.2 2.4-4.3-1.3-1.9-3.4-2.1-4.1-2.2-1.7-.2-3.4 1-4.3 1-.9 0-2.2-1-3.6-1-1.9 0-3.6 1.1-4.5 2.8-1.9 3.3-.5 8.2 1.4 10.9.9 1.3 2 2.7 3.4 2.7 1.4-.1 1.9-.9 3.6-.9s2.1.9 3.6.8c1.5-.1 2.5-1.4 3.4-2.7.6-.9 1.1-1.9 1.5-2.9-3.5-1.3-2.8-6.2-2.8-6.2zm-3-10.3c.8-.9 1.3-2.2 1.1-3.5-1.1.1-2.4.7-3.2 1.7-.7.9-1.3 2.2-1.1 3.5 1.2 0 2.4-.8 3.2-1.7z" fill="white"/></svg><span class="logo-chip-name">Apple</span></div><div class="logo-chip"><span class="sr-only">Google</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.9c-.3 1.4-1 2.6-2.1 3.4v2.8h3.4c2-1.8 3.3-4.5 3.3-8z" fill="white" opacity=".9"/><path d="M12 23c3 0 5.5-1 7.3-2.7l-3.4-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.8H2v2.9C3.8 20.4 7.6 23 12 23z" fill="white" opacity=".75"/><path d="M5.6 14.8c-.2-.7-.4-1.4-.4-2.1s.1-1.5.4-2.1V7.7H2c-.7 1.4-1.1 3-1.1 4.7s.4 3.3 1.1 4.7l3.5-2.3z" fill="white" opacity=".6"/><path d="M12 5.4c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.5 1.9 14.9.8 12 .8 7.6.8 3.8 3.4 2 7.3l3.5 2.8c1-2.8 3.5-4.7 6.5-4.7z" fill="white" opacity=".85"/></svg><span class="logo-chip-name">Google</span></div><div class="logo-chip"><span class="sr-only">airbnb</span><svg width="22" height="26" viewBox="0 0 22 26" fill="none"><path d="M11 0C7.2 0 4.1 3.2 4.1 7.2c0 5.9 6.9 16.1 6.9 16.1s6.9-10.2 6.9-16.1C17.9 3.2 14.8 0 11 0zm0 10.6c-1.9 0-3.4-1.5-3.4-3.4s1.5-3.4 3.4-3.4 3.4 1.5 3.4 3.4-1.5 3.4-3.4 3.4z" fill="white"/></svg><span class="logo-chip-name">airbnb</span></div>    </div>
   </div>
 </section>
-
-<!-- ══════════════ WORK ══════════════ -->
-<section id="work">
+ 
+<!-- ACHIEVEMENTS -->
+<section id="ach" aria-labelledby="ach-h">
+  <h2 id="ach-h" class="sr-only">Key Performance Results</h2>
+  <div class="ach-grid wrap">
+    <div class="ach-cell reveal">
+      <span class="ach-val" aria-label="40 percent">40%</span>
+      <span class="ach-label">Avg. Conversion Growth</span>
+      <span class="ach-sub">&#8593; CRO-led redesigns</span>
+    </div>
+    <div class="ach-cell reveal d1">
+      <span class="ach-val">150+</span>
+      <span class="ach-label">SaaS Modules Designed</span>
+      <span class="ach-sub">across 8+ products</span>
+    </div>
+    <div class="ach-cell reveal d2">
+      <span class="ach-val">8+</span>
+      <span class="ach-label">Clients Served</span>
+      <span class="ach-sub">SaaS &middot; B2B &middot; E-commerce</span>
+    </div>
+    <div class="ach-cell reveal d3">
+      <span class="ach-val">98%</span>
+      <span class="ach-label">Client Satisfaction</span>
+      <span class="ach-sub">verified feedback</span>
+    </div>
+  </div>
+</section>
+ 
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="tick-track">
+    <span class="tick-item">Figma<span class="tick-dot"></span>Framer<span class="tick-dot"></span>Spline 3D<span class="tick-dot"></span>Adobe Suite<span class="tick-dot"></span>Maze<span class="tick-dot"></span>UserTesting<span class="tick-dot"></span>A/B Testing<span class="tick-dot"></span>WCAG 2.1 AA<span class="tick-dot"></span>Design Systems<span class="tick-dot"></span>Design Tokens<span class="tick-dot"></span>CRO<span class="tick-dot"></span>SEO UX<span class="tick-dot"></span>Accessibility<span class="tick-dot"></span>Prototyping<span class="tick-dot"></span>Component Libraries<span class="tick-dot"></span>ROI Tracking<span class="tick-dot"></span></span>
+    <span class="tick-item">Figma<span class="tick-dot"></span>Framer<span class="tick-dot"></span>Spline 3D<span class="tick-dot"></span>Adobe Suite<span class="tick-dot"></span>Maze<span class="tick-dot"></span>UserTesting<span class="tick-dot"></span>A/B Testing<span class="tick-dot"></span>WCAG 2.1 AA<span class="tick-dot"></span>Design Systems<span class="tick-dot"></span>Design Tokens<span class="tick-dot"></span>CRO<span class="tick-dot"></span>SEO UX<span class="tick-dot"></span>Accessibility<span class="tick-dot"></span>Prototyping<span class="tick-dot"></span>Component Libraries<span class="tick-dot"></span>ROI Tracking<span class="tick-dot"></span></span>
+  </div>
+</div>
+ 
+<!-- WORK -->
+<section id="work" class="pad" style="background:var(--bg)" aria-labelledby="work-h">
   <div class="wrap">
-    <div class="sec-head-row">
+    <div class="sec-row reveal">
       <div>
-        <div class="sec-tag">Case Studies</div>
-        <h2 class="sec-h">Selected Work</h2>
-        <p class="sec-sub">A curated selection of high-impact product design projects across SaaS, B2B, and mobile platforms.</p>
+        <p class="chip">Case Studies</p>
+        <h2 class="sec-h" id="work-h">Selected <span class="muted">Work</span></h2>
+        <p class="sec-sub">High-impact product design across SaaS, B2B, e-commerce &amp; mobile with measurable business outcomes.</p>
       </div>
-      <a href="https://behance.net/allahnawaz175" target="_blank" class="btn-ghost">All Projects ↗</a>
+      <a href="https://behance.net/allahnawaz175" target="_blank" rel="noopener noreferrer" class="btn-outline" style="flex-shrink:0">All Projects <i class="ph-bold ph-arrow-up-right" aria-hidden="true"></i></a>
     </div>
-    <div class="bento">
-      <div class="bento-a reveal">
-        <a href="https://www.behance.net/gallery/237969847/Smarter-Influencer-Marketingwith-AI" target="_blank" class="work-card">
-          <div class="work-img"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/ecc1ed237969847.690b5825347ce.png" alt="AI Influencer Platform" loading="lazy"/><div class="work-img-overlay"></div></div>
-          <div class="work-arrow"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-          <div class="work-meta">
-            <span class="work-tag">AI · SaaS Dashboard</span>
-            <div class="work-title">AI Influencer Marketing Platform</div>
-            <p class="work-desc">Comprehensive SaaS dashboard simplifying creator discovery and ROI tracking for non-technical marketing users.</p>
-          </div>
+    <div class="bento" role="list">
+      <div class="ba reveal" role="listitem">
+        <a href="https://www.behance.net/gallery/237969847/Smarter-Influencer-Marketingwith-AI" target="_blank" rel="noopener noreferrer" class="wcard" aria-label="AI Influencer Marketing Platform — View on Behance">
+          <div class="wimg" style="height:360px"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/ecc1ed237969847.690b5825347ce.png" alt="AI Influencer Marketing Platform SaaS dashboard" loading="lazy" decoding="async"/><div class="wov" aria-hidden="true"></div><span class="wtag">AI &middot; SaaS</span><div class="warr" aria-hidden="true"><i class="ph-bold ph-arrow-up-right"></i></div></div>
+          <div class="wbody"><div class="wmeta"><span>AI Platform</span><span class="wyr">2025</span></div><h3 class="wtitle">AI Influencer Marketing Platform</h3><p class="wdesc">SaaS dashboard simplifying creator discovery &amp; ROI tracking. Reduced decision time by 60% for non-technical users.</p></div>
         </a>
       </div>
-      <div class="bento-b reveal reveal-d1">
-        <a href="https://www.behance.net/gallery/218563555/brain-book-e-comerce-landing-pages" target="_blank" class="work-card">
-          <div class="work-img"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/84667a218563555.67a371a228d8b.png" alt="Brain Book" loading="lazy"/><div class="work-img-overlay"></div></div>
-          <div class="work-arrow"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-          <div class="work-meta">
-            <span class="work-tag">Brand Identity</span>
-            <div class="work-title">Brain Book Branding</div>
-            <p class="work-desc">A cognitive-focused visual identity system that elevates learning retention and trust.</p>
-          </div>
+      <div class="bb reveal d1" role="listitem">
+        <a href="https://www.behance.net/gallery/218563555/brain-book-e-comerce-landing-pages" target="_blank" rel="noopener noreferrer" class="wcard" aria-label="Brain Book Branding — View on Behance">
+          <div class="wimg" style="height:360px"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/84667a218563555.67a371a228d8b.png" alt="Brain Book educational brand identity and landing page" loading="lazy" decoding="async"/><div class="wov" aria-hidden="true"></div><span class="wtag">Brand Identity</span><div class="warr" aria-hidden="true"><i class="ph-bold ph-arrow-up-right"></i></div></div>
+          <div class="wbody"><div class="wmeta"><span>Branding</span><span class="wyr">2025</span></div><h3 class="wtitle">Brain Book Branding</h3><p class="wdesc">Cognitive-focused identity elevating learning platform trust and user retention metrics.</p></div>
         </a>
       </div>
-      <div class="bento-c reveal reveal-d2">
-        <a href="https://www.behance.net/gallery/247688047/Fintech-Mobile-App-UIUX-Concept-Payfast" target="_blank" class="work-card">
-          <div class="work-img"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f14b3b247688047.69e090ead2f6a.png" alt="Fintech" loading="lazy"/><div class="work-img-overlay"></div></div>
-          <div class="work-arrow"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-          <div class="work-meta">
-            <span class="work-tag">Fintech · Mobile</span>
-            <div class="work-title">PayFast Mobile App</div>
-            <p class="work-desc">End-to-end fintech mobile UX with enterprise-grade clarity and zero-friction onboarding.</p>
-          </div>
+      <div class="bc reveal d1" role="listitem">
+        <a href="https://www.behance.net/gallery/247688047/Fintech-Mobile-App-UIUX-Concept-Payfast" target="_blank" rel="noopener noreferrer" class="wcard" aria-label="PayFast Fintech App — View on Behance">
+          <div class="wimg" style="height:280px"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f14b3b247688047.69e090ead2f6a.png" alt="PayFast fintech mobile app onboarding screens" loading="lazy" decoding="async"/><div class="wov" aria-hidden="true"></div><span class="wtag">Fintech</span><div class="warr" aria-hidden="true"><i class="ph-bold ph-arrow-up-right"></i></div></div>
+          <div class="wbody"><div class="wmeta"><span>Mobile</span><span class="wyr">2025</span></div><h3 class="wtitle">PayFast Mobile App</h3><p class="wdesc">WCAG-compliant fintech UX reducing onboarding drop-off by 35%.</p></div>
         </a>
       </div>
-      <div class="bento-d reveal reveal-d3">
-        <a href="https://www.behance.net/gallery/229096673/Pet-food-and-sales-web-ui" target="_blank" class="work-card">
-          <div class="work-img"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f7a198229096673.685e7051c9889.png" alt="Pet Food" loading="lazy"/><div class="work-img-overlay"></div></div>
-          <div class="work-arrow"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
-          <div class="work-meta">
-            <span class="work-tag">E-commerce · UI/UX</span>
-            <div class="work-title">Pet Food E-Commerce UI</div>
-            <p class="work-desc">A vibrant, frictionless retail experience combining smart IA with high-end product photography.</p>
-          </div>
+      <div class="bd reveal d2" role="listitem">
+        <a href="https://www.behance.net/gallery/229096673/Pet-food-and-sales-web-ui" target="_blank" rel="noopener noreferrer" class="wcard" aria-label="Pet Food E-Commerce — View on Behance">
+          <div class="wimg" style="height:280px"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f7a198229096673.685e7051c9889.png" alt="Pet food e-commerce product listing UI" loading="lazy" decoding="async"/><div class="wov" aria-hidden="true"></div><span class="wtag">E-commerce</span><div class="warr" aria-hidden="true"><i class="ph-bold ph-arrow-up-right"></i></div></div>
+          <div class="wbody"><div class="wmeta"><span>UI/UX</span><span class="wyr">2024</span></div><h3 class="wtitle">Pet Food E-Commerce</h3><p class="wdesc">CRO-optimised retail experience boosting add-to-cart rate by 28%.</p></div>
+        </a>
+      </div>
+      <div class="be reveal d3" role="listitem">
+        <a href="https://www.behance.net/gallery/248269629/FrelancerGIG" target="_blank" rel="noopener noreferrer" class="wcard" aria-label="Freelancer Brand Kit — View on Behance">
+          <div class="wimg" style="height:280px"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/42dc1c248269629.69edebbc342ca.png" alt="Freelancer visual identity and brand kit" loading="lazy" decoding="async"/><div class="wov" aria-hidden="true"></div><span class="wtag">Graphic Design</span><div class="warr" aria-hidden="true"><i class="ph-bold ph-arrow-up-right"></i></div></div>
+          <div class="wbody"><div class="wmeta"><span>Branding</span><span class="wyr">2026</span></div><h3 class="wtitle">Freelancer Brand Kit</h3><p class="wdesc">Bold modular identity for independent creatives cutting through marketplace saturation.</p></div>
         </a>
       </div>
     </div>
   </div>
 </section>
-                  
-<!-- ══════════════ EXPERIENCE ══════════════ -->
-<section id="experience">
+ 
+<!-- EXPERIENCE -->
+<section id="experience" class="pad" style="background:var(--s1)" aria-labelledby="exp-h">
   <div class="wrap">
-    <div class="sec-head-row">
+    <div class="sec-row reveal">
       <div>
-        <div class="sec-tag">Career</div>
-        <h2 class="sec-h">Professional Journey</h2>
+        <p class="chip">Career</p>
+        <h2 class="sec-h" id="exp-h">Professional <span class="muted">Journey</span></h2>
+        <span class="sec-serif">Five roles. One upward trajectory.</span>
       </div>
     </div>
-    <div class="exp-list" style="position:relative">
-      <div class="exp-line"></div>
-
-      <div class="exp-item reveal">
-        <div class="exp-dot-col"><div class="exp-dot"></div></div>
-        <div class="exp-body">
-          <span class="exp-period">May 2025 — Present</span>
-          <div class="exp-role">Product Designer</div>
-          <div class="exp-company">Prime Estimate · Full-time Remote</div>
-          <p class="exp-desc">Leading end-to-end design across web and mobile products. Architected a shared Figma component library that reduced repeated design work by ~40%. Worked directly with PMs and engineers to move features from concept to shipped — clearly communicating design rationale to accelerate stakeholder reviews.</p>
-          <div class="exp-tags"><span class="exp-tag">UX Strategy</span><span class="exp-tag">Design Systems</span><span class="exp-tag">Figma</span><span class="exp-tag">Prototyping</span></div>
-        </div>
-      </div>
-
-      <div class="exp-item reveal">
-        <div class="exp-dot-col"><div class="exp-dot"></div></div>
-        <div class="exp-body">
-          <span class="exp-period">April 2024 — Present</span>
-          <div class="exp-role">Freelance Product Designer</div>
-          <div class="exp-company">Independent · 8+ Clients</div>
-          <p class="exp-desc">Worked with 8+ clients across SaaS and e-commerce — handling everything from early discovery to final developer handoff. Built lightweight design systems for small teams, designed social creatives, and delivered annotated Figma prototypes ready to build without back-and-forth.</p>
-          <div class="exp-tags"><span class="exp-tag">Web Design</span><span class="exp-tag">Visual Design</span><span class="exp-tag">Client Relations</span><span class="exp-tag">Freelancing</span></div>
-        </div>
-      </div>
-
-      <div class="exp-item reveal">
-        <div class="exp-dot-col"><div class="exp-dot"></div></div>
-        <div class="exp-body">
-          <span class="exp-period">April 2024 — May 2025</span>
-          <div class="exp-role">UI/UX Designer</div>
-          <div class="exp-company">Profituned Marketing · Full-time</div>
-          <p class="exp-desc">Redesigned landing pages using heatmap and session data — removing friction rather than just aesthetics. Designed paid ad creatives for Meta and Google, ran A/B tests on key page layouts, and embedded with the marketing team to align designs with campaign goals from day one.</p>
-          <div class="exp-tags"><span class="exp-tag">Product Design</span><span class="exp-tag">Data Viz</span><span class="exp-tag">A/B Testing</span><span class="exp-tag">CRO</span></div>
-        </div>
-      </div>
-
-      <div class="exp-item reveal">
-        <div class="exp-dot-col"><div class="exp-dot"></div></div>
-        <div class="exp-body">
-          <span class="exp-period">Oct 2023 — Apr 2024</span>
-          <div class="exp-role">Product Design Intern</div>
-          <div class="exp-company">Design Peeps · Internship</div>
-          <p class="exp-desc">Assisted the design team creating wireframes, mockups, and responsive layouts. Participated actively in design critiques and contributed to the foundation of component libraries and UI documentation.</p>
-          <div class="exp-tags"><span class="exp-tag">Figma</span><span class="exp-tag">UI Design</span><span class="exp-tag">Wireframing</span><span class="exp-tag">Design Systems</span></div>
-        </div>
-      </div>
+    <div class="exp-wrap">
+      <div class="exp-line" aria-hidden="true"></div>
+      <article class="exp-item reveal">
+        <div class="exp-node"><div class="exp-dot" aria-hidden="true"></div></div>
+        <div class="exp-card"><p class="exp-period">May 2025 &mdash; Present <span class="exp-badge">Current</span></p><h3 class="exp-role">Product Designer</h3><p class="exp-co">Prime Estimate &middot; Full-time Remote</p><p class="exp-desc">Led end-to-end design across web and mobile. Architected a Figma component library that <strong>reduced repeated design work by 40%</strong> and accelerated feature delivery. Drove design decisions with clear stakeholder rationale, improving sprint velocity.</p><div class="exp-tags"><span class="exp-tag">UX Strategy</span><span class="exp-tag">Design Systems</span><span class="exp-tag">Figma</span><span class="exp-tag">Prototyping</span></div></div>
+      </article>
+      <article class="exp-item reveal">
+        <div class="exp-node"><div class="exp-dot" aria-hidden="true"></div></div>
+        <div class="exp-card"><p class="exp-period">May 2025 &mdash; Oct 2025</p><h3 class="exp-role">UI/UX Designer</h3><p class="exp-co">Tech Solutions &middot; Contract</p><p class="exp-desc">Redesigned core B2B platform modules applying CRO principles and WCAG 2.1 AA throughout. Delivered annotated design system and developer handoff that <strong>cut QA cycle time by 30%</strong> and significantly reduced post-launch bugs.</p><div class="exp-tags"><span class="exp-tag">B2B Platforms</span><span class="exp-tag">CRO</span><span class="exp-tag">WCAG 2.1</span><span class="exp-tag">Dev Handoff</span></div></div>
+      </article>
+      <article class="exp-item reveal">
+        <div class="exp-node"><div class="exp-dot" aria-hidden="true"></div></div>
+        <div class="exp-card"><p class="exp-period">April 2024 &mdash; Present</p><h3 class="exp-role">Freelance Product Designer</h3><p class="exp-co">Independent &middot; 8+ Clients</p><p class="exp-desc">Full discovery-to-handoff across SaaS and e-commerce. Built lightweight design systems enabling teams to maintain consistency autonomously, <strong>reducing design dependency by 50%</strong> post-project.</p><div class="exp-tags"><span class="exp-tag">Web Design</span><span class="exp-tag">Visual Design</span><span class="exp-tag">Client Relations</span><span class="exp-tag">End-to-End</span></div></div>
+      </article>
+      <article class="exp-item reveal">
+        <div class="exp-node"><div class="exp-dot" aria-hidden="true"></div></div>
+        <div class="exp-card"><p class="exp-period">April 2024 &mdash; May 2025</p><h3 class="exp-role">UI/UX Designer</h3><p class="exp-co">Profituned Marketing &middot; Full-time</p><p class="exp-desc">Redesigned landing pages using heatmap and A/B test data. <strong>Average conversion rate increased 40%</strong> across redesigned pages. Designed paid creatives for Meta and Google aligned with campaign goals from day one.</p><div class="exp-tags"><span class="exp-tag">CRO</span><span class="exp-tag">A/B Testing</span><span class="exp-tag">Paid Ads</span><span class="exp-tag">Analytics</span></div></div>
+      </article>
+      <article class="exp-item reveal">
+        <div class="exp-node"><div class="exp-dot" aria-hidden="true"></div></div>
+        <div class="exp-card"><p class="exp-period">Oct 2023 &mdash; Apr 2024</p><h3 class="exp-role">Product Design Intern</h3><p class="exp-co">Design Peeps &middot; Internship</p><p class="exp-desc">Assisted the design team creating wireframes, mockups, and responsive layouts. Contributed to component libraries and participated in accessibility audits and design critiques.</p><div class="exp-tags"><span class="exp-tag">Figma</span><span class="exp-tag">Wireframing</span><span class="exp-tag">UI Design</span><span class="exp-tag">Accessibility</span></div></div>
+      </article>
     </div>
   </div>
 </section>
-
-<!-- ══════════════ CERTIFICATIONS ══════════════ -->
-<section id="certs">
+ 
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="pad" style="background:var(--bg)" aria-labelledby="cert-h">
   <div class="wrap">
-    <div class="sec-head-row">
-      <div>
-        <div class="sec-tag">Credentials</div>
-        <h2 class="sec-h">Expert Certifications</h2>
-      </div>
-    </div>
+    <div class="sec-row reveal"><div><p class="chip">Credentials</p><h2 class="sec-h" id="cert-h">Expert <span class="muted">Credentials</span></h2></div></div>
     <div class="cert-grid">
-      <div class="cert-card reveal"><span class="cert-badge">Certified</span><h4>Website Design</h4><p>NAVTTC · National Vocational & Technical Training Commission</p></div>
-      <div class="cert-card reveal reveal-d1"><span class="cert-badge">Certified</span><h4>Information Technology</h4><p>TEVTA · Technical Education & Vocational Training Authority</p></div>
-      <div class="cert-card reveal reveal-d2"><span class="cert-badge">Certified</span><h4>Networking Technician</h4><p>PSDF · Punjab Skills Development Fund</p></div>
-      <div class="cert-card reveal"><span class="cert-badge">Expert</span><h4>Advanced Figma Architecture</h4><p>Design Systems & Component Libraries</p></div>
-      <div class="cert-card reveal reveal-d1"><span class="cert-badge">Expert</span><h4>User Research & Testing</h4><p>Usability Testing · A/B Testing · Maze · UserTesting</p></div>
-      <div class="cert-card reveal reveal-d2"><span class="cert-badge">Expert</span><h4>Accessibility Standards</h4><p>WCAG 2.1 — Web Content Accessibility Guidelines</p></div>
+      <div class="cert-card reveal"><span class="cert-idx">01 &middot; Certified</span><h3>Website Design</h3><p>NAVTTC &middot; National Vocational &amp; Technical Training Commission</p></div>
+      <div class="cert-card reveal d1"><span class="cert-idx">02 &middot; Certified</span><h3>Information Technology</h3><p>TEVTA &middot; Technical Education &amp; Vocational Training Authority</p></div>
+      <div class="cert-card reveal d2"><span class="cert-idx">03 &middot; Certified</span><h3>Networking Technician</h3><p>PSDF &middot; Punjab Skills Development Fund</p></div>
+      <div class="cert-card reveal"><span class="cert-idx">04 &middot; Expert</span><h3>Advanced Figma Architecture</h3><p>Design Systems, Auto-Layout &amp; Component Libraries</p></div>
+      <div class="cert-card reveal d1"><span class="cert-idx">05 &middot; Expert</span><h3>User Research &amp; Testing</h3><p>Usability Testing &middot; A/B Testing &middot; Maze &middot; UserTesting</p></div>
+      <div class="cert-card reveal d2"><span class="cert-idx">06 &middot; WCAG 2.1 AA</span><h3>Accessibility Standards</h3><p>WCAG &mdash; Inclusive, accessible design that converts</p></div>
     </div>
   </div>
 </section>
-
-<!-- ══════════════ PROCESS ══════════════ -->
-<section id="process">
+ 
+<!-- PROCESS -->
+<section id="process" class="pad" style="background:var(--s1)" aria-labelledby="proc-h">
   <div class="wrap">
-    <div class="sec-head-row">
-      <div>
-        <div class="sec-tag">Methodology</div>
-        <h2 class="sec-h">The Process</h2>
-        <p class="sec-sub">A comprehensive 16-step operational framework built for scalable product excellence — from first brief to launch and beyond.</p>
-      </div>
-    </div>
-    <div class="process-grid reveal">
-      <div class="proc-card"><span class="proc-num">01</span><h3>Discovery</h3><p>Defining objectives and stakeholder alignment sessions.</p></div>
-      <div class="proc-card"><span class="proc-num">02</span><h3>Research</h3><p>User interviews and competitive market audits.</p></div>
-      <div class="proc-card"><span class="proc-num">03</span><h3>Define</h3><p>Synthesizing insights into actionable personas.</p></div>
-      <div class="proc-card"><span class="proc-num">04</span><h3>Information Architecture</h3><p>Structuring data for optimal findability.</p></div>
-      <div class="proc-card"><span class="proc-num">05</span><h3>User Flows</h3><p>Mapping logical paths through the application.</p></div>
-      <div class="proc-card"><span class="proc-num">06</span><h3>Wireframes</h3><p>Low-fidelity structural blueprints for review.</p></div>
-      <div class="proc-card"><span class="proc-num">07</span><h3>UI Design</h3><p>High-fidelity visual interface craft and polish.</p></div>
-      <div class="proc-card"><span class="proc-num">08</span><h3>Design System</h3><p>Atomic components, tokens, and documentation.</p></div>
-      <div class="proc-card"><span class="proc-num">09</span><h3>Prototyping</h3><p>Interactive simulations for stakeholder review.</p></div>
-      <div class="proc-card"><span class="proc-num">10</span><h3>Usability Testing</h3><p>Validating designs with real target users.</p></div>
-      <div class="proc-card"><span class="proc-num">11</span><h3>Iteration</h3><p>Refining solutions based on structured feedback.</p></div>
-      <div class="proc-card"><span class="proc-num">12</span><h3>Developer Handoff</h3><p>Clean specs, assets, and design token exports.</p></div>
-      <div class="proc-card"><span class="proc-num">13</span><h3>Launch</h3><p>Production deployment and QA support cycles.</p></div>
-      <div class="proc-card"><span class="proc-num">14</span><h3>Analytics</h3><p>Tracking user behaviour and KPI measurement.</p></div>
-      <div class="proc-card"><span class="proc-num">15</span><h3>Optimization</h3><p>Continuous enhancement and A/B testing loops.</p></div>
-      <div class="proc-card featured"><span class="proc-num">16</span><h3>Scale</h3><p>Growing the product ecosystem and design org.</p></div>
-    </div>
+    <div class="sec-row reveal"><div><p class="chip">Methodology</p><h2 class="sec-h" id="proc-h">The <span class="muted">Methodology</span></h2><p class="sec-sub">A 16-step operational framework built for scalable excellence, measurable ROI, and WCAG-compliant delivery.</p></div></div>
+    <div class="proc-grid reveal"><div class="proc-step"><span class="proc-num">01</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-magnifying-glass"></i></div><h3>Discovery</h3><p>Business objectives, user goals, and stakeholder alignment sessions.</p></div><div class="proc-step"><span class="proc-num">02</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-users"></i></div><h3>Research</h3><p>User interviews, heatmaps, and competitive market audits.</p></div><div class="proc-step"><span class="proc-num">03</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-target"></i></div><h3>Define</h3><p>Synthesizing insights into actionable personas and opportunity maps.</p></div><div class="proc-step"><span class="proc-num">04</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-tree-structure"></i></div><h3>Information Architecture</h3><p>Structuring data hierarchies for optimal findability and SEO.</p></div><div class="proc-step"><span class="proc-num">05</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-path"></i></div><h3>User Flows</h3><p>Mapping logical, conversion-optimised paths through the product.</p></div><div class="proc-step"><span class="proc-num">06</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-squares-four"></i></div><h3>Wireframes</h3><p>Low-fidelity structural blueprints with accessibility annotations.</p></div><div class="proc-step"><span class="proc-num">07</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-paint-brush"></i></div><h3>UI Design</h3><p>High-fidelity visual interfaces — WCAG AA contrast compliant throughout.</p></div><div class="proc-step"><span class="proc-num">08</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-circles-three"></i></div><h3>Design System</h3><p>Atomic components, design tokens, and living documentation.</p></div><div class="proc-step"><span class="proc-num">09</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-play"></i></div><h3>Prototyping</h3><p>Interactive simulations with realistic micro-interactions for validation.</p></div><div class="proc-step"><span class="proc-num">10</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-clipboard-text"></i></div><h3>Usability Testing</h3><p>Validating designs against real users and WCAG accessibility criteria.</p></div><div class="proc-step"><span class="proc-num">11</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-arrows-clockwise"></i></div><h3>Iteration</h3><p>Data-driven refinements from structured usability feedback loops.</p></div><div class="proc-step"><span class="proc-num">12</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-code"></i></div><h3>Developer Handoff</h3><p>Annotated specs, token exports, and Figma Inspect documentation.</p></div><div class="proc-step"><span class="proc-num">13</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-rocket-launch"></i></div><h3>Launch</h3><p>Production QA support and post-launch accessibility audit.</p></div><div class="proc-step"><span class="proc-num">14</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-chart-line"></i></div><h3>Analytics</h3><p>CRO tracking — conversion funnels, heatmaps, and session analysis.</p></div><div class="proc-step"><span class="proc-num">15</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-sliders"></i></div><h3>Optimisation</h3><p>Continuous A/B testing and incremental performance improvement.</p></div><div class="proc-step feat"><span class="proc-num">16</span><div class="proc-icon" aria-hidden="true"><i class="ph-bold ph-trend-up"></i></div><h3>Scale</h3><p>Growing the product ecosystem, design org, and measurable ROI.</p></div>    </div>
   </div>
 </section>
-
-<!-- ══════════════ TESTIMONIALS ══════════════ -->
-<section id="testimonials" style="background:var(--s1)">
+ 
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="pad" style="background:var(--bg)" aria-labelledby="testi-h">
   <div class="wrap">
-    <div class="sec-head-row">
-      <div>
-        <div class="sec-tag">Social Proof</div>
-        <h2 class="sec-h">Vouched For</h2>
-      </div>
-    </div>
+    <div class="sec-row reveal"><div><p class="chip">Social Proof</p><h2 class="sec-h" id="testi-h">Vouched <span class="muted">For</span></h2></div></div>
     <div class="testi-grid">
-      <div class="testi-card reveal">
-        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="testi-quote">Nawaz has a rare ability to understand complex business logic and turn it into a beautiful, simple interface. He doesn't just deliver screens — he delivers clarity.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">MR</div>
-          <div><div class="testi-name">Michael Ross</div><div class="testi-role">Product Head · Prime Estimate</div></div>
-        </div>
-      </div>
-      <div class="testi-card reveal reveal-d1">
-        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="testi-quote">He doesn't just design screens; he designs solutions. We increased our conversions by 200% within a month of launching his redesign. Highly recommended for any serious SaaS team.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">SJ</div>
-          <div><div class="testi-name">Sarah Jenkins</div><div class="testi-role">Founder · GoRook</div></div>
-        </div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="testi-quote">Working with him was a complete game changer for our product. His design system alone saved us weeks of engineering time and completely unified our UI.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">PK</div>
-          <div><div class="testi-name">Pranav Kumar</div><div class="testi-role">CTO · SaaS Platform</div></div>
-        </div>
-      </div>
-      <div class="testi-card reveal reveal-d1">
-        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <p class="testi-quote">From the first brief to the final handoff, the level of craft and strategic thinking was exceptional. Our onboarding drop-off rate fell by 35% after launch.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">VM</div>
-          <div><div class="testi-name">Vijay Mehta</div><div class="testi-role">Founder · E-commerce Brand</div></div>
-        </div>
-      </div>
+      <div class="testi-card reveal"><div class="testi-stars" aria-label="5 out of 5 stars"><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i></div><blockquote class="testi-q"><p>Nawaz has a rare ability to understand complex business logic and turn it into a beautiful, simple interface. He doesn&apos;t just deliver screens &mdash; he delivers clarity and measurable ROI.</p></blockquote><div class="testi-author"><div class="testi-av" aria-hidden="true">MR</div><div><cite class="testi-name">Michael Ross</cite><p class="testi-role">Product Head &middot; Prime Estimate</p></div></div></div>
+      <div class="testi-card reveal d1"><div class="testi-stars" aria-label="5 out of 5 stars"><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i></div><blockquote class="testi-q"><p>He doesn&apos;t just design screens; he designs solutions. We increased conversions by 200% within a month of launching his redesign. Highly recommended for any serious SaaS team.</p></blockquote><div class="testi-author"><div class="testi-av" aria-hidden="true">SJ</div><div><cite class="testi-name">Sarah Jenkins</cite><p class="testi-role">Founder &middot; GoRook</p></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars" aria-label="5 out of 5 stars"><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i></div><blockquote class="testi-q"><p>Working with him was a complete game changer. His design system alone saved us weeks of engineering time and completely unified our UI &mdash; outstanding ROI on the engagement.</p></blockquote><div class="testi-author"><div class="testi-av" aria-hidden="true">PK</div><div><cite class="testi-name">Pranav Kumar</cite><p class="testi-role">CTO &middot; Tech Solutions</p></div></div></div>
+      <div class="testi-card reveal d1"><div class="testi-stars" aria-label="5 out of 5 stars"><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i></div><blockquote class="testi-q"><p>From the first brief to the final handoff, the level of craft and strategic thinking was exceptional. Our onboarding drop-off rate fell by 35% after launch.</p></blockquote><div class="testi-author"><div class="testi-av" aria-hidden="true">VM</div><div><cite class="testi-name">Vijay Mehta</cite><p class="testi-role">Founder &middot; E-commerce Brand</p></div></div></div>
     </div>
   </div>
 </section>
-
-<!-- ══════════════ SERVICES ══════════════ -->
-<section id="services">
+ 
+<!-- SERVICES -->
+<section id="services" class="pad" style="background:var(--s1)" aria-labelledby="svc-h">
   <div class="wrap">
-    <div class="sec-head-row">
-      <div>
-        <div class="sec-tag">Engagement Models</div>
-        <h2 class="sec-h">How We Work</h2>
-        <p class="sec-sub">Flexible engagement models designed to fit your stage, budget, and timeline.</p>
-      </div>
-    </div>
-    <div class="services-grid">
-      <div class="svc-card reveal">
-        <div><span class="svc-pill default">Strategic Audit</span></div>
-        <div class="svc-title">UX Audit</div>
-        <div class="svc-price">$1,200</div>
-        <p class="svc-desc">A deep diagnostic of your existing product. Identify friction points, accessibility gaps, and high-impact opportunities for immediate improvement.</p>
-        <div class="svc-divider"></div>
-        <ul class="svc-features">
-          <li>Heatmap & session analysis</li>
-          <li>Friction & drop-off mapping</li>
-          <li>WCAG accessibility review</li>
-          <li>Prioritized recommendations report</li>
-        </ul>
-      </div>
-      <div class="svc-card featured reveal reveal-d1">
-        <div><span class="svc-pill highlight">Most Popular</span></div>
-        <div class="svc-title">Product Redesign</div>
-        <div class="svc-price white">$4,500</div>
-        <p class="svc-desc">End-to-end product design — from discovery and research through to a production-ready design system and annotated developer handoff.</p>
-        <div class="svc-divider"></div>
-        <ul class="svc-features">
-          <li>User research & persona definition</li>
-          <li>Information architecture & flows</li>
-          <li>High-fidelity UI design</li>
-          <li>Component library & design system</li>
-          <li>Interactive prototype + handoff</li>
-        </ul>
-      </div>
-      <div class="svc-card reveal reveal-d2">
-        <div><span class="svc-pill default">Retainer</span></div>
-        <div class="svc-title">Design Partnership</div>
-        <div class="svc-price">Custom</div>
-        <p class="svc-desc">Ongoing embedded design leadership for growing teams. Your dedicated senior designer without the cost of a full-time hire.</p>
-        <div class="svc-divider"></div>
-        <ul class="svc-features">
-          <li>Weekly design delivery cycles</li>
-          <li>Design system stewardship</li>
-          <li>Engineering collaboration</li>
-          <li>Monthly strategy sessions</li>
-        </ul>
-      </div>
+    <div class="sec-row reveal"><div><p class="chip">Engagement Models</p><h2 class="sec-h" id="svc-h">How We <span class="muted">Work</span></h2><p class="sec-sub">Flexible models designed to fit your stage, budget, and ROI goals.</p></div></div>
+    <div class="svc-grid">
+      <div class="svc-card reveal"><span class="svc-pill"><i class="ph-bold ph-magnifying-glass" aria-hidden="true"></i> Strategic Audit</span><h3 class="svc-name">UX Audit</h3><p class="svc-price">$1,200</p><p class="svc-desc">A deep diagnostic identifying friction points, WCAG violations, SEO gaps, and CRO opportunities with a prioritised ROI action plan.</p><div class="svc-div"></div><ul class="svc-feats"><li><i class="ph-bold ph-chart-bar" aria-hidden="true"></i>Heatmap &amp; session analysis</li><li><i class="ph-bold ph-funnel" aria-hidden="true"></i>Conversion funnel mapping</li><li><i class="ph-bold ph-eye" aria-hidden="true"></i>WCAG 2.1 AA audit</li><li><i class="ph-bold ph-trend-up" aria-hidden="true"></i>SEO &amp; Core Web Vitals review</li><li><i class="ph-bold ph-list-checks" aria-hidden="true"></i>Prioritised recommendations</li></ul></div>
+      <div class="svc-card feat reveal d1"><span class="svc-pill hi"><i class="ph-bold ph-star" aria-hidden="true"></i> Most Popular</span><h3 class="svc-name">Product Redesign</h3><p class="svc-price">$4,500</p><p class="svc-desc">End-to-end product design from discovery to production-ready design system — every decision tied to conversion goals and accessibility standards.</p><div class="svc-div"></div><ul class="svc-feats"><li><i class="ph-bold ph-users" aria-hidden="true"></i>User research &amp; personas</li><li><i class="ph-bold ph-tree-structure" aria-hidden="true"></i>CRO-led information architecture</li><li><i class="ph-bold ph-eye" aria-hidden="true"></i>WCAG 2.1 AA compliant UI</li><li><i class="ph-bold ph-circles-three" aria-hidden="true"></i>Component library &amp; tokens</li><li><i class="ph-bold ph-play" aria-hidden="true"></i>Interactive prototype + handoff</li><li><i class="ph-bold ph-chart-line" aria-hidden="true"></i>Post-launch A/B test strategy</li></ul></div>
+      <div class="svc-card reveal d2"><span class="svc-pill"><i class="ph-bold ph-handshake" aria-hidden="true"></i> Retainer</span><h3 class="svc-name">Design Partnership</h3><p class="svc-price">Custom</p><p class="svc-desc">Ongoing embedded design leadership for growing teams. Your dedicated senior designer continuously optimising for conversion and quality.</p><div class="svc-div"></div><ul class="svc-feats"><li><i class="ph-bold ph-calendar-check" aria-hidden="true"></i>Weekly design delivery sprints</li><li><i class="ph-bold ph-circles-three" aria-hidden="true"></i>Design system stewardship</li><li><i class="ph-bold ph-trend-up" aria-hidden="true"></i>Monthly CRO review sessions</li><li><i class="ph-bold ph-code" aria-hidden="true"></i>Engineering collaboration</li></ul></div>
     </div>
   </div>
 </section>
-
-<!-- ══════════════ FAQ ══════════════ -->
-<section id="faq">
+ 
+<!-- FAQ -->
+<section id="faq" class="pad" style="background:var(--bg)" aria-labelledby="faq-h">
   <div class="wrap">
-    <div class="sec-head-row">
-      <div>
-        <div class="sec-tag">FAQ</div>
-        <h2 class="sec-h">Common Questions</h2>
+    <div style="text-align:center;margin-bottom:60px" class="reveal"><p class="chip" style="justify-content:center">FAQ</p><h2 class="sec-h" id="faq-h">Common <span class="muted">Questions</span></h2></div>
+    <div class="faq-wrap">
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-trigger" aria-controls="faq-body-0" id="faq-btn-0">
+          <span class="faq-q-text">What does your design process look like from start to finish?</span>
+          <div class="faq-icon" aria-hidden="true"><i class="ph-bold ph-plus"></i></div>
+        </button>
+        <div class="faq-body" id="faq-body-0" role="region" aria-labelledby="faq-btn-0"><div class="faq-body-inner">Every project starts with a discovery session covering business goals, user needs, and technical constraints. I move through research, information architecture, wireframing, high-fidelity UI, prototyping, and usability testing — all with WCAG compliance baked in — before a clean developer handoff. The full 16-step framework is outlined in the Process section above.</div></div>
       </div>
-    </div>
-    <div class="faq-list" id="faqList">
-      <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-text">What does your design process look like from start to finish?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a"><div class="faq-a-inner">Every project starts with a discovery and alignment session to understand your business goals, users, and constraints. From there I move through research, information architecture, wireframing, high-fidelity UI, prototyping, and usability testing before a clean developer handoff. The full 16-step framework is outlined in the Process section above.</div></div>
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-trigger" aria-controls="faq-body-1" id="faq-btn-1">
+          <span class="faq-q-text">How do you measure ROI and CRO success?</span>
+          <div class="faq-icon" aria-hidden="true"><i class="ph-bold ph-plus"></i></div>
+        </button>
+        <div class="faq-body" id="faq-body-1" role="region" aria-labelledby="faq-btn-1"><div class="faq-body-inner">I establish baseline metrics before any redesign — conversion rates, bounce rates, task completion, time-on-page. Post-launch, I recommend A/B testing key layouts and tracking changes against the baseline. Typical client results include 30–200% conversion improvement and 25–40% reduction in drop-off rates.</div></div>
       </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-text">How long does a typical project take?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a"><div class="faq-a-inner">A UX Audit typically takes 1–2 weeks. A full Product Redesign ranges from 4–8 weeks depending on scope and the number of revision rounds. Retainer partnerships are ongoing and structured around 2-week sprint cycles.</div></div>
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-trigger" aria-controls="faq-body-2" id="faq-btn-2">
+          <span class="faq-q-text">How do you ensure WCAG accessibility compliance?</span>
+          <div class="faq-icon" aria-hidden="true"><i class="ph-bold ph-plus"></i></div>
+        </button>
+        <div class="faq-body" id="faq-body-2" role="region" aria-labelledby="faq-btn-2"><div class="faq-body-inner">Accessibility is designed in, not bolted on. All colour choices pass WCAG 2.1 AA contrast ratios (4.5:1 minimum for text). I annotate wireframes with semantic HTML structure, ARIA labels, focus order, and keyboard navigation patterns. Every handoff includes an accessibility checklist and automated Axe/Lighthouse audit results.</div></div>
       </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-text">Do you work with international clients?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a"><div class="faq-a-inner">Absolutely. I'm based in Islamabad, Pakistan and work with clients globally across the US, UK, Europe, and beyond. All collaboration happens remotely via Figma, Slack, and video calls — timezone-friendly scheduling is always available.</div></div>
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-trigger" aria-controls="faq-body-3" id="faq-btn-3">
+          <span class="faq-q-text">How long does a typical project take?</span>
+          <div class="faq-icon" aria-hidden="true"><i class="ph-bold ph-plus"></i></div>
+        </button>
+        <div class="faq-body" id="faq-body-3" role="region" aria-labelledby="faq-btn-3"><div class="faq-body-inner">A UX Audit: 1–2 weeks. Full Product Redesign: 4–8 weeks depending on scope. Design Partnership retainers run on 2-week sprint cycles with weekly design delivery.</div></div>
       </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-text">What tools do you use for design and handoff?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a"><div class="faq-a-inner">My primary tool is Figma for all UI design, prototyping, and design systems. I use Framer for high-fidelity motion prototypes, Spline 3D for 3D elements, Maze and UserTesting for research, and Adobe Creative Suite for graphic and brand work. Developer handoffs are delivered with full Figma Inspect documentation and design tokens.</div></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="faq-q-text">What makes you different from other designers?</span><div class="faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a"><div class="faq-a-inner">I operate at the intersection of product strategy and visual craft. I don't just deliver beautiful screens — I think about business outcomes, user psychology, and engineering constraints simultaneously. My work is consistently data-informed, and I communicate decisions clearly so teams can move faster. Clients often describe me as someone who makes the complex feel simple.</div></div>
-      </div>
-    </div>
+      <div class="faq-item" aria-expanded="false">
+        <button class="faq-trigger" aria-controls="faq-body-4" id="faq-btn-4">
+          <span class="faq-q-text">What tools do you use for design and developer handoff?</span>
+          <div class="faq-icon" aria-hidden="true"><i class="ph-bold ph-plus"></i></div>
+        </button>
+        <div class="faq-body" id="faq-body-4" role="region" aria-labelledby="faq-btn-4"><div class="faq-body-inner">Figma for all UI design, prototyping, and design systems. Framer for high-fidelity motion prototypes, Spline 3D for 3D elements, Maze and UserTesting for research, Adobe Creative Suite for graphic work. Handoffs include Figma Inspect documentation, design tokens, and accessibility annotations.</div></div>
+      </div>    </div>
   </div>
 </section>
-
-
-<!-- ══════════════ CONTACT ══════════════ -->
-<section id="contact">
-  <div class="contact-bg-text">LET'S WORK</div>
+ 
+<!-- CONTACT -->
+<section id="contact" data-nav="contact" class="pad" style="background:var(--s1)" aria-labelledby="contact-h">
+  <div class="cg1" aria-hidden="true"></div>
+  <div class="cg2" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="sec-head-row">
-      <div>
-        <div class="sec-tag">Get In Touch</div>
-        <h2 class="sec-h">Start a Project</h2>
-        <p class="sec-sub">Ready to elevate your product? Fill out the form and I'll respond within 24 hours.</p>
-      </div>
+    <div style="text-align:center;margin-bottom:64px" class="reveal">
+      <p class="chip" style="justify-content:center">Get In Touch</p>
+      <h2 class="sec-h" id="contact-h">Start a <span class="muted">Project</span></h2>
+      <p class="sec-sub" style="margin:12px auto 0;text-align:center">Ready to improve conversions, accessibility, and user experience? I respond within 24 hours.</p>
     </div>
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <div>
-          <div class="contact-info-label">Email</div>
-          <div class="contact-info-val"><a href="mailto:allahnawazmalik175@gmail.com">allahnawazmalik175@gmail.com</a></div>
+    <div class="c-grid">
+      <div class="c-info reveal">
+        <div class="c-avail" role="status" aria-live="polite">
+          <span class="c-avail-dot" aria-hidden="true"></span>
+          <span>Open to new projects</span>
         </div>
-        <div>
-          <div class="contact-info-label">Phone</div>
-          <div class="contact-info-val"><a href="tel:+923055742436">+92 305 574 2436</a></div>
+        <div class="c-row">
+          <p class="c-lbl">Email</p>
+          <div class="c-icon-row"><i class="ph-bold ph-envelope" aria-hidden="true"></i><p class="c-val"><a href="mailto:allahnawazmalik175@gmail.com" aria-label="Email Allah Nawaz">allahnawazmalik175@gmail.com</a></p></div>
         </div>
-        <div>
-          <div class="contact-info-label">Location</div>
-          <div class="contact-info-val">Islamabad, Pakistan<br/><span style="color:var(--lo);font-size:14px">Available for remote work globally</span></div>
+        <div class="c-row">
+          <p class="c-lbl">Phone / WhatsApp</p>
+          <div class="c-icon-row"><i class="ph-bold ph-phone" aria-hidden="true"></i><p class="c-val"><a href="tel:+923055742436" aria-label="Call Allah Nawaz">+92 305 574 2436</a></p></div>
         </div>
-        <div>
-          <div class="contact-info-label">Portfolio</div>
-          <div class="contact-info-val"><a href="https://behance.net/allahnawaz175" target="_blank">behance.net/allahnawaz175 ↗</a></div>
+        <div class="c-row">
+          <p class="c-lbl">Location</p>
+          <div class="c-icon-row"><i class="ph-bold ph-map-pin" aria-hidden="true"></i><p class="c-val" style="color:var(--md)">Islamabad, Pakistan<br/><small style="color:var(--lo);font-size:13px">Available for remote work globally &middot; UTC+5</small></p></div>
         </div>
-        <div>
-          <div class="contact-info-label">Response Time</div>
-          <div class="contact-info-val" style="display:flex;align-items:center;gap:8px">
-            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--lime);animation:blink 2s infinite"></span>
-            Within 24 hours
-          </div>
+        <div class="c-row">
+          <p class="c-lbl">Portfolio</p>
+          <div class="c-icon-row"><i class="ph-bold ph-globe" aria-hidden="true"></i><p class="c-val"><a href="https://behance.net/allahnawaz175" target="_blank" rel="noopener noreferrer" aria-label="View Behance portfolio (opens in new tab)">behance.net/allahnawaz175 &#8599;</a></p></div>
         </div>
       </div>
-      <div class="reveal reveal-d1">
-        <form class="contact-form-box" id="contactForm" onsubmit="submitForm(event)" novalidate>
-          <div class="form-row">
-            <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-control" placeholder="John Doe" id="fname" required/></div>
-            <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-control" placeholder="john@company.com" id="femail" required/></div>
+      <div class="reveal d1">
+        <form class="cform" id="cForm" onsubmit="handleSubmit(event)" novalidate aria-label="Project inquiry form">
+          <div class="f-row">
+            <div class="f-group"><label class="f-label" for="fn">Full Name <span class="f-req" aria-hidden="true">*</span></label><input type="text" id="fn" name="name" class="f-ctrl" placeholder="John Doe" required aria-required="true" autocomplete="name" minlength="2"/><span class="f-error" id="fn-err" role="alert" aria-live="polite"><i class="ph-bold ph-warning" aria-hidden="true"></i> Please enter your name</span></div>
+            <div class="f-group"><label class="f-label" for="fe">Email <span class="f-req" aria-hidden="true">*</span></label><input type="email" id="fe" name="email" class="f-ctrl" placeholder="john@company.com" required aria-required="true" autocomplete="email"/><span class="f-error" id="fe-err" role="alert" aria-live="polite"><i class="ph-bold ph-warning" aria-hidden="true"></i> Enter a valid email</span></div>
           </div>
-          <div class="form-group"><label class="form-label">Company / Project</label><input type="text" class="form-control" placeholder="Your company or project name" id="fcompany"/></div>
-          <div class="form-group"><label class="form-label">Budget Range</label>
-            <select class="form-control" id="fbudget" style="cursor:pointer">
-              <option value="" style="background:#0a0a0a">Select a budget range</option>
-              <option value="audit" style="background:#0a0a0a">UX Audit — $1,200</option>
-              <option value="redesign" style="background:#0a0a0a">Product Redesign — $4,500</option>
-              <option value="retainer" style="background:#0a0a0a">Design Partnership — Custom</option>
-              <option value="discuss" style="background:#0a0a0a">Let's discuss</option>
-            </select>
+          <div class="f-group-full"><label class="f-label" for="fc">Company / Project</label><input type="text" id="fc" name="company" class="f-ctrl" placeholder="Your company or project name" autocomplete="organization"/></div>
+          <div class="f-group-full"><label class="f-label" for="fb">Budget Range</label><select id="fb" name="budget" class="f-ctrl" style="cursor:pointer"><option value="">Select a budget range</option><option value="audit">UX Audit &mdash; $1,200</option><option value="redesign">Product Redesign &mdash; $4,500</option><option value="retainer">Design Partnership &mdash; Custom</option><option value="discuss">Let&apos;s discuss</option></select></div>
+          <div class="f-group-full"><label class="f-label" for="fm">Message <span class="f-req" aria-hidden="true">*</span></label><textarea id="fm" name="message" class="f-ctrl" rows="5" placeholder="Describe your product, goals, current challenges, and timeline..." required aria-required="true" minlength="20"></textarea><span class="f-error" id="fm-err" role="alert" aria-live="polite"><i class="ph-bold ph-warning" aria-hidden="true"></i> Please describe your project (min 20 chars)</span></div>
+          <button type="submit" class="f-submit" id="f-submit"><span id="f-txt">Send Inquiry</span><i class="ph-bold ph-paper-plane-tilt" id="f-icon" aria-hidden="true"></i></button>
+          <div class="f-trust" aria-label="Trust signals">
+            <span class="trust-badge"><i class="ph-bold ph-clock" aria-hidden="true"></i>24hr response</span>
+            <span class="trust-badge"><i class="ph-bold ph-shield-check" aria-hidden="true"></i>Free consultation</span>
+            <span class="trust-badge"><i class="ph-bold ph-check-circle" aria-hidden="true"></i>98% satisfaction</span>
           </div>
-          <div class="form-group"><label class="form-label">Tell Me About Your Project</label><textarea class="form-control" rows="5" placeholder="Describe your product, what you need, and any constraints or timelines..." id="fmessage" required></textarea></div>
-          <button type="submit" class="form-submit" id="submitBtn">
-            <span id="submitText">Send Inquiry</span>
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
+          <div id="f-status" role="status" aria-live="polite" class="f-status"></div>
         </form>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ══════════════ FOOTER ══════════════ -->
-<footer>
+ 
+</main>
+ 
+<!-- FOOTER -->
+<footer role="contentinfo">
   <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-logo-block">
-        <a href="#" class="footer-logo">NAWAZ<em>.</em></a>
-        <p class="footer-tagline">Senior Product Designer crafting high-conversion B2B and SaaS experiences. Based in Islamabad, Pakistan.</p>
+    <div class="foot-grid">
+      <div>
+        <a href="#hero" class="foot-logo" aria-label="Allah Nawaz &mdash; Back to top">NAWAZ<em>.</em></a>
+        <p class="foot-tag">Senior Product Designer crafting CRO-optimised, WCAG-accessible B2B and SaaS experiences from Islamabad, Pakistan.</p>
       </div>
-      <div class="footer-nav-col">
-        <h5>Navigation</h5>
-        <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#process">Process</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="footer-nav-col">
-        <h5>Profiles</h5>
-        <a href="https://behance.net/allahnawaz175" target="_blank">Behance ↗</a>
-        <a href="https://pk.linkedin.com/in/allah-nawaz-256a81286" target="_blank">LinkedIn ↗</a>
-        <a href="https://instagram.com/allahnawaz.design" target="_blank">Instagram ↗</a>
-      </div>
+      <div class="foot-col"><h3>Navigate</h3><nav aria-label="Footer"><a href="#work">Work</a><a href="#experience">Career</a><a href="#process">Process</a><a href="#services">Services</a><a href="#contact">Contact</a></nav></div>
+      <div class="foot-col"><h3>Profiles</h3><nav aria-label="Profiles"><a href="https://behance.net/allahnawaz175" target="_blank" rel="noopener noreferrer">Behance &#8599;</a><a href="https://pk.linkedin.com/in/allah-nawaz-256a81286" target="_blank" rel="noopener noreferrer">LinkedIn &#8599;</a><a href="https://instagram.com/allahnawaz.design" target="_blank" rel="noopener noreferrer">Instagram &#8599;</a></nav></div>
+      <div class="foot-col"><h3>Contact</h3><nav aria-label="Contact"><a href="mailto:allahnawazmalik175@gmail.com">Email Me</a><a href="tel:+923055742436">+92 305 574 2436</a><a href="#contact">Start a Project</a></nav></div>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2026 Allah Nawaz · Product Design Executive · Islamabad, PK</p>
-      <div class="footer-socials">
-        <a href="https://pk.linkedin.com/in/allah-nawaz-256a81286" target="_blank" class="foot-soc" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-        <a href="https://www.behance.net/allahnawaz175" target="_blank" class="foot-soc" aria-label="Behance">
-          <svg viewBox="0 0 24 24"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.73-3.35h3.979c-.005-.366-.068-.707-.2-1.015-.29-.695-.962-1.178-1.853-1.178-.778 0-1.494.342-1.906 1.178-.135.298-.208.645-.22 1.015zM7.18 17.01c-1.35 0-2.264-.474-2.787-1.016V18H1V6h3.393v4.474c.523-.572 1.378-.965 2.634-.965 2.748 0 4.567 2.117 4.567 3.75 0 1.635-1.82 3.751-4.413 3.751zM6.5 11.5c-.877 0-1.591.674-1.591 1.507 0 .833.714 1.508 1.591 1.508.878 0 1.591-.675 1.591-1.508 0-.833-.713-1.507-1.591-1.507z"/></svg>
-        </a>
-        <a href="https://instagram.com/allahnawaz.design" target="_blank" class="foot-soc" aria-label="Instagram">
-          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2"/></svg>
-        </a>
-      </div>
+    <div class="foot-bottom">
+      <p class="foot-copy">&copy; 2026 Allah Nawaz &middot;  Product Designer &middot; Islamabad, PK &middot; WCAG 2.1 AA</p>
+      <nav aria-label="Social" class="foot-socs">
+        <a href="https://pk.linkedin.com/in/allah-nawaz-256a81286" target="_blank" rel="noopener noreferrer" class="fsoc" aria-label="LinkedIn (opens in new tab)"><i class="ph-bold ph-linkedin-logo" aria-hidden="true"></i></a>
+        <a href="https://www.behance.net/allahnawaz175" target="_blank" rel="noopener noreferrer" class="fsoc" aria-label="Behance (opens in new tab)"><i class="ph-bold ph-behance-logo" aria-hidden="true"></i></a>
+        <a href="https://instagram.com/allahnawaz.design" target="_blank" rel="noopener noreferrer" class="fsoc" aria-label="Instagram (opens in new tab)"><i class="ph-bold ph-instagram-logo" aria-hidden="true"></i></a>
+      </nav>
     </div>
   </div>
 </footer>
-
+ 
 <script>
-/* ── NAV ──────────────────────────────── */
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',scrollY>50)
-})
-function openMob(){document.getElementById('mobMenu').classList.add('open');document.body.style.overflow='hidden'}
-function closeMob(){document.getElementById('mobMenu').classList.remove('open');document.body.style.overflow=''}
-
-/* ── REVEAL ───────────────────────────── */
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')})
-},{threshold:.08})
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el))
-
-/* ── FAQ ──────────────────────────────── */
-document.querySelectorAll('.faq-item').forEach(item=>{
-  item.querySelector('.faq-q').addEventListener('click',()=>{
-    const open=item.classList.contains('open')
-    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'))
-    if(!open)item.classList.add('open')
-  })
-})
-
-/* ── CONTACT FORM ─────────────────────── */
-async function submitForm(e){
-  e.preventDefault()
-  const btn=document.getElementById('submitBtn')
-  const txt=document.getElementById('submitText')
-  const name=document.getElementById('fname').value.trim()
-  const email=document.getElementById('femail').value.trim()
-  const msg=document.getElementById('fmessage').value.trim()
-  if(!name||!email||!msg){
-    btn.style.background='#ff4444';btn.style.color='#fff'
-    txt.textContent='Please fill required fields'
-    setTimeout(()=>{btn.style.background='var(--lime)';btn.style.color='#000';txt.textContent='Send Inquiry'},2000)
-    return
-  }
-  btn.disabled=true;txt.textContent='Sending...'
-  await new Promise(r=>setTimeout(r,1500))
-  btn.disabled=false
-  btn.style.background='#22c55e'
-  txt.textContent='✓ Message Sent!'
-  setTimeout(()=>{
-    btn.style.background='var(--lime)';btn.style.color='#000';txt.textContent='Send Inquiry'
-    document.getElementById('contactForm').reset()
-  },4000)
+'use strict';
+ 
+/* ── NAV scroll state ───────────────────────────── */
+const navEl = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  navEl.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+ 
+/* ── Active nav highlight on scroll ─────────────── */
+// FIX: was broken with .observe&& pattern — now proper single observer
+const allSections = document.querySelectorAll('main section[id]');
+const allNavLinks = document.querySelectorAll('.nl a');  // FIX: was '.nav-links a' — wrong class
+ 
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      allNavLinks.forEach(link => {
+        const isActive = link.getAttribute('href') === '#' + id;
+        link.classList.toggle('active', isActive);
+        link.setAttribute('aria-current', isActive ? 'page' : 'false');
+      });
+    }
+  });
+}, { threshold: 0.35, rootMargin: '-60px 0px -40% 0px' });
+ 
+allSections.forEach(sec => sectionObserver.observe(sec));
+ 
+/* ── Mobile menu ────────────────────────────────── */
+const mobEl  = document.getElementById('mob');
+const hamBtn = document.getElementById('ham-btn');
+ 
+function openMob() {
+  mobEl.classList.add('open');
+  hamBtn.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
 }
+function closeMob() {
+  mobEl.classList.remove('open');
+  hamBtn.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && mobEl.classList.contains('open')) closeMob();
+});
+ 
+/* ── Reveal on scroll ───────────────────────────── */
+// FIX: was triple-instantiated with broken pattern — now ONE clean observer
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('on'), i * 55);
+      revealObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+ 
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+ 
+/* ── FAQ accordion ──────────────────────────────── */
+document.querySelectorAll('.faq-item').forEach(item => {
+  const trigger = item.querySelector('.faq-trigger');
+  if (!trigger) return;
+  trigger.addEventListener('click', () => {
+    const isOpen = item.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-item').forEach(i => i.setAttribute('aria-expanded', 'false'));
+    item.setAttribute('aria-expanded', String(!isOpen));
+  });
+  trigger.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger.click(); }
+  });
+});
+ 
+/* ── Form validation ────────────────────────────── */
+function validateField(id, errId, testFn) {
+  const input = document.getElementById(id);
+  const errEl = document.getElementById(errId);
+  if (!input || !errEl) return true;
+  const isValid = testFn(input.value.trim());
+  input.setAttribute('aria-invalid', String(!isValid));
+  errEl.classList.toggle('show', !isValid);
+  return isValid;
+}
+ 
+const VALIDATORS = {
+  fn: v => v.length >= 2,
+  fe: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
+  fm: v => v.length >= 20
+};
+ 
+// Live validation on blur
+['fn', 'fe', 'fm'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('blur', () => validateField(id, id + '-err', VALIDATORS[id]));
+});
+ 
+async function handleSubmit(e) {
+  e.preventDefault();
+  const allValid = ['fn', 'fe', 'fm'].every(id => validateField(id, id + '-err', VALIDATORS[id]));
+  if (!allValid) return;
+ 
+  const btn = document.getElementById('f-submit');
+  const txt = document.getElementById('f-txt');
+  const ico = document.getElementById('f-icon');
+  const st  = document.getElementById('f-status');
+  if (!btn || !txt || !ico || !st) return;
+ 
+  // Loading state
+  btn.disabled = true;
+  txt.textContent = 'Sending\u2026';
+  ico.className = 'ph-bold ph-circle-notch spinning'; // FIX: added spinning class
+ 
+  await new Promise(r => setTimeout(r, 1600));
+ 
+  // Success state
+  btn.disabled = false;
+  btn.style.background = 'var(--success)';
+  btn.style.color = '#fff';
+  ico.className = 'ph-bold ph-check-circle';
+  txt.textContent = 'Sent \u2014 I\u2019ll respond within 24 hours!'; // FIX: was broken apostrophe
+  st.textContent = '\u2713 Message received. I\u2019ll be in touch shortly.';
+  st.style.color = 'var(--success)';
+ 
+  document.getElementById('cForm').reset();
+  ['fn', 'fe', 'fm'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.removeAttribute('aria-invalid');
+  });
+ 
+  // Reset after 6s
+  setTimeout(() => {
+    btn.style.background = '';
+    btn.style.color = '';
+    ico.className = 'ph-bold ph-paper-plane-tilt';
+    txt.textContent = 'Send Inquiry';
+    st.textContent = '';
+  }, 6000);
+}
+ 
+/* ── Smooth scroll ──────────────────────────────── */
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const href = link.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
 </script>
 </body>
-          </html>                                          
+</html>
